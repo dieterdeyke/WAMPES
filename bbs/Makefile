@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/bbs/Makefile,v 1.21 1993-07-17 20:34:31 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/bbs/Makefile,v 1.22 1993-07-18 19:52:54 deyke Exp $
 
 CFLAGS     = -I../lib
 LD         = $(CC)
@@ -26,7 +26,7 @@ all:;   @if [ $(OS) = HP-UX ] ; then \
 		'LIBS=../lib/libutil.a' \
 		_all; \
 	elif [ $(OS) = SunOS ] ; then \
-		if [ -x /usr/lang/acc ] ; then \
+		(if [ -x /usr/lang/acc ] ; then \
 			make -i \
 			'CC=acc' \
 			'CFLAGS=-O -s -I../lib' \
@@ -39,7 +39,7 @@ all:;   @if [ $(OS) = HP-UX ] ; then \
 			'LD=/usr/ucb/cc' \
 			'LIBS=../lib/libutil.a' \
 			_all; \
-		fi \
+		fi) \
 	elif [ $(OS) = ULTRIX ] ; then \
 		make -i \
 		'CC=gcc' \

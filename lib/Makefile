@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.6 1993-07-17 20:34:39 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.7 1993-07-18 19:53:14 deyke Exp $
 
 LIBRARY       = libutil.a
 
@@ -28,7 +28,7 @@ all:;   @if [ $(OS) = HP-UX ] ; then \
 		'CFLAGS=-O' \
 		_all; \
 	elif [ $(OS) = SunOS ] ; then \
-		if [ -x /usr/lang/acc ] ; then \
+		(if [ -x /usr/lang/acc ] ; then \
 			make -i \
 			'CC=acc' \
 			'CFLAGS=-O' \
@@ -39,7 +39,7 @@ all:;   @if [ $(OS) = HP-UX ] ; then \
 			'CFLAGS=-O' \
 			'RANLIB=:' \
 			_all; \
-		fi \
+		fi) \
 	elif [ $(OS) = ULTRIX ] ; then \
 		make -i \
 		'CC=gcc' \
