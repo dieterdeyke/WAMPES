@@ -1,9 +1,8 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Makefile,v 1.9 1993-04-11 07:06:13 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Makefile,v 1.10 1993-05-10 11:22:58 deyke Exp $
 
 CC         = c89
 CFLAGS     = -O -s
 RMTARGET   = @if [ -f $@ ] ; then rm -f $@ || mv -f $@ $@~ ; fi
-SHELL      = /bin/sh
 
 TARGETS    = connect connect2 filter nos-cb
 
