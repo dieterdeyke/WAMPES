@@ -1,5 +1,5 @@
 #ifndef __lint
-static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/convers/convers.c,v 1.13 1993-09-17 09:33:01 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/convers/convers.c,v 1.14 1993-10-13 22:31:13 deyke Exp $";
 #endif
 
 #include <sys/types.h>
