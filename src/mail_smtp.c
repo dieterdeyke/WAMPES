@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_smtp.c,v 1.12 1994-04-18 08:38:44 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_smtp.c,v 1.13 1994-06-23 08:32:31 deyke Exp $ */
 
 /* SMTP Mail Delivery Agent */
 
@@ -105,6 +105,8 @@ nextjob:
       transport_close(mp->tp);
       break;
     }
+  else if (valid_reply && *mp->buf == '4')
+    transport_close(mp->tp);
   else {
     if (mp->state != SMTP_QUIT_STATE) {
       strcpy(jp->return_reason, mp->buf);
