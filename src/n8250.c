@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.23 1992-09-01 16:52:55 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.24 1992-09-01 20:09:57 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -20,16 +20,16 @@
 #endif
 #endif
 
+#ifdef sun
+#include <sys/filio.h>
+#endif
+
 #ifdef LINUX
 #define FIOSNBIO        O_NONBLOCK
 #endif
 
 #ifndef FIOSNBIO
 #define FIOSNBIO        FIONBIO
-#endif
-
-#ifdef sun
-#include <sys/filio.h>
 #endif
 
 #include "global.h"

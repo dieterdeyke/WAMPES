@@ -1,5 +1,5 @@
 #ifndef __lint
-static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.14 1992-09-01 16:58:44 deyke Exp $";
+static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.15 1992-09-01 20:09:20 deyke Exp $";
 #endif
 
 #define _HPUX_SOURCE
@@ -21,6 +21,10 @@ static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.14 
 #include <sys/stream.h>
 #include <sys/ptem.h>
 #include <sys/pty.h>
+#endif
+
+#ifdef sun
+#include <sys/filio.h>
 #endif
 
 #ifdef LINUX
