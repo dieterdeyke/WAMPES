@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.41 1996-01-22 13:13:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.42 1996-04-08 13:19:08 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -17,7 +17,11 @@ typedef long speed_t;
 #endif
 
 #ifndef MAXIOV
+#if defined IOV_MAX
+#define MAXIOV          IOV_MAX
+#else
 #define MAXIOV          16
+#endif
 #endif
 
 #ifndef O_NOCTTY
