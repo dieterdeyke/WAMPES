@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail.h,v 1.2 1990-08-23 17:33:22 deyke Exp $ */
+
 #define CONFFILE   "/tcp/mail.conf"
 #define SPOOLDIR   "/usr/spool/uucp"
 #define POLLTIME   (60l*5)

@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/transport.h,v 1.2 1990-08-23 17:34:29 deyke Exp $ */
+
 #define EOL_NONE        0       /* No EOL conversion (binary) */
 #define EOL_CR          1       /* EOL is "\r" */
 #define EOL_LF          2       /* EOL is "\n" */

@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/finger.h,v 1.2 1990-08-23 17:32:49 deyke Exp $ */
+
 /*
  *
  *      Finger support...

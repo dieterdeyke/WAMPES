@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strmatch.c,v 1.2 1990-08-23 17:34:04 deyke Exp $ */
+
 int  strmatch(s, p)
 register unsigned char  *s;
 register unsigned char  *p;

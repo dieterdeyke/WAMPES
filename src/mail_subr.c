@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_subr.c,v 1.2 1990-08-23 17:33:31 deyke Exp $ */
+
 #include <string.h>
 
 #include "global.h"

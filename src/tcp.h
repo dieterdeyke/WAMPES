@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcp.h,v 1.2 1990-08-23 17:34:05 deyke Exp $ */
+
 /* TCP implementation. Follows RFC 793 as closely as possible */
 
 #define DEF_WND 2048    /* Default receiver window */

@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcptimer.c,v 1.2 1990-08-23 17:34:15 deyke Exp $ */
+
 /* TCP timeout routines */
 #include <stdio.h>
 #include "global.h"

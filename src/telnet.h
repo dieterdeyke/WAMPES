@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/telnet.h,v 1.2 1990-08-23 17:34:19 deyke Exp $ */
+
 #define LINESIZE        256     /* Length of local editing buffer */
 
 /* Telnet command characters */

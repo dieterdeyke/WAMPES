@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_retrn.c,v 1.2 1990-08-23 17:33:29 deyke Exp $ */
+
 /* Mail Delivery Agent for returned Mails */
 
 #include <stdio.h>
