@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.6 1995-12-20 09:46:38 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.7 1996-01-04 19:11:38 deyke Exp $ */
 
 #include "configure.h"
 
@@ -82,7 +82,11 @@ int adjtime(
   }
 
   sigsetmask(mask);
-  return (0);
+  return 0;
 }
+
+#else
+
+int adjtime_dummy;      /* Prevent "Empty source file" message */
 
 #endif

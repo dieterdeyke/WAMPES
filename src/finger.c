@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/finger.c,v 1.12 1995-12-20 09:46:43 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/finger.c,v 1.13 1996-01-04 19:11:41 deyke Exp $ */
 
 /*
  *
@@ -15,6 +15,7 @@
 #include "config.h"
 #include "global.h"
 #include "mbuf.h"
+#include "socket.h"
 #include "timer.h"
 #include "internet.h"
 #include "icmp.h"
@@ -101,7 +102,7 @@ void *p)
 		strcat(finger->user, "\015\012");
 	}
 
-	fsocket.port = FINGER_PORT;             /* use finger wnp */
+	fsocket.port = IPPORT_FINGER;           /* use finger wnp */
 
 	/* Allocate a session descriptor */
 	if ((s = newsession()) == NULL){
