@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/main.c,v 1.50 1994-10-10 13:16:40 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/main.c,v 1.51 1994-12-04 09:16:27 deyke Exp $ */
 
 /* Main-level NOS program:
  *  initialization
@@ -91,7 +91,7 @@ char *argv[])
 	setposix();
 #endif
 
-#ifdef ibm032
+#if defined linux || defined ibm032
 	setbuffer(stdout,NULLCHAR,8192);
 #else
 	setvbuf(stdout,NULLCHAR,_IOFBF,8192);
