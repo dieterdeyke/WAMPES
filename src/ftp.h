@@ -1,11 +1,9 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftp.h,v 1.4 1991-04-25 18:26:50 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftp.h,v 1.5 1992-08-02 07:33:51 deyke Exp $ */
 
 #ifndef _FTP_H
 #define _FTP_H
 
 /* Definitions common to both FTP servers and clients */
-
-#define CTLZ    26              /* EOF for CP/M systems */
 
 /* Per-session control block */
 struct ftp {
