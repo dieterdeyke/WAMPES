@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.2 1993-06-10 09:46:32 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.3 1993-06-17 07:28:14 deyke Exp $
 
 LIBRARY       = libutil.a
 
@@ -38,7 +38,7 @@ all:;   @if [ $(OS) = HP-UX ] ; then \
 		_all; \
 	elif [ $(OS) = A/UX ] ; then \
 		make -i \
-		'CC=gcc' \
+		'CC=gcc -fpcc-struct-return' \
 		'CFLAGS=-O -D_POSIX_SOURCE' \
 		'RANLIB=:' \
 		_all; \
