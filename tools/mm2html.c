@@ -1,5 +1,5 @@
 #ifndef __lint
-static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/tools/mm2html.c,v 1.1 1994-11-13 21:51:56 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/tools/mm2html.c,v 1.2 1994-11-18 11:36:53 deyke Exp $";
 #endif
 
 #include <ctype.h>
@@ -423,7 +423,7 @@ static void dot_TS(int argc, char **argv)
   while (fgets(line, sizeof(line), tempptr)) {
     if ((cp = strchr(line, '\n')))
       *cp = 0;
-    puts(line);
+    puts(escape_special_characters(buf, line));
   }
   puts("</PRE>");
   fclose(tempptr);
