@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arpdump.c,v 1.2 1990-08-23 17:32:26 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arpdump.c,v 1.3 1990-09-11 13:44:52 deyke Exp $ */
 
 #include <stdio.h>
 #include "global.h"
@@ -58,5 +58,5 @@ struct mbuf **bpp;
 	}
 	if(is_ip)
 		fprintf(fp," target %s",inet_ntoa(arp.tprotaddr));
-	fputc('\n',fp);
+	putc('\n',fp);
 }

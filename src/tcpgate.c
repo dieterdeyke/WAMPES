@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpgate.c,v 1.3 1990-08-23 17:34:10 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpgate.c,v 1.4 1990-09-11 13:46:30 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -126,16 +126,17 @@ char  old, new;
 
 /*---------------------------------------------------------------------------*/
 
-tcpgate1(argc, argv)
+int  tcpgate1(argc, argv, p)
 int  argc;
 char  *argv[];
+void *p;
 {
 
   char  *socketname;
   char  buf[80];
   struct socket lsocket;
 
-  lsocket.address = Ip_addr;
+  lsocket.address = INADDR_ANY;
   lsocket.port = tcp_portnum(argv[1]);
   if (argc < 3)
     sprintf(socketname = buf, "loopback:%d", lsocket.port);
