@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ksubr.c,v 1.30 1995-12-20 15:49:39 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ksubr.c,v 1.31 1996-01-08 12:24:40 deyke Exp $ */
 
 /* Machine or compiler-dependent portions of kernel
  *
@@ -13,6 +13,7 @@
 #include "global.h"
 #include "proc.h"
 #include "commands.h"
+#include "main.h"
 
 #if 0
 static oldNull;
@@ -365,8 +366,6 @@ void *p)
 {
 	register struct proc *pp;
 	int i;
-
-	extern time_t StartTime;
 
 	printf("Uptime %s",tformat(secclock()-StartTime));
 	printf("\n");
