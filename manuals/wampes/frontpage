@@ -1,12 +1,12 @@
-.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/frontpage,v 1.45 1995-02-15 11:47:12 deyke Exp $
+.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/frontpage,v 1.46 1995-02-23 09:54:59 deyke Exp $
 .\"
-.PF "^WAMPES Reference Manual^-\\\\nP-^Version 950215" \" Page footer
+.PF "^WAMPES Reference Manual^-\\\\nP-^Version 950223" \" Page footer
 .\"
 .S 30
 .ce
 \fBWAMPES Reference Manual\fP
 .ce
-Version 950215
+Version 950223
 .S
 .SP 2
 .S 15
