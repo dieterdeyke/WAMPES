@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netuser.c,v 1.9 1991-07-16 17:55:37 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netuser.c,v 1.10 1992-07-24 20:00:30 deyke Exp $ */
 
 /* Miscellaneous integer and IP address format conversion subroutines
  * Copyright 1991 Phil Karn, KA9Q
@@ -57,7 +57,6 @@ char *s;
 
 	ret = 0;
 	while((c = *s++) != '\0'){
-		c &= 0x7f;
 		if(c == 'x')
 			continue;       /* Ignore 'x', e.g., '0x' prefixes */
 		if(c >= '0' && c <= '9')
