@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/bbs/Makefile,v 1.30 1993-11-06 17:00:08 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/bbs/Makefile,v 1.31 1994-01-09 16:19:57 deyke Exp $
 
 CFLAGS     = -I../lib
 LD         = $(CC)
@@ -121,7 +121,8 @@ clean:; rm -f *.o $(TARGETS) *~
 
 depend:; @mkmf
 ###
-bbs.o: ../lib/bbs.h ../lib/configure.h ../lib/buildsaddr.h ../lib/strdup.h
-findpath.o: ../lib/bbs.h ../lib/configure.h
+bbs.o: ../lib/bbs.h ../lib/configure.h ../lib/buildsaddr.h ../lib/callvalid.h \
+	../lib/strdup.h
+findpath.o: ../lib/bbs.h ../lib/configure.h ../lib/callvalid.h
 killdup.o: ../lib/bbs.h ../lib/configure.h
 sfstat.o: ../lib/bbs.h ../lib/configure.h
