@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.16 1992-05-26 10:08:46 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.17 1992-05-28 13:50:25 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -25,7 +25,7 @@
 #include "mbuf.h"
 #include "proc.h"
 #include "iface.h"
-#include "8250.h"
+#include "n8250.h"
 #include "asy.h"
 #include "devparam.h"
 #include "hpux.h"

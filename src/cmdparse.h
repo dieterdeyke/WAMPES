@@ -1,9 +1,9 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.h,v 1.5 1991-05-09 07:38:07 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.h,v 1.6 1992-05-28 13:50:09 deyke Exp $ */
 
 #ifndef _CMDPARSE_H
 #define _CMDPARSE_H
 
-#define NARG            40      /* Max number of args to commands */
+#define NARG            20      /* Max number of args to commands */
 
 struct cmds {
 	char *name;             /* Name of command */
