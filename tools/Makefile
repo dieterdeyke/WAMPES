@@ -1,7 +1,7 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Makefile,v 1.14 1993-06-13 18:36:56 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Makefile,v 1.15 1993-09-17 09:32:47 deyke Exp $
 
 CC         = c89
-CFLAGS     = -O -s
+CFLAGS     = -O -s -D_HPUX_SOURCE
 RMTARGET   = @if [ -f $@ ] ; then rm -f $@ || mv -f $@ $@~ ; fi
 
 TARGETS    = connect connect2 filter makeiprt mp nos-cb

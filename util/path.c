@@ -1,6 +1,4 @@
-static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/path.c,v 1.12 1993-06-20 07:32:05 deyke Exp $";
-
-#define _HPUX_SOURCE
+static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/path.c,v 1.13 1993-09-17 09:32:55 deyke Exp $";
 
 #include <ctype.h>
 #include <stdio.h>
