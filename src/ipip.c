@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipip.c,v 1.11 1994-04-13 09:51:44 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipip.c,v 1.12 1994-07-18 09:15:24 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -122,7 +122,7 @@ int ipip_attach(int argc, char *argv[], void *p)
 
   char *ifname = "ipip";
   int fd;
-  int port = IP_PTCL;
+  int port = IP4_PTCL;
   int type = USE_IP;
   struct edv_t *edv;
   struct iface *ifp;
