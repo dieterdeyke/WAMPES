@@ -1,4 +1,6 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.3 1991-10-03 11:04:56 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.4 1991-10-11 18:56:11 deyke Exp $ */
+
+#include "global.h"
 
 #include <sys/types.h>
 
@@ -15,7 +17,6 @@
 extern char *sys_errlist[];
 extern int errno;
 
-#include "global.h"
 #include "mbuf.h"
 #include "iface.h"
 #include "timer.h"
