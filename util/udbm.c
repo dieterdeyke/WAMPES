@@ -1,5 +1,5 @@
 #ifndef __lint
-static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/udbm.c,v 1.28 1993-10-31 07:26:24 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/udbm.c,v 1.29 1993-11-06 16:59:54 deyke Exp $";
 #endif
 
 /* User Data Base Manager */
@@ -19,9 +19,8 @@ static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/ud
 #include <sys/stat.h>
 #include <unistd.h>
 
+#include "bbs.h"
 #include "configure.h"
-
-#include "../bbs/bbs.h"
 
 struct user {
   struct user *next;
