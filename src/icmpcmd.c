@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmpcmd.c,v 1.8 1991-04-12 18:34:54 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmpcmd.c,v 1.9 1991-05-24 12:09:45 deyke Exp $ */
 
 /* ICMP-related user commands
  * Copyright 1991 Phil Karn, KA9Q
@@ -271,7 +271,7 @@ int16 len;      /* Length of data field */
 		free_p(data);
 		return 0;
 	}
-	return ip_send(Ip_addr,target,ICMP_PTCL,0,0,bp,len,0,0);
+	return ip_send(INADDR_ANY,target,ICMP_PTCL,0,0,bp,len,0,0);
 }
 static int16
 hash_ping(dest)
