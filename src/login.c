@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.31 1993-03-11 14:12:42 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.32 1993-03-11 15:01:49 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -184,7 +184,7 @@ const char *name;
 
   for (; ; ) {
     while (*name && !isalnum(*name & 0xff)) name++;
-    for (cp = username; isalnum(*name & 0xff); *cp++ = tolower(*name++)) ;
+    for (cp = username; isalnum(*name & 0xff); *cp++ = Xtolower(*name++)) ;
     *cp = 0;
     if (!*username) return DEFAULTUSER;
     if (callvalid(username)) return username;
