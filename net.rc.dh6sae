@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/Attic/net.rc.dh6sae,v 1.1 1994-04-19 19:34:45 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/Attic/net.rc.dh6sae,v 1.2 1994-04-20 08:22:46 deyke Exp $
 
 hostname     dh6sae
 ax25 mycall  dh6sae
@@ -29,7 +29,7 @@ source /tcp/netrom_links
 
 domain usegethostby on
 echo refuse
-esc 
+escape 
 icmp trace on
 ip rtimer 300
 ip ttl 30
