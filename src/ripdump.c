@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripdump.c,v 1.2 1991-02-24 20:17:36 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripdump.c,v 1.3 1993-05-17 13:45:15 deyke Exp $ */
 
 /* RIP packet tracing
  * Copyright 1991 Phil Karn, KA9Q
@@ -18,7 +18,7 @@ struct mbuf **bpp;
 	struct rip_route entry;
 	int i;
 	int cmd,version;
-	int16 len;
+	uint16 len;
 
 	fprintf(fp,"RIP: ");
 	cmd = PULLCHAR(bpp);

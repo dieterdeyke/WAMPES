@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripcmd.c,v 1.3 1992-05-14 13:20:26 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripcmd.c,v 1.4 1993-05-17 13:45:15 deyke Exp $ */
 
 /* RIP-related user commands
  *   Al Broscious, N3FCT
@@ -111,7 +111,7 @@ int argc;
 char *argv[];
 void *p;
 {
-	int16 replyport;
+	uint16 replyport;
 
 	if(argc > 2)
 		replyport = atoi(argv[2]);

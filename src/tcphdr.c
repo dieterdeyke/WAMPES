@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcphdr.c,v 1.4 1992-05-28 13:50:34 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcphdr.c,v 1.5 1993-05-17 13:45:19 deyke Exp $ */
 
 /* TCP header conversion routines
  * Copyright 1991 Phil Karn, KA9Q
@@ -19,7 +19,7 @@ register struct tcp *tcph;
 struct mbuf *bp;
 struct pseudo_header *ph;
 {
-	int16 hdrlen;
+	uint16 hdrlen;
 	register char *cp;
 
 	hdrlen =  TCPLEN;

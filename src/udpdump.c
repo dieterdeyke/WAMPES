@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/udpdump.c,v 1.5 1991-05-09 07:39:11 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/udpdump.c,v 1.6 1993-05-17 13:45:27 deyke Exp $ */
 
 /* UDP packet tracing
  * Copyright 1991 Phil Karn, KA9Q
@@ -23,7 +23,7 @@ int check;              /* If 0, bypass checksum verify */
 {
 	struct udp udp;
 	struct pseudo_header ph;
-	int16 csum;
+	uint16 csum;
 
 	if(bpp == NULLBUFP || *bpp == NULLBUF)
 		return;
