@@ -1,6 +1,6 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/src/Makefile,v 1.22 1992-09-05 08:15:48 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/src/Makefile,v 1.23 1992-09-25 20:07:10 deyke Exp $
 
-DEFINES       = -DUNIX -D_HPUX_SOURCE
+DEFINES       = -DUNIX -D_HPUX_SOURCE -DFD_SETSIZE=64
 
 CFLAGS        = $(OPTIMIZE) $(DEFINES)
 

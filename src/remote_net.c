@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/remote_net.c,v 1.13 1992-09-01 16:52:58 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/remote_net.c,v 1.14 1992-09-25 20:07:23 deyke Exp $ */
 
 #include "global.h"
 
@@ -9,8 +9,9 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#ifdef LINUX
-#include "linux.h"
+
+#ifndef SOMAXCONN
+#define SOMAXCONN       5
 #endif
 
 #include "mbuf.h"
