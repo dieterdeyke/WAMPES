@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.7 1996-01-04 19:11:38 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.8 1996-02-13 15:30:42 deyke Exp $ */
 
 #include "configure.h"
 
@@ -87,6 +87,6 @@ int adjtime(
 
 #else
 
-int adjtime_dummy;      /* Prevent "Empty source file" message */
+struct prevent_empty_file_message;
 
 #endif

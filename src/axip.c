@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.23 1995-12-30 15:05:42 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.24 1996-02-13 15:30:43 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -15,6 +15,8 @@
 #include <stdio.h>
 #include <sys/socket.h>
 #include <unistd.h>
+
+#include "strerror.h"
 
 #include "mbuf.h"
 #include "iface.h"

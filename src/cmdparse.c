@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.c,v 1.15 1995-12-20 09:46:41 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.c,v 1.16 1996-02-13 15:30:44 deyke Exp $ */
 
 /* Parse command line, set up command arguments Unix-style, and call function.
  * Note: argument is modified (delimiters are overwritten with nulls)
@@ -13,6 +13,9 @@
  */
 #include <ctype.h>
 #include <stdio.h>
+
+#include "strtoul.h"
+
 #include "global.h"
 #include "proc.h"
 #include "cmdparse.h"

@@ -1,9 +1,17 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strdup.h,v 1.1 1993-06-10 09:48:12 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strdup.h,v 1.2 1996-02-13 15:31:00 deyke Exp $ */
 
 #ifndef _STRDUP_H
 #define _STRDUP_H
 
+#ifndef _CONFIGURE_H
+#include "configure.h"
+#endif
+
+#if !HAS_STRDUP
+
 /* In strdup.c: */
-char *strdup();
+char *strdup(const char *s);
+
+#endif
 
 #endif  /* _STRDUP_H */
