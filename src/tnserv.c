@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tnserv.c,v 1.12 1995-12-20 09:46:57 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tnserv.c,v 1.13 1995-12-26 11:18:47 deyke Exp $ */
 
 #include "global.h"
 #include "mbuf.h"
@@ -17,8 +17,9 @@ static void tnserv_recv_upcall(struct tcb *tcb, int32 cnt)
   struct mbuf *bp;
 
   if (tcb->user) {
+    bp = 0;
     recv_tcp(tcb, &bp, 0);
-    login_write((struct login_cb *) tcb->user, bp);
+    login_write((struct login_cb *) tcb->user, &bp);
   }
 }
 
