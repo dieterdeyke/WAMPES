@@ -1,8 +1,6 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipfilter.c,v 1.5 1994-11-08 14:26:26 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipfilter.c,v 1.6 1995-12-20 09:46:46 deyke Exp $ */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #include "global.h"
 #include "netuser.h"
