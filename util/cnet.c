@@ -1,5 +1,5 @@
 #ifndef __lint
-static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.23 1993-06-06 08:23:34 deyke Exp $";
+static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.24 1993-06-06 08:48:59 deyke Exp $";
 #endif
 
 #define _HPUX_SOURCE
@@ -158,8 +158,8 @@ int main(int argc, char **argv)
 #endif
 
   signal(SIGPIPE, SIG_IGN);
-  signal(SIGTERM, terminate);
-  signal(SIGHUP, terminate);
+  signal(SIGTERM, (void (*)()) terminate);
+  signal(SIGHUP, (void (*)()) terminate);
 
   tcgetattr(fdin, &prev_termios);
   ap = area;
