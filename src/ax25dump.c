@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25dump.c,v 1.9 1994-10-06 16:15:20 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25dump.c,v 1.10 1994-10-21 11:54:15 deyke Exp $ */
 
 /* AX25 header tracing
  * Copyright 1991 Phil Karn, KA9Q
@@ -112,6 +112,7 @@ int check)      /* Not used */
 				break;
 			case PID_FLEXNET:
 				fprintf(fp," pid=FLEXNET\n");
+				flexnet_dump(fp,bpp);
 				break;
 			case PID_NO_L3:
 				fprintf(fp," pid=Text\n");
