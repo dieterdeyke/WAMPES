@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/global.h,v 1.34 1994-10-21 11:54:18 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/global.h,v 1.35 1994-10-30 21:26:58 deyke Exp $ */
 
 #ifndef _GLOBAL_H
 #define _GLOBAL_H
@@ -301,6 +301,7 @@ struct asy;
 struct ax25_cb;
 struct iface;
 struct mbuf;
+struct session;
 struct usock;
 
 extern int Debug;
