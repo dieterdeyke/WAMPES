@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/hpux.c,v 1.53 1994-10-10 13:16:35 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/hpux.c,v 1.54 1995-02-07 10:27:22 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -103,9 +103,7 @@ void ioinit(void)
 {
 
   int i;
-#ifndef linux
   struct rlimit rlp;
-#endif
 
 #define fixdir(name, mode) \
 	{ mkdir((name), (mode)); chmod((name), (mode)); }
