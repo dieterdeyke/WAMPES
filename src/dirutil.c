@@ -1,6 +1,7 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/dirutil.c,v 1.1 1990-09-11 13:45:15 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/dirutil.c,v 1.2 1990-10-12 19:25:31 deyke Exp $ */
 
 #include <stdio.h>
+#include <unistd.h>
 
 #include "global.h"
 #include "dirutil.h"

@@ -1,9 +1,11 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/hpux.h,v 1.4 1990-09-11 13:45:28 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/hpux.h,v 1.5 1990-10-12 19:25:45 deyke Exp $ */
 
 #ifndef HPUX_INCLUDED
 #define HPUX_INCLUDED
 
 #include <stdio.h>
+
+#include "global.h"
 
 extern long  currtime;
 
@@ -29,7 +31,7 @@ extern char  *excparg[];
 struct iface;   /* announce struct iface */
 struct mbuf;    /* announce struct mbuf */
 
-/* hpux.c */
+/* In hpux.c: */
 void ioinit __ARGS((void));
 void iostop __ARGS((void));
 int kbread __ARGS((void));
