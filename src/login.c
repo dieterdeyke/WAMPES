@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.57 1995-03-24 13:00:05 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.58 1995-05-13 18:46:51 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -666,7 +666,7 @@ void login_close(struct login_cb *tp)
 
 /*---------------------------------------------------------------------------*/
 
-#define ASIZE 512
+#define ASIZE 480
 
 #define add_to_mbuf(chr) \
 { \
