@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.13 1992-01-20 17:17:27 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.c,v 1.14 1992-01-22 11:12:01 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -235,7 +235,6 @@ struct iface *ifp;
 		close(ap->fd);
 		ap->fd = -1;
 	}
-	ap->iface = NULLIF;
 
 	return 0;
 }
