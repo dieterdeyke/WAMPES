@@ -1,8 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_subr.c,v 1.3 1990-10-12 19:26:10 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_subr.c,v 1.4 1990-10-26 19:20:48 deyke Exp $ */
 
+#include <stdlib.h>
 #include <string.h>
 
-#include "hpux.h"
 #include "mail.h"
 
 /*---------------------------------------------------------------------------*/
@@ -41,6 +41,5 @@ struct mailsys *sp;
     sp->jobs = jp->next;
     free(jp);
   }
-  sp->nexttime = currtime + RETRYTIME;
 }
 
