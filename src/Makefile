@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/src/Makefile,v 1.21 1992-09-01 16:52:40 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/src/Makefile,v 1.22 1992-09-05 08:15:48 deyke Exp $
 
 DEFINES       = -DUNIX -D_HPUX_SOURCE
 
@@ -303,7 +303,7 @@ index:;         @ctags -wx $(HDRS) $(SRCS)
 
 install:        $(DEST)/$(PROGRAM)
 
-lint:;          @lint -Aa -v $(DEFINES) $(SRCS)
+lint:;          @lih $(SRCS)
 
 print:;         @$(PRINT) $(HDRS) $(SRCS)
 
