@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/main.c,v 1.58 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: main.c,v 1.59 1996-08-12 18:51:17 deyke Exp $ */
 
 /* Main-level NOS program:
  *  initialization

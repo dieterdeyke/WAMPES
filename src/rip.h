@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/rip.h,v 1.8 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: rip.h,v 1.9 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _RIP_H
 #define _RIP_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strdup.h,v 1.3 1996-08-11 18:17:33 deyke Exp $ */
+/* @(#) $Id: strdup.h,v 1.4 1996-08-12 18:53:41 deyke Exp $ */
 
 #ifndef _STRDUP_H
 #define _STRDUP_H

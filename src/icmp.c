@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmp.c,v 1.18 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: icmp.c,v 1.19 1996-08-12 18:51:17 deyke Exp $ */
 
 /* Internet Control Message Protocol (ICMP)
  * Copyright 1991 Phil Karn, KA9Q

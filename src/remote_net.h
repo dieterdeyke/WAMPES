@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/remote_net.h,v 1.3 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: remote_net.h,v 1.4 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _REMOTE_NET_H
 #define _REMOTE_NET_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strtoul.c,v 1.7 1996-08-11 18:17:33 deyke Exp $ */
+/* @(#) $Id: strtoul.c,v 1.8 1996-08-12 18:53:41 deyke Exp $ */
 
 #include "configure.h"
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25mail.h,v 1.3 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: ax25mail.h,v 1.4 1996-08-12 18:51:17 deyke Exp $ */
 
 int ax250(int argc,char *argv[],void *p);
 int ax25start(int argc,char *argv[],void *p);

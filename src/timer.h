@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/timer.h,v 1.9 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: timer.h,v 1.10 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _TIMER_H
 #define _TIMER_H

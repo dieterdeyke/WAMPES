@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_daemn.c,v 1.25 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: mail_daemn.c,v 1.26 1996-08-12 18:51:17 deyke Exp $ */
 
 /* Mail Daemon, checks for outbound mail and starts mail delivery agents */
 

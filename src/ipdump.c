@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipdump.c,v 1.11 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: ipdump.c,v 1.12 1996-08-12 18:51:17 deyke Exp $ */
 
 /* IP header tracing routines
  * Copyright 1991 Phil Karn, KA9Q

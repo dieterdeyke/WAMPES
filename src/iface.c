@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/iface.c,v 1.25 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: iface.c,v 1.26 1996-08-12 18:51:17 deyke Exp $ */
 
 /* IP interface control and configuration routines
  * Copyright 1991 Phil Karn, KA9Q

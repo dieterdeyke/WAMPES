@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/slhcdump.c,v 1.5 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: slhcdump.c,v 1.6 1996-08-12 18:51:17 deyke Exp $ */
 
 #include <stdio.h>
 #include "global.h"

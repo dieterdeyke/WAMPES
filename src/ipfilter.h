@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipfilter.h,v 1.2 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: ipfilter.h,v 1.3 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _IPFILTER_H
 #define _IPFILTER_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netrom.h,v 1.22 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: netrom.h,v 1.23 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _NETROM_H
 #define _NETROM_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mbuf.h,v 1.14 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: mbuf.h,v 1.15 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _MBUF_H
 #define _MBUF_H

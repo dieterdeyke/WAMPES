@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ni.c,v 1.14 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: ni.c,v 1.15 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifdef __hpux
 

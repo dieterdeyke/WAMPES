@@ -1,4 +1,4 @@
-.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/doc/kisstnc.ms,v 1.4 1996-08-11 18:17:22 deyke Exp $
+.\" @(#) $Id: kisstnc.ms,v 1.5 1996-08-12 18:53:24 deyke Exp $
 .\" kisstnc.ms -- submitted to the sixth ARRL computer networking
 .\"              conference, August 1987.
 .\" to format, use "eqn kisstnc.ms | tbl | troff -ms"

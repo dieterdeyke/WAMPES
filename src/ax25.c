@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25.c,v 1.29 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: ax25.c,v 1.30 1996-08-12 18:51:17 deyke Exp $ */
 
 /* Low level AX.25 code:
  *  incoming frame processing (including digipeating)

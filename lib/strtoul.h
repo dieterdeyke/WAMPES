@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strtoul.h,v 1.2 1996-08-11 18:17:33 deyke Exp $ */
+/* @(#) $Id: strtoul.h,v 1.3 1996-08-12 18:53:41 deyke Exp $ */
 
 #ifndef _STRTOUL_H
 #define _STRTOUL_H

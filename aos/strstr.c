@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/strstr.c,v 1.3 1996-08-11 18:17:41 deyke Exp $ */
+/* @(#) $Id: strstr.c,v 1.4 1996-08-12 18:53:54 deyke Exp $ */
 
 /*-
  * Copyright (c) 1990 The Regents of the University of California.

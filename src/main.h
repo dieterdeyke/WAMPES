@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/main.h,v 1.7 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: main.h,v 1.8 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _MAIN_H
 #define _MAIN_H

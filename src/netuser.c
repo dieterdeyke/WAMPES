@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netuser.c,v 1.13 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: netuser.c,v 1.14 1996-08-12 18:51:17 deyke Exp $ */
 
 /* Miscellaneous integer and IP address format conversion subroutines
  * Copyright 1991 Phil Karn, KA9Q

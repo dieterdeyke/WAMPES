@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/Attic/net.rc.df3du-1,v 1.26 1996-08-11 18:15:53 deyke Exp $
+# @(#) $Id: net.rc.df3du-1,v 1.27 1996-08-12 18:50:57 deyke Exp $
 
 hostname     df3du-1
 ax25 mycall  df3du-1

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpin.c,v 1.16 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: tcpin.c,v 1.17 1996-08-12 18:51:17 deyke Exp $ */
 
 /* Process incoming TCP segments. Page number references are to ARPA RFC-793,
  * the TCP specification.

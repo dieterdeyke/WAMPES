@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tun.c,v 1.2 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: tun.c,v 1.3 1996-08-12 18:51:17 deyke Exp $ */
 
 /*
    Interface to FreeBSD's tun device - Olaf Erb, dc1ik 960728

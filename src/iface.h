@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/iface.h,v 1.24 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: iface.h,v 1.25 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _IFACE_H
 #define _IFACE_H

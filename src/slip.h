@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/slip.h,v 1.16 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: slip.h,v 1.17 1996-08-12 18:51:17 deyke Exp $ */
 
 #ifndef _SLIP_H
 #define _SLIP_H

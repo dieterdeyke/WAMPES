@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/slip.c,v 1.19 1996-08-11 18:16:09 deyke Exp $ */
+/* @(#) $Id: slip.c,v 1.20 1996-08-12 18:51:17 deyke Exp $ */
 
 /* SLIP (Serial Line IP) encapsulation and control routines.
  * Copyright 1991 Phil Karn
