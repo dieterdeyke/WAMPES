@@ -1,4 +1,4 @@
-static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/path.c,v 1.8 1993-05-17 13:47:19 deyke Exp $";
+static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/path.c,v 1.9 1993-06-06 08:23:34 deyke Exp $";
 
 #define _HPUX_SOURCE
 
@@ -7,6 +7,8 @@ static char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/path.c,v 1.8 1
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
+extern char *strdup();
 
 #define NULLCHAR        ((char *) 0)
 

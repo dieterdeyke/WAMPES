@@ -1,6 +1,6 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/buildsaddr.c,v 1.10 1993-05-17 13:44:48 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/buildsaddr.c,v 1.11 1993-06-06 08:24:17 deyke Exp $ */
 
-#include "global.h"
+#define _HPUX_SOURCE
 
 #include <sys/types.h>
 
