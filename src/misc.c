@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/misc.c,v 1.8 1991-06-01 22:18:27 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/misc.c,v 1.9 1991-06-18 17:27:16 deyke Exp $ */
 
 /* Miscellaneous machine independent utilities
  * Copyright 1991 Phil Karn, KA9Q
@@ -65,7 +65,7 @@ register char *s;
  */
 char *
 strdup(s)
-char *s;
+const char *s;
 {
 	register char *out;
 	register int len;

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/version.c,v 1.10 1991-06-10 19:32:50 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/version.c,v 1.11 1991-06-18 17:27:47 deyke Exp $ */
 
 /* version control information */
-char Version[] = "WAMPES-910610";
+char Version[] = "WAMPES-910618";
