@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25.h,v 1.11 1993-02-23 21:34:03 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25.h,v 1.12 1993-04-20 09:27:05 deyke Exp $ */
 
 #ifndef _AX25_H
 #define _AX25_H
@@ -47,6 +47,7 @@ struct ax25 {
 	int ndigis;                     /* Number of digipeaters */
 	int nextdigi;                   /* Index to next digi in chain */
 	int cmdrsp;                     /* Command/response */
+	int qso_num;                    /* QSO number or -1 */
 };
 
 /* C-bit stuff */
