@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_retrn.c,v 1.14 1993-06-21 21:46:37 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_retrn.c,v 1.15 1993-09-10 16:05:24 deyke Exp $ */
 
 /* Mail Delivery Agent for returned Mails */
 
@@ -29,7 +29,7 @@ void mail_return(struct mailjob *jp)
   fopen("/dev/null", "r+");
   fopen("/dev/null", "r+");
   if (fpi = fopen(jp->dfile, "r")) {
-#ifdef __386BSD__
+#if defined(__386BSD__) || defined(__bsdi__)
     sprintf(line, "/usr/sbin/sendmail -oi -oem -f '<>' %s", jp->from);
 #else
     sprintf(line, "/usr/lib/sendmail -oi -oem -f '<>' %s", jp->from);

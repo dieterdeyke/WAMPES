@@ -1,8 +1,12 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.15 1993-05-17 13:44:47 deyke Exp $ */
-
-#include "global.h"
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.16 1993-09-10 16:05:19 deyke Exp $ */
 
 #include <sys/types.h>
+
+#include "global.h"
+#undef  hiword
+#undef  loword
+#undef  hibyte
+#undef  lobyte
 
 #include <netinet/in.h>
 #include <netinet/in_systm.h>
