@@ -1,6 +1,6 @@
 #! /bin/ksh
 
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/tcpmake,v 1.30 1996-04-01 13:16:45 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/tcpmake,v 1.31 1996-08-11 18:05:25 deyke Exp $
 
 save_file()
 {
@@ -102,7 +102,7 @@ make
 mk make
 
 cd ~/tcp/src
-make lint tags
+make lint tags TAGS 
 nosdiff
 # jnosdiff -w
 

@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/Makefile,v 1.6 1995-03-13 13:32:27 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/Makefile,v 1.7 1996-08-11 18:04:21 deyke Exp $
 
 LIBRARY       = libaos.a
 
@@ -57,7 +57,7 @@ $(LIBRARY): $(OBJS)
 
 install:;
 
-clean:; @rm -f *.o $(LIBRARY) *~
+clean:; @rm -f *.o $(LIBRARY) *~ \#*\#
 
 depend:; @mkmf -f $(MAKEFILE)
 ###
