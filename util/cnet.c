@@ -1,5 +1,5 @@
 #ifndef __lint
-static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.28 1994-02-07 12:39:23 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v 1.29 1994-05-05 11:18:19 deyke Exp $";
 #endif
 
 #ifndef linux
@@ -32,6 +32,8 @@ static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/cnet.c,v
 #ifndef O_NONBLOCK
 #define O_NONBLOCK      O_NDELAY
 #endif
+
+char *tgetstr();
 
 #ifdef __hpux
 #define SEL_ARG(x) ((int *) (x))

@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/Makefile,v 1.3 1994-02-28 11:57:02 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/Makefile,v 1.4 1994-05-05 11:18:48 deyke Exp $
 
 LIBRARY       = libaos.a
 
@@ -16,6 +16,8 @@ all:;   @case "`uname -sr`" in \
 	HP-UX*) \
 		:;; \
 	AIX*) \
+		:;; \
+	IRIX*) \
 		:;; \
 	Linux*) \
 		:;; \
