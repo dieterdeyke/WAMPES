@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/domain.c,v 1.11 1993-03-11 15:01:41 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/domain.c,v 1.12 1993-03-30 17:24:00 deyke Exp $ */
 
 #include "global.h"
 
@@ -293,7 +293,7 @@ char *name;
       dname.dsize = strlen(names[i]) + 1;
       daddr = dbm_fetch(Dbhostaddr, dname);
       if (daddr.dptr) {
-	memcpy(&addr, daddr.dptr, sizeof(addr));
+	memcpy((char *) &addr, daddr.dptr, sizeof(addr));
 	add_to_cache(names[i], addr);
 	return addr;
       }
