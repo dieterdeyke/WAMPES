@@ -1,9 +1,10 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/telnet.c,v 1.18 1994-10-09 08:23:00 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/telnet.c,v 1.19 1995-03-24 13:00:11 deyke Exp $ */
 
 /* Internet Telnet client
  * Copyright 1991 Phil Karn, KA9Q
  */
 #include <stdio.h>
+#include <string.h>
 #include "global.h"
 #include "mbuf.h"
 #include "socket.h"
