@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.5 1991-05-07 18:24:12 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.6 1991-10-25 14:21:27 deyke Exp $ */
 
 /* Net Update Server */
 
@@ -18,6 +18,7 @@
 #define __ARGS(x)       x
 #else
 #define __ARGS(x)       ()
+#define const
 #endif
 
 static void pexit __ARGS((const char *s));
