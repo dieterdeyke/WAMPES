@@ -1,4 +1,4 @@
-. \" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/commands/echo,v 1.1 1994-07-12 16:32:25 deyke Exp $
+.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/commands/echo,v 1.2 1994-07-27 09:47:54 deyke Exp $
 .H 2 "echo" " [accept|refuse]"
 Display or set the flag controlling client Telnet's response to
 a remote WILL ECHO offer.

@@ -1,4 +1,4 @@
-. \" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/commands/kick,v 1.1 1994-07-12 16:32:25 deyke Exp $
+.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/commands/kick,v 1.2 1994-07-27 09:47:56 deyke Exp $
 .H 2 "kick" " [\fIsession#\fP]"
 Kick all sockets associated with a session.
 If no argument is given, kick the current session.
