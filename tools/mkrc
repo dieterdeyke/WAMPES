@@ -1,6 +1,6 @@
 #! /bin/csh -f
 
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/mkrc,v 1.1 1992-08-13 19:00:52 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/mkrc,v 1.2 1992-11-29 17:37:25 deyke Exp $
 
 foreach i (1 2 3 4)
 set tty=ttyr$i
@@ -19,7 +19,6 @@ ax25 route add $tty default
 
 route add default $tty
 
-domain useserver off
 echo refuse
 icmp trace on
 ip rtimer 100
