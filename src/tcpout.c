@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpout.c,v 1.15 1995-12-26 11:18:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpout.c,v 1.16 1995-12-30 15:05:48 deyke Exp $ */
 
 /* TCP output segment processing
  * Copyright 1991 Phil Karn, KA9Q
@@ -97,8 +97,11 @@ register struct tcb *tcb)
 		 * sequence number, which may be necessary for the
 		 * ack to be accepted by the receiver
 		 */
-		if(tcb->flags.force && tcb->snd.ptr != tcb->snd.nxt)
+		if(tcb->flags.force && tcb->snd.ptr != tcb->snd.nxt){
 			ssize = 0;
+			if(tcb->snd.ptr == tcb->iss)
+				ssize = 1;
+		}
 		if(ssize == 0 && !tcb->flags.force)
 			break;          /* No need to send anything */
 

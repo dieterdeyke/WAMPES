@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/setsp.c,v 1.10 1995-03-13 13:32:18 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/setsp.c,v 1.11 1995-12-30 15:05:47 deyke Exp $ */
 
 #ifndef __lint
 
@@ -57,10 +57,17 @@ $SHORT_STATIC_DATA$
 
 #ifdef linux
 	.file   "setsp.s"
+#ifdef __ELF__
+	.globl  setstack
+setstack:
+	movl    %esp, %ebp
+	movl    newstackptr, %esp
+#else
 	.globl  _setstack
 _setstack:
 	movl    %esp, %ebp
 	movl    _newstackptr, %esp
+#endif
 	jmp     *(%ebp)
 	.align  4
 #endif
