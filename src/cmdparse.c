@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.c,v 1.7 1992-08-19 13:20:24 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.c,v 1.8 1993-02-23 21:34:05 deyke Exp $ */
 
 /* Parse command line, set up command arguments Unix-style, and call function.
  * Note: argument is modified (delimiters are overwritten with nulls)
@@ -362,13 +362,13 @@ char *argv[];
 
 /* Subroutine for setting and displaying int variables (with range check) */
 
-int  setintrc(var, label, argc, argv, minval, maxval)
-int  *var;
-char  *label;
-int  argc;
-char  *argv[];
-int  minval;
-int  maxval;
+int setintrc(var, label, argc, argv, minval, maxval)
+int *var;
+char *label;
+int argc;
+char *argv[];
+int minval;
+int maxval;
 {
   if (argc < 2)
     printf("%s: %i\n", label, *var);
