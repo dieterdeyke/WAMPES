@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/alloc.c,v 1.26 1994-10-06 16:15:18 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/alloc.c,v 1.27 1995-04-13 14:30:14 deyke Exp $ */
 
 /* memory allocation routines
  */
@@ -11,6 +11,8 @@
 #define calloc  Xcalloc
 
 #endif
+
+#define NO_FIX_MALLOC
 
 #include <stdio.h>
 #include <stdlib.h>
