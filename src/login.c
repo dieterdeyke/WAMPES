@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.16 1991-10-11 18:56:26 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.17 1992-01-08 13:45:22 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -92,13 +92,13 @@ char  *slave;
     if (!pty_inuse[num]) {
       pty_name(master, MASTERPREFIX, num);
       if ((fd = open(master, O_RDWR | O_NDELAY, 0600)) >= 0) {
-	pty_inuse[num] = 1;
+	/* pty_inuse[num] = 1; ***** DON'T LOCK PTYS -- TESTING ***** */
 	*numptr = num;
 	pty_name(slave, SLAVEPREFIX, num);
 	return fd;
       }
       if (errno != EBUSY) return (-1);
-      pty_inuse[num] = 1;
+      /* pty_inuse[num] = 1; ***** DON'T LOCK PTYS -- TESTING ***** */
     }
 }
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/daemon.h,v 1.1 1991-10-11 18:57:18 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/daemon.h,v 1.2 1992-01-08 13:45:06 deyke Exp $ */
 
 #ifndef _DAEMON_H
 #define _DAEMON_H
@@ -10,6 +10,9 @@ struct daemon {
 };
 #define NULLDAEMON ((struct daemon *)0)
 extern struct daemon Daemons[];
+
+/* In alloc.c: */
+void gcollect __ARGS((int,void*,void*));
 
 /* In main.c: */
 void keyboard __ARGS((int,void*,void*));

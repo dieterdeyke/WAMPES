@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/devparam.c,v 1.2 1991-05-09 07:38:10 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/devparam.c,v 1.3 1992-01-08 13:45:06 deyke Exp $ */
 
 #include <string.h>
 #include <ctype.h>
@@ -29,6 +29,7 @@ static struct param Parms[] = {
 	PARAM_WAIT,     "Wait",
 	PARAM_DOWN,     "Down",
 	PARAM_UP,       "Up",
+	PARAM_BLIND,    "Blind",
 	PARAM_RETURN,   "Return",
 	-1,             NULLCHAR,
 };
