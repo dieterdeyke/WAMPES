@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.1 1990-03-01 15:16:54 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.2 1990-03-02 09:27:18 deyke Exp $ */
 
 /* Net Update Server */
 
@@ -77,6 +77,8 @@ int  main()
   int  filesize;
   int  i;
   struct stat statbuf;
+
+  alarm(6 * 3600);
 
   umask(022);
   putenv("HOME=/users/root");
