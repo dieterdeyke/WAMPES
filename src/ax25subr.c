@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25subr.c,v 1.12 1993-05-17 13:44:46 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25subr.c,v 1.13 1994-02-28 11:55:11 deyke Exp $ */
 
 /* Low level AX.25 routines:
  *  callsign conversion
@@ -286,6 +286,7 @@ struct ax25 *hdr;
     printf("Missing call\n");
     return 1;
   }
+  addrcp(hdr->source,Mycall);
   if (setcall(hdr->dest,*argv)) {
     printf("Invalid call \"%s\"\n",*argv);
     return 1;
