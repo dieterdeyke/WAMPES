@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/buildsaddr.c,v 1.13 1993-09-17 09:33:12 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/buildsaddr.c,v 1.14 1995-11-19 11:54:18 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -76,4 +76,3 @@ struct sockaddr *build_sockaddr(const char *name, int *addrlen)
   *addrlen = sizeof(struct sockaddr_in);
   return &addr.sa;
 }
-

@@ -1,5 +1,5 @@
 #ifndef __lint
-static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.34 1995-11-07 22:55:14 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.35 1995-11-19 11:54:17 deyke Exp $";
 #endif
 
 /* Net Update Client/Server */
@@ -1280,7 +1280,7 @@ int main(int argc, char **argv)
 
 #if !DEBUG
   mkdir("/tcp/locks", 0755);
-  if ((fdlock = lock_file(LOCKFILE, 0)) < 0)
+  if ((fdlock = lock_file(LOCKFILE, 1, 0)) < 0)
     syscallerr(LOCKFILE);
 #endif
 
