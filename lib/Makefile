@@ -1,10 +1,11 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.17 1994-02-19 17:50:46 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.18 1994-02-22 13:22:56 deyke Exp $
 
 LIBRARY       = libutil.a
 
 OBJS          = buildsaddr.o \
 		calc_crc.o \
 		callvalid.o \
+		lockfile.o \
 		md5.o \
 		seteugid.o \
 		strdup.o \
