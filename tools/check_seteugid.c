@@ -1,5 +1,5 @@
 #ifndef __lint
-static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/tools/check_seteugid.c,v 1.2 1994-06-16 13:14:39 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/tools/check_seteugid.c,v 1.3 1994-09-05 12:47:32 deyke Exp $";
 #endif
 
 #include <stdio.h>
@@ -12,7 +12,7 @@ static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/tools/check_s
 static void print_ids(void)
 {
   printf("ruid = %4d euid = %4d rgid = %4d egid = %4d\n",
-	 getuid(), geteuid(), getgid(), getegid());
+	 (int) getuid(), (int) geteuid(), (int) getgid(), (int) getegid());
 }
 
 /*---------------------------------------------------------------------------*/
