@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/asy.c,v 1.2 1991-02-24 20:16:30 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/asy.c,v 1.3 1991-03-28 19:39:02 deyke Exp $ */
 
 /* Generic serial line interface routines
  * Copyright 1991 Phil Karn, KA9Q
@@ -19,7 +19,7 @@
 #include "config.h"
 /* #include "proc.h" */
 #include "commands.h"
-/* #include "slcompress.h" */
+/* #include "slcomp.h" */
 
 /* Attach a serial interface to the system
  * argv[0]: hardware type, must be "asy"
