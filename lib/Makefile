@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.27 1996-02-13 15:31:00 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/Makefile,v 1.28 1996-05-28 15:58:05 deyke Exp $
 
 LIBRARY       = libutil.a
 
@@ -77,7 +77,7 @@ all:;   if [ -x /bin/bash ]; then \
 	SunOS\ 5.*) \
 		$(MAKE) -i -f $(MAKEFILE) \
 		'CC=cc' \
-		'CFLAGS=-O' \
+		'CFLAGS=-O -v' \
 		'RANLIB=:' \
 		_all;; \
 	ULTRIX*) \

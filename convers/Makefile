@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/convers/Makefile,v 1.36 1995-03-13 13:32:11 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/convers/Makefile,v 1.37 1996-05-28 15:56:39 deyke Exp $
 
 CFLAGS     = -I../lib
 LD         = $(CC)
@@ -55,7 +55,7 @@ all:;   @case "`uname -sr`" in \
 	SunOS\ 5.*) \
 		$(MAKE) -i -f $(MAKEFILE) \
 		'CC=cc' \
-		'CFLAGS=-O -I../lib' \
+		'CFLAGS=-O -v -I../lib' \
 		'SLIBS=-lsocket -lnsl' \
 		_all;; \
 	ULTRIX*) \
