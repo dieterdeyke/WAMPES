@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/dirutil.c,v 1.4 1991-04-12 18:34:44 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/dirutil.c,v 1.5 1991-04-25 18:26:43 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -36,7 +36,10 @@ int full;
 		full ? "-l" : "",
 		strquote_for_shell(buf, path),
 		fname);
-	fp = system(cmd) ? 0 : fopen(fname, "r");
+	if (system(cmd))
+		fp = 0;
+	else
+		fp = fopen(fname, "r");
 	unlink(fname);
 	return fp;
 }
