@@ -1,4 +1,4 @@
-static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/bbs/bbs.c,v 3.2 1996-01-04 19:11:49 deyke Exp $";
+static const char rcsid[] = "@(#) $Header: /home/deyke/tmp/cvs/tcp/bbs/bbs.c,v 3.3 1996-03-14 17:06:46 deyke Exp $";
 
 /* Bulletin Board System */
 
@@ -1381,6 +1381,7 @@ static void change_alias(const char *name, const char *value)
       free(p->name);
       free(p->value);
       free(p);
+      break;
     }
   }
 
