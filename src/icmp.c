@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmp.c,v 1.10 1992-09-01 16:52:48 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmp.c,v 1.11 1993-01-29 06:48:23 deyke Exp $ */
 
 /* Internet Control Message Protocol (ICMP)
  * Copyright 1991 Phil Karn, KA9Q
@@ -149,6 +149,13 @@ int rxbroadcast;
 		return;
 	case ICMP_REDIRECT:     /* Redirect */
 		icmpInRedirects++;
+		ntohip(&oip,&bp);       /* Extract offending IP header */
+		if(Icmp_trace){
+			printf("ICMP from %s:",inet_ntoa(ip->source));
+			printf(" dest %s %s",inet_ntoa(oip.dest),
+			 smsg(Icmptypes,ICMP_TYPES,uchar(type)));
+			printf(" new gateway %s\n",inet_ntoa(icmp.args.address));
+		}
 		break;
 	case ICMP_PARAM_PROB:   /* Parameter Problem */
 		icmpInParmProbs++;

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/lcsum.c,v 1.4 1991-02-24 20:17:11 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/lcsum.c,v 1.5 1993-01-29 06:48:29 deyke Exp $ */
 
 /*
  * Word aligned linear buffer checksum routine.  Called from mbuf checksum
@@ -9,7 +9,7 @@
  * Copyright 1991 Phil Karn, KA9Q
  */
 
-#if     (defined(MPU8086) || defined(MPU8080) || defined(vax))
+#if     (defined(MPU8086) || defined(MPU8080) || defined(vax) || defined(ULTRIX_RISC))
 #define LITTLE_ENDIAN   /* Low order bytes are first in memory */
 #endif                  /* Almost all other machines are big-endian */
 #include "global.h"

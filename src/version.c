@@ -1,8 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/version.c,v 1.72 1992-11-30 13:56:32 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/version.c,v 1.73 1993-01-29 06:48:45 deyke Exp $ */
 
 #ifndef __lint
-static char id[] = "@(#)WAMPES-921130";
+static char id[] = "@(#)WAMPES-930129";
 #endif
 
 /* version control information */
-char Version[] = "WAMPES-921130";
+char Version[] = "WAMPES-930129";

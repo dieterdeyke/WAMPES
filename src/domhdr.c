@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/domhdr.c,v 1.3 1992-11-27 17:08:28 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/domhdr.c,v 1.4 1993-01-29 06:48:20 deyke Exp $ */
 
 /* Domain header conversion routines
  * Copyright 1991 Phil Karn, KA9Q
@@ -241,7 +241,7 @@ char *cp;       /* Pointer to start of encoded RR record */
 	case TYPE_TXT:
 		len = *cp++ & 0xff;
 		rrp->rdata.name = mallocw(len+1);
-		memcpy( rrp->rdata.name, cp, len );
+		memcpy(rrp->rdata.name,cp,len);
 		rrp->rdata.data[len] = '\0';
 		cp += rrp->rdlength;
 		break;
