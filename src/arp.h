@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arp.h,v 1.5 1991-02-24 20:16:26 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arp.h,v 1.6 1991-04-12 18:34:32 deyke Exp $ */
 
 #ifndef _ARP_H
 #define _ARP_H
@@ -20,7 +20,7 @@
 #endif
 
 /* Lifetime of a valid ARP entry */
-#define ARPLIFE         900     /* 15 minutes */
+#define ARPLIFE         (0x7fffffff / 1000)
 /* Lifetime of a pending ARP entry */
 #define PENDTIME        15      /* 15 seconds */
 

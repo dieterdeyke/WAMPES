@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_retrn.c,v 1.3 1990-10-12 19:26:08 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_retrn.c,v 1.4 1991-04-12 18:35:12 deyke Exp $ */
 
 /* Mail Delivery Agent for returned Mails */
 
@@ -19,7 +19,7 @@ struct mailjob *jp;
   char  line[1024];
   int  i;
 
-  fflush((FILE * ) 0);
+  fflush(stdout);
   if (fork()) return;
   rtprio(0, RTPRIO_RTOFF);
   for (i = 0; i < _NFILE; i++) close(i);
