@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmp.c,v 1.9 1992-08-21 16:42:49 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmp.c,v 1.10 1992-09-01 16:52:48 deyke Exp $ */
 
 /* Internet Control Message Protocol (ICMP)
  * Copyright 1991 Phil Karn, KA9Q
@@ -132,8 +132,7 @@ int rxbroadcast;
 		icmpOutEchoReps++;
 #if 1
 		{
-		int32 tmp;
-		tmp = ip->source;
+		int32 tmp = ip->source;
 		ip->source = ip->dest;
 		ip->dest = tmp;
 		ip->ttl = ipDefaultTTL;

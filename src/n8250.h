@@ -1,8 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.h,v 1.5 1992-05-26 10:08:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/n8250.h,v 1.6 1992-09-01 16:52:55 deyke Exp $ */
 
 /* Various I/O definitions specific to asynch I/O */
-#ifndef _8250_H
-#define _8250_H
+#ifndef _N8250_H
+#define _N8250_H
 
 #ifndef _MBUF_H
 #include "mbuf.h"
@@ -31,4 +31,4 @@ struct asy {
 
 extern struct asy Asy[];
 
-#endif  /* _8250_H */
+#endif  /* _N8250_H */
