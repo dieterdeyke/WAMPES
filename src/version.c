@@ -1,6 +1,6 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/version.c,v 1.308 1996-01-22 13:13:57 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/version.c,v 1.309 1996-01-28 10:44:41 deyke Exp $ */
 
-static char id[] = "@(#)WAMPES-960122";
+static char id[] = "@(#)WAMPES-960128";
 
 /* version control information */
 char *Version = id + 4;
