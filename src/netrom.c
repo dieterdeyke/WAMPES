@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netrom.c,v 1.22 1991-05-21 19:09:04 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netrom.c,v 1.23 1991-06-04 11:34:33 deyke Exp $ */
 
 #include <ctype.h>
 #include <stdio.h>
@@ -1653,7 +1653,6 @@ int  cnt;
     putchar(c);
     if (Current->record) putc(c, Current->record);
   }
-  fflush(stdout);
 }
 
 /*---------------------------------------------------------------------------*/
