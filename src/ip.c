@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ip.c,v 1.13 1995-12-20 09:46:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ip.c,v 1.14 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Upper half of IP, consisting of send/receive primitives, including
  * fragment reassembly, for higher level protocols.

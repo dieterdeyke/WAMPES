@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/finger.c,v 1.13 1996-01-04 19:11:41 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/finger.c,v 1.14 1996-08-11 18:16:09 deyke Exp $ */
 
 /*
  *

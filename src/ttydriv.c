@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ttydriv.c,v 1.27 1995-12-30 15:05:49 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ttydriv.c,v 1.28 1996-08-11 18:16:09 deyke Exp $ */
 
 /* TTY input line editing
  */

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/crc.h,v 1.4 1993-05-17 13:44:50 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/crc.h,v 1.5 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _CRC_H
 #define _CRC_H

@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/ip_routes,v 1.52 1996-02-08 11:56:53 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/ip_routes,v 1.53 1996-08-11 18:15:53 deyke Exp $
 
 #Host           Destination     Bits    Iface   Metric  Gateway         Private
 #------------------------------------------------------------------------------

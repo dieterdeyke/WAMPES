@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/buildsaddr.c,v 1.15 1996-01-22 13:14:19 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/buildsaddr.c,v 1.16 1996-08-11 18:17:33 deyke Exp $ */
 
 #include <sys/types.h>
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/kiss.c,v 1.17 1995-12-20 09:46:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/kiss.c,v 1.18 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Routines for AX.25 encapsulation in KISS TNC
  * Copyright 1991 Phil Karn, KA9Q

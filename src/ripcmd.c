@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripcmd.c,v 1.6 1995-12-20 09:46:53 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripcmd.c,v 1.7 1996-08-11 18:16:09 deyke Exp $ */
 
 /* RIP-related user commands
  *   Al Broscious, N3FCT

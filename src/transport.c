@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/transport.c,v 1.19 1995-12-26 11:18:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/transport.c,v 1.20 1996-08-11 18:16:09 deyke Exp $ */
 
 #include "global.h"
 #include "netuser.h"

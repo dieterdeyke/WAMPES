@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Makefile,v 1.32 1996-08-11 18:04:08 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Makefile,v 1.33 1996-08-11 18:17:09 deyke Exp $
 
 CFLAGS     = -I../lib
 LD         = $(CC)

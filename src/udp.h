@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/udp.h,v 1.10 1995-12-20 09:46:59 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/udp.h,v 1.11 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _UDP_H
 #define _UDP_H

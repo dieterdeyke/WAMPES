@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/commands.h,v 1.27 1996-08-11 18:04:00 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/commands.h,v 1.28 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _COMMANDS_H
 #define _COMMANDS_H

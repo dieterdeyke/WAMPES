@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.25 1996-05-28 15:56:48 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axip.c,v 1.26 1996-08-11 18:16:09 deyke Exp $ */
 
 #include <sys/types.h>
 

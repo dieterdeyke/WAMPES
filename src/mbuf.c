@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mbuf.c,v 1.16 1995-12-30 15:05:46 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mbuf.c,v 1.17 1996-08-11 18:16:09 deyke Exp $ */
 
 /* mbuf (message buffer) primitives
  * Copyright 1991 Phil Karn, KA9Q

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.8 1996-02-13 15:30:42 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.9 1996-08-11 18:16:09 deyke Exp $ */
 
 #include "configure.h"
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strerror.c,v 1.3 1996-02-13 15:31:00 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strerror.c,v 1.4 1996-08-11 18:17:33 deyke Exp $ */
 
 #include "configure.h"
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25.h,v 1.17 1996-02-08 11:56:57 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25.h,v 1.18 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _AX25_H
 #define _AX25_H

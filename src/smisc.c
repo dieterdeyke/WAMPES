@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/smisc.c,v 1.15 1996-02-04 11:17:43 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/smisc.c,v 1.16 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Miscellaneous Internet servers: discard, echo and remote
  * Copyright 1991 Phil Karn, KA9Q

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/alloc.c,v 1.31 1996-04-01 13:16:03 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/alloc.c,v 1.32 1996-08-11 18:16:09 deyke Exp $ */
 
 /* memory allocation routines
  */

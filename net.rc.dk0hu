@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/net.rc.dk0hu,v 1.51 1995-05-31 19:20:14 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/net.rc.dk0hu,v 1.52 1996-08-11 18:15:53 deyke Exp $
 
 hostname     dk0hu
 ax25 mycall  dk0hu

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/crc.c,v 1.7 1995-12-20 09:46:41 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/crc.c,v 1.8 1996-08-11 18:16:09 deyke Exp $ */
 
 #include "global.h"
 #include "mbuf.h"

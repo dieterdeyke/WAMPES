@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/files.c,v 1.12 1995-12-20 09:46:43 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/files.c,v 1.13 1996-08-11 18:16:09 deyke Exp $ */
 
 /* System-dependent definitions of various files, spool directories, etc */
 #include <stdio.h>

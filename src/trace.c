@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/trace.c,v 1.18 1995-12-20 09:46:58 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/trace.c,v 1.19 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Packet tracing - top level and generic routines, including hex/ascii
  * Copyright 1991 Phil Karn, KA9Q

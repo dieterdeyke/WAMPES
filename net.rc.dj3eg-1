@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/Attic/net.rc.dj3eg-1,v 1.32 1995-05-31 19:20:13 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/Attic/net.rc.dj3eg-1,v 1.33 1996-08-11 18:15:53 deyke Exp $
 
 hostname     dj3eg-1
 ax25 mycall  dj3eg-1

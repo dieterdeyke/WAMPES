@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axheard.c,v 1.3 1995-12-20 09:46:40 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axheard.c,v 1.4 1996-08-11 18:16:09 deyke Exp $ */
 
 /* AX25 link callsign monitoring. Also contains beginnings of
  * an automatic link quality monitoring scheme (incomplete)

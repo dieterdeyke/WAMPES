@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/nrdump.c,v 1.4 1995-12-20 09:46:52 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/nrdump.c,v 1.5 1996-08-11 18:16:09 deyke Exp $ */
 
 /* NET/ROM header tracing routines
  * Copyright 1991 Phil Karn, KA9Q

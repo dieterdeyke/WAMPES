@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/callvalid.h,v 1.1 1994-01-09 16:22:35 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/callvalid.h,v 1.2 1996-08-11 18:17:33 deyke Exp $ */
 
 #ifndef _CALLVALID_H
 #define _CALLVALID_H

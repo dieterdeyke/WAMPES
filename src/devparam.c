@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/devparam.c,v 1.5 1995-12-20 09:46:42 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/devparam.c,v 1.6 1996-08-11 18:16:09 deyke Exp $ */
 
 #include <ctype.h>
 #include "global.h"

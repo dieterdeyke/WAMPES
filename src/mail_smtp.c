@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_smtp.c,v 1.19 1996-01-28 10:44:36 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/mail_smtp.c,v 1.20 1996-08-11 18:16:09 deyke Exp $ */
 
 /* SMTP Mail Delivery Agent */
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axserver.c,v 1.14 1995-12-26 11:18:39 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/axserver.c,v 1.15 1996-08-11 18:16:09 deyke Exp $ */
 
 #include "global.h"
 #include "mbuf.h"

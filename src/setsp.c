@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/setsp.c,v 1.12 1996-02-04 11:17:42 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/setsp.c,v 1.13 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef __lint
 

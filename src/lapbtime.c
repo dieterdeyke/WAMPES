@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/lapbtime.c,v 1.7 1995-12-20 09:46:48 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/lapbtime.c,v 1.8 1996-08-11 18:16:09 deyke Exp $ */
 
 /* LAPB (AX25) timer recovery routines
  * Copyright 1991 Phil Karn, KA9Q

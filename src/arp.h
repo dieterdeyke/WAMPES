@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arp.h,v 1.12 1995-12-20 09:46:39 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arp.h,v 1.13 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _ARP_H
 #define _ARP_H

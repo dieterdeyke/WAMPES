@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpgate.c,v 1.14 1995-12-20 09:46:55 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcpgate.c,v 1.15 1996-08-11 18:16:09 deyke Exp $ */
 
 #include "global.h"
 

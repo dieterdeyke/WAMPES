@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/asy.h,v 1.16 1995-12-26 11:18:39 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/asy.h,v 1.17 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _ASY_H
 #define _ASY_H

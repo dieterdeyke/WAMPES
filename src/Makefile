@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/src/Makefile,v 1.90 1996-08-11 18:11:36 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/src/Makefile,v 1.91 1996-08-11 18:16:09 deyke Exp $
 
 CFLAGS        = -I../lib
 

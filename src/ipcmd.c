@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipcmd.c,v 1.13 1995-12-20 09:46:46 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ipcmd.c,v 1.14 1996-08-11 18:16:09 deyke Exp $ */
 
 /* IP-related user commands
  * Copyright 1991 Phil Karn, KA9Q

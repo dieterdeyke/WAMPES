@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/misc.c,v 1.21 1995-12-20 09:46:50 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/misc.c,v 1.22 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Miscellaneous machine independent utilities
  * Copyright 1991 Phil Karn, KA9Q

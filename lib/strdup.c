@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strdup.c,v 1.8 1996-03-14 17:07:07 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strdup.c,v 1.9 1996-08-11 18:17:33 deyke Exp $ */
 
 #include "configure.h"
 

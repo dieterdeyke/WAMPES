@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripdump.c,v 1.5 1994-10-09 08:22:57 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripdump.c,v 1.6 1996-08-11 18:16:09 deyke Exp $ */
 
 /* RIP packet tracing
  * Copyright 1991 Phil Karn, KA9Q

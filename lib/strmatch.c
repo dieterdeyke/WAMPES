@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strmatch.c,v 1.4 1994-11-08 14:29:52 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strmatch.c,v 1.5 1996-08-11 18:17:33 deyke Exp $ */
 
 #include "strmatch.h"
 

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/global.h,v 1.38 1996-02-04 11:17:38 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/global.h,v 1.39 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _GLOBAL_H
 #define _GLOBAL_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25user.c,v 1.9 1996-02-04 11:17:36 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25user.c,v 1.10 1996-08-11 18:16:09 deyke Exp $ */
 
 /* User interface subroutines for AX.25
  * Copyright 1991 Phil Karn, KA9Q

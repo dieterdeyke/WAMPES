@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tty.h,v 1.3 1993-05-17 13:45:25 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tty.h,v 1.4 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _TTY_H
 #define _TTY_H

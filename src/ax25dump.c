@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25dump.c,v 1.11 1995-12-20 09:46:39 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ax25dump.c,v 1.12 1996-08-11 18:16:09 deyke Exp $ */
 
 /* AX25 header tracing
  * Copyright 1991 Phil Karn, KA9Q

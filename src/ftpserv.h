@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftpserv.h,v 1.2 1995-12-20 09:46:44 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftpserv.h,v 1.3 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _FTPSERV_H
 #define _FTPSERV_H

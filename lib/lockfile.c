@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/lockfile.c,v 1.3 1995-11-19 11:54:19 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/lockfile.c,v 1.4 1996-08-11 18:17:33 deyke Exp $ */
 
 #include <sys/types.h>
 

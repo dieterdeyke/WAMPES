@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arpdump.c,v 1.7 1995-12-20 09:46:38 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/arpdump.c,v 1.8 1996-08-11 18:16:09 deyke Exp $ */
 
 /* ARP packet tracing routines
  * Copyright 1991 Phil Karn, KA9Q

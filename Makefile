@@ -1,4 +1,4 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/Makefile,v 1.30 1996-02-13 15:30:34 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/Makefile,v 1.31 1996-08-11 18:15:53 deyke Exp $
 
 MAKEFILE   = Makefile
 MKDIR      = @if [ ! -d `dirname $@` ]; then mkdir -p `dirname $@`; fi

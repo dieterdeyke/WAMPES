@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netrom.c,v 1.52 1996-05-28 15:57:25 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/netrom.c,v 1.53 1996-08-11 18:16:09 deyke Exp $ */
 
 #include <ctype.h>
 #include <stdio.h>

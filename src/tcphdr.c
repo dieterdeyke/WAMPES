@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcphdr.c,v 1.8 1995-12-20 09:46:55 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tcphdr.c,v 1.9 1996-08-11 18:16:09 deyke Exp $ */
 
 /* TCP header conversion routines
  * Copyright 1991 Phil Karn, KA9Q

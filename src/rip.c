@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/rip.c,v 1.13 1995-12-20 09:46:53 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/rip.c,v 1.14 1996-08-11 18:16:09 deyke Exp $ */
 
 /* This file contains code to implement the Routing Information Protocol (RIP)
  * and is derived from 4.2BSD code. Mike Karels of Berkeley has stated on

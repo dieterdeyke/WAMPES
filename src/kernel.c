@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/kernel.c,v 1.26 1995-12-20 15:49:38 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/kernel.c,v 1.27 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Non pre-empting synchronization kernel, machine-independent portion
  * Copyright 1992 Phil Karn, KA9Q

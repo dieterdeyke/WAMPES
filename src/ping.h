@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ping.h,v 1.1 1995-12-20 09:48:03 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ping.h,v 1.2 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _PING_H
 #define _PING_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.61 1995-12-26 11:18:43 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/login.c,v 1.62 1996-08-11 18:16:09 deyke Exp $ */
 
 #include <sys/types.h>
 

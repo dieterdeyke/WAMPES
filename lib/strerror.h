@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strerror.h,v 1.1 1996-02-13 15:32:03 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strerror.h,v 1.2 1996-08-11 18:17:33 deyke Exp $ */
 
 #ifndef _STRERROR_H
 #define _STRERROR_H

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/seteugid.c,v 1.5 1995-11-19 11:54:19 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/seteugid.c,v 1.6 1996-08-11 18:17:33 deyke Exp $ */
 
 #include <sys/types.h>
 #include <unistd.h>

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tipmail.h,v 1.2 1993-05-17 13:45:22 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/tipmail.h,v 1.3 1996-08-11 18:16:09 deyke Exp $ */
 
 int tipstart(int argc,char *argv[],void *p);
 int tip0(int argc,char *argv[],void *p);

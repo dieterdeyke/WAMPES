@@ -1,4 +1,4 @@
-.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/credits,v 1.3 1994-08-05 10:36:15 deyke Exp $
+.\" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/credits,v 1.4 1996-08-11 18:18:04 deyke Exp $
 .nr Cl 7 \" Max level of header for table of contents
 .H 1 "Credits"
 This manual is based in part on publications authored by

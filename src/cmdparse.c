@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.c,v 1.16 1996-02-13 15:30:44 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/cmdparse.c,v 1.17 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Parse command line, set up command arguments Unix-style, and call function.
  * Note: argument is modified (delimiters are overwritten with nulls)

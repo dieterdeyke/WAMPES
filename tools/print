@@ -1,6 +1,6 @@
 #! /bin/ksh
 
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/print,v 1.5 1995-06-04 09:36:41 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/print,v 1.6 1996-08-11 18:17:09 deyke Exp $
 
 if [[ -n "$1" ]]; then
 	files="setup $*"

@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ip.h,v 1.16 1995-12-20 09:46:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ip.h,v 1.17 1996-08-11 18:16:09 deyke Exp $ */
 
 #ifndef _IP_H
 #define _IP_H

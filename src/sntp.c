@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/sntp.c,v 1.12 1995-12-20 09:46:54 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/sntp.c,v 1.13 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Simple Network Time Protocol (SNTP) (see RFC1361) */
 

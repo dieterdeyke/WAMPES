@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/putenv.c,v 1.2 1994-11-28 10:40:05 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/putenv.c,v 1.3 1996-08-11 18:17:41 deyke Exp $ */
 
 /*-
  * Copyright (c) 1988 The Regents of the University of California.

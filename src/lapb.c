@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/lapb.c,v 1.38 1996-03-03 09:40:59 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/lapb.c,v 1.39 1996-08-11 18:16:09 deyke Exp $ */
 
 /* Link Access Procedures Balanced (LAPB), the upper sublayer of
  * AX.25 Level 2.
