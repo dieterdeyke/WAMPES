@@ -1,7 +1,7 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/convers/Makefile,v 1.4 1992-08-24 13:01:08 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/convers/Makefile,v 1.5 1992-08-25 09:28:13 deyke Exp $
 
 BUILDSADDR = ../src/buildsaddr.o
-CFLAGS     = -Os
+CFLAGS     = -O -s
 SHELL      = /bin/sh
 
 .IGNORE:
