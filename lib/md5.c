@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/md5.c,v 1.4 1994-11-28 10:40:03 deyke Exp $ */
+
 /*
  ***********************************************************************
  ** md5.c -- the source code for MD5 routines                         **

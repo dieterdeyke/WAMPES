@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/lib/strtoul.c,v 1.5 1994-11-28 10:40:04 deyke Exp $ */
+
 /*
  * Copyright (c) 1990 Regents of the University of California.
  * All rights reserved.

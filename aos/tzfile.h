@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/tzfile.h,v 1.2 1994-11-28 10:40:05 deyke Exp $ */
+
 /*
  * Copyright (c) 1988 Regents of the University of California.
  * All rights reserved.

@@ -1,3 +1,5 @@
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/aos/setsid.c,v 1.2 1994-11-28 10:40:05 deyke Exp $ */
+
 /* setsid.c
  * remove tty association
  * 17/01/94 J.Jaeger, PA3EFU.
