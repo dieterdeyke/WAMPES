@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.3 1990-03-02 16:25:33 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/util/Attic/netupds.c,v 1.4 1990-03-12 13:21:31 deyke Exp $ */
 
 /* Net Update Server */
 
@@ -153,6 +153,7 @@ int  main()
     dowrite(fdsocket, buf, (unsigned) i);
     filesize -= i;
   }
+  if (close(fdfile)) pexit("close()");
 
   doread(fdsocket, (char *) & i, 4);
 
