@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/hpux.c,v 1.30 1992-11-13 17:19:58 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/hpux.c,v 1.31 1992-11-16 10:20:54 deyke Exp $ */
 
 #include <sys/types.h>
 
@@ -22,7 +22,6 @@
 #ifndef WNOHANG
 #define WNOHANG 1
 #endif
-
 
 #include "global.h"
 #include "iface.h"
