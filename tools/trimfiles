@@ -1,7 +1,8 @@
 #! /bin/sh
 
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Attic/trimfiles,v 1.2 1992-09-05 08:15:20 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/tools/Attic/trimfiles,v 1.3 1992-09-21 19:27:15 deyke Exp $
 
+PATH=/usr/5bin:$PATH
 tmp=tmp$$
 if [ ! -f .trimtime ] ; then
   touch 0101000070 .trimtime
@@ -29,4 +30,4 @@ do
     echo done
   fi
 done
-: > .trimtime
+echo x > .trimtime
