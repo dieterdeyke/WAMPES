@@ -1,5 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/kissdump.c,v 1.1 1990-09-11 13:45:47 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/kissdump.c,v 1.2 1991-02-24 20:17:07 deyke Exp $ */
 
+/* Tracing routines for KISS TNC
+ * Copyright 1991 Phil Karn, KA9Q
+ */
 #include "global.h"
 #include "mbuf.h"
 #include "kiss.h"

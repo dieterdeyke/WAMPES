@@ -1,5 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripdump.c,v 1.1 1990-09-11 13:46:18 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripdump.c,v 1.2 1991-02-24 20:17:36 deyke Exp $ */
 
+/* RIP packet tracing
+ * Copyright 1991 Phil Karn, KA9Q
+ */
 #include "global.h"
 #include "mbuf.h"
 #include "netuser.h"

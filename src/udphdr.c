@@ -1,5 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/udphdr.c,v 1.1 1990-09-11 13:46:49 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/udphdr.c,v 1.2 1991-02-24 20:18:02 deyke Exp $ */
 
+/* UDP header conversion routines
+ * Copyright 1991 Phil Karn, KA9Q
+ */
 #include "global.h"
 #include "mbuf.h"
 #include "ip.h"

@@ -1,4 +1,11 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/telnet.h,v 1.2 1990-08-23 17:34:19 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/telnet.h,v 1.3 1991-02-24 20:17:51 deyke Exp $ */
+
+#ifndef _TELNET_H
+#define _TELNET_H
+
+#ifndef _SESSION_H
+#include "session.h"
+#endif
 
 #define LINESIZE        256     /* Length of local editing buffer */
 
@@ -38,3 +45,5 @@ struct telnet {
 extern int refuse_echo;
 struct telnet *open_telnet();
 int send_tel(),tel_input();
+
+#endif  /* _TELNET_H */

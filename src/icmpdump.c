@@ -1,5 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmpdump.c,v 1.3 1990-09-11 13:45:32 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/icmpdump.c,v 1.4 1991-02-24 20:16:55 deyke Exp $ */
 
+/* ICMP header tracing
+ * Copyright 1991 Phil Karn, KA9Q
+ */
 #include <stdio.h>
 #include "global.h"
 #include "mbuf.h"

@@ -1,6 +1,9 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripcmd.c,v 1.1 1990-09-11 13:46:18 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ripcmd.c,v 1.2 1991-02-24 20:17:35 deyke Exp $ */
 
-/* RIP-related user commands */
+/* RIP-related user commands
+ *   Al Broscious, N3FCT
+ *   Phil Karn, KA9Q
+ */
 #include <stdio.h>
 #include "global.h"
 #include "mbuf.h"

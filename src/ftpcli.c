@@ -1,6 +1,8 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftpcli.c,v 1.4 1990-10-22 11:37:49 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftpcli.c,v 1.5 1991-02-24 20:16:47 deyke Exp $ */
 
-/* FTP client (interactive user) code */
+/* Internet FTP client (interactive user)
+ * Copyright 1991 Phil Karn, KA9Q
+ */
 #include <stdio.h>
 #include <string.h>
 #include "global.h"
