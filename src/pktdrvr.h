@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/pktdrvr.h,v 1.2 1991-02-24 20:17:31 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/pktdrvr.h,v 1.3 1991-05-09 07:38:46 deyke Exp $ */
 
 #ifndef _PKTDRVR_H
 #define _PKTDRVR_H
@@ -103,10 +103,11 @@ struct pktdrvr {
 extern struct pktdrvr Pktdrvr[];
 
 /* In pktdrvr.c: */
-void pkint __ARGS((int dev,unsigned short di,unsigned short si,
-	unsigned short bp,unsigned short dx,unsigned short cx,
-	unsigned short bx,unsigned short ax,unsigned short ds,
-	unsigned short es));
+INTERRUPT pkint __ARGS((unsigned short bp, unsigned short di,
+     unsigned short si, unsigned short ds, unsigned short es,
+     unsigned short dx, unsigned short cx, unsigned short bx,
+     unsigned short ax, unsigned short ip, unsigned short cs,
+     unsigned short flags, int dev));
 int pk_send __ARGS((struct mbuf *bp,struct iface *iface,int32 gateway,
 	int prec,int del,int tput,int rel));
 
