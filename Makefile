@@ -1,11 +1,11 @@
-# @(#) $Header: /home/deyke/tmp/cvs/tcp/Makefile,v 1.24 1995-05-09 21:12:54 deyke Exp $
+# @(#) $Header: /home/deyke/tmp/cvs/tcp/Makefile,v 1.25 1995-06-04 09:36:30 deyke Exp $
 
 MAKEFILE   = Makefile
 MKDIR      = @if [ ! -d `dirname $@` ]; then mkdir -p `dirname $@`; fi
 
-OBSOLETE   = bbs/bbs.h \
-	     bbs/sfstat* \
+OBSOLETE   = bbs/sfstat* \
 	     examples/bbs.conf \
+	     lib/bbs.h \
 	     src/linux_include/stdlib.h \
 	     src/mail_bbs.* \
 	     util/genupd \
