@@ -1,4 +1,4 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftpcli.c,v 1.8 1991-05-24 12:09:40 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/ftpcli.c,v 1.9 1991-05-29 12:01:53 deyke Exp $ */
 
 /* Internet FTP client (interactive user)
  * Copyright 1991 Phil Karn, KA9Q
@@ -451,7 +451,7 @@ void (*state)();
 	struct socket lsocket;
 	struct mbuf *bp;
 
-	lsocket.address = INADDR_ANY;
+	lsocket.address = ftp->control->conn.local.address;
 	lsocket.port = Lport++;
 
 	/* Compose and send PORT a,a,a,a,p,p message */
