@@ -1,6 +1,6 @@
-/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.1 1994-05-02 16:52:31 deyke Exp $ */
+/* @(#) $Header: /home/deyke/tmp/cvs/tcp/src/adjtime.c,v 1.2 1994-05-11 10:46:30 deyke Exp $ */
 
-#ifdef __hpux
+#if defined __hpux && !HAS_ADJTIME
 
 #include <sys/types.h>
 
