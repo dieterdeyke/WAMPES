@@ -1,0 +1,4 @@
+. \" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/ftp-commands/user,v 1.1 1994-07-12 16:32:34 deyke Exp $
+.H 2 "user" " \fIuser-name\fP [\fIpassword\fP]"
+Log into the server host on the current connection, which must
+already be open.

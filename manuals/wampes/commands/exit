@@ -1,0 +1,3 @@
+. \" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/commands/exit,v 1.1 1994-07-12 16:32:25 deyke Exp $
+.H 2 "exit"
+Exit (terminate) \fBWAMPES\fP.

@@ -1,0 +1,5 @@
+. \" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/ftp-commands/append,v 1.1 1994-07-12 16:32:33 deyke Exp $
+.H 2 "append" " \fIlocal-file\fP [\fIremote-file\fP]"
+Copy \fIlocal-file\fP to the end of \fIremote-file\fP.
+If \fIremote-file\fP is left unspecified,
+the local file name is used in naming the remote file.

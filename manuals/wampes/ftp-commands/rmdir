@@ -1,0 +1,4 @@
+. \" @(#) $Header: /home/deyke/tmp/cvs/tcp/manuals/wampes/ftp-commands/rmdir,v 1.1 1994-07-12 16:32:34 deyke Exp $
+.H 2 "rmdir" " \fIremote-directory\fP"
+Delete \fIremote-directory\fP. \fIremote-directory\fP must be an empty
+directory.
