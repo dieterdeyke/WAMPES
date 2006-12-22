@@ -1,4 +1,4 @@
-# @(#) $Id: configure,v 1.39 2001-01-27 15:10:04 deyke Exp $
+# @(#) $Id: configure,v 1.40 2006-12-22 04:04:30 deyke Exp $
 
 CC='cc'
 CFLAGS='-O -I../lib'
@@ -39,7 +39,7 @@ IRIX*)
 Linux*)
 	CC='gcc'
 	case `hostname` in
-	server.deyke.net)
+	ddx|*.deyke.net)
 		CFLAGS="$CFLAGS -fsigned-char -ansi -pedantic -Wall -Wshadow -Wpointer-arith -Wstrict-prototypes -Wnested-externs -Dlinux -D_GNU_SOURCE -I../src/linux_include";;
 	*)
 		CFLAGS="$CFLAGS -I../src/linux_include";;
@@ -47,7 +47,7 @@ Linux*)
 	if [ -f /usr/lib/libndbm.so -o -f /usr/lib/libndbm.a ]; then
 		LIBDBM='ndbm'
 	elif [ -f /usr/lib/libgdbm.so -o -f /usr/lib/libgdbm.a ]; then
-		LIBDBM='gdbm'
+		LIBDBM='gdbm -lgdbm_compat'
 	elif [ -f /usr/lib/libdbm.so -o -f /usr/lib/libdbm.a ]; then
 		LIBDBM='dbm'
 	else
@@ -301,6 +301,10 @@ checksymbol()
 
 	checksymbol HAS_DB1_NDBM \
 		"#include <db1/ndbm.h>
+		main(){dbm_open(0, 0, 0);return 0;}"
+
+	checksymbol HAS_GDBM_NDBM \
+		"#include <gdbm-ndbm.h>
 		main(){dbm_open(0, 0, 0);return 0;}"
 
 	checksymbol HAS_NI \

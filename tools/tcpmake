@@ -1,6 +1,6 @@
 #! /bin/ksh
 
-# @(#) $Id: tcpmake,v 1.42 2000-02-12 19:39:29 deyke Exp $
+# @(#) $Id: tcpmake,v 1.43 2006-12-22 04:04:30 deyke Exp $
 
 #------------------------------------------------------------------------------
 
@@ -144,7 +144,7 @@ cd ~/tcp
 trimfiles
 make
 make distrib
-mk make
+sudo make
 
 cd ~/tcp/src
 make tags TAGS
