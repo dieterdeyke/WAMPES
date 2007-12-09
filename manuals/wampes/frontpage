@@ -1,4 +1,4 @@
-.\" @(#) $Id: frontpage,v 1.180 2000-03-04 18:31:12 deyke Exp $ -*- Mode: Nroff -*-
+.\" @(#) $Id: frontpage,v 1.181 2007-12-09 17:19:18 deyke Exp $ -*- Mode: Nroff -*-
 .\"
 .PF "^WAMPES Reference Manual^-\\\\nP-^Version 000304" \" Page footer
 .\"
@@ -13,5 +13,5 @@ Version 000304
 .ce
 Dieter Deyke, DK5SG/N0PRA
 .ce
-deyke@crosswinds.net
+deyke@yahoo.com
 .S

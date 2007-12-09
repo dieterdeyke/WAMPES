@@ -1,21 +1,20 @@
-# @(#) $Id: Makefile,v 1.45 2006-12-22 04:04:30 deyke Exp $
+# @(#) $Id: Makefile,v 1.46 2007-12-09 17:19:18 deyke Exp $
 
-TARGETS    = \
+TARGETS = \
 	     check_seteugid \
 	     connect \
 	     connect2 \
 	     filter \
-	     htmldiff \
 	     import \
 	     makeiprt \
 	     mm2html \
 	     ms2mm \
 	     udpbridge
 
-all:;        @. ../lib/configure.mak; $(MAKE) -i _all
-install:;    @. ../lib/configure.mak; $(MAKE) -i _install
+all:; @. ../lib/configure.mak; $(MAKE) -i _all
+install:; @. ../lib/configure.mak; $(MAKE) -i _install
 
-_all:   $(TARGETS)
+_all: $(TARGETS)
 
 check_seteugid: check_seteugid.o $(LIBS)
 	$(RMTARGET)
@@ -35,10 +34,6 @@ filter: filter.o $(LIBS)
 	$(RMTARGET)
 	$(LD) $(LDFLAGS) filter.o $(LIBS) $(SLIBS) -o $@
 
-htmldiff: htmldiff.o $(LIBS)
-	$(RMTARGET)
-	$(LD) $(LDFLAGS) htmldiff.o $(LIBS) $(SLIBS) -o $@
-
 import: import.o $(LIBS)
 	$(RMTARGET)
 	$(LD) $(LDFLAGS) import.o $(LIBS) $(SLIBS) -o $@
@@ -51,7 +46,7 @@ mm2html: mm2html.o $(LIBS)
 	$(RMTARGET)
 	$(LD) $(LDFLAGS) mm2html.o $(LIBS) $(SLIBS) -o $@
 
-ms2mm:  ms2mm.o $(LIBS)
+ms2mm: ms2mm.o $(LIBS)
 	$(RMTARGET)
 	$(LD) $(LDFLAGS) ms2mm.o $(LIBS) $(SLIBS) -o $@
 
@@ -79,8 +74,6 @@ connect2.o:\
 	connect2.c
 filter.o:\
 	filter.c
-htmldiff.o:\
-	htmldiff.c
 import.o:\
 	import.c
 makeiprt.o:\
