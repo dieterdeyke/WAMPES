@@ -1,4 +1,4 @@
-/* @(#) $Id: cmdparse.c,v 1.20 1999-01-22 21:20:07 deyke Exp $ */
+/* @(#) $Id: cmdparse.c,v 1.21 2007-12-09 19:22:54 deyke Exp $ */
 
 /* Parse command line, set up command arguments Unix-style, and call function.
  * Note: argument is modified (delimiters are overwritten with nulls)
@@ -89,7 +89,7 @@ char *line)
 				*cp++ = '\"';
 				break;
 			case 'x':
-				num = strtoul( --line, &line, 16 );
+				num = strtoul( line, &line, 16 );
 				*cp++ = (char) num;
 				break;
 			case '0':
@@ -100,7 +100,8 @@ char *line)
 			case '5':
 			case '6':
 			case '7':
-				num = strtoul( --line, &line, 8 );
+                                line--;
+				num = strtoul( line, &line, 8 );
 				*cp++ = (char) num;
 				break;
 			case '\0':
@@ -412,4 +413,3 @@ int maxval)
   }
   return 0;
 }
-

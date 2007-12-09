@@ -1,6 +1,11 @@
-@(#) $Id: ChangeLog,v 1.79 2007-12-09 17:19:18 deyke Exp $
+@(#) $Id: ChangeLog,v 1.80 2007-12-09 19:22:54 deyke Exp $
 
 071209 Dieter Deyke <deyke@yahoo.com>
+
+        Fixed compiler warning in src/cmdparse.c
+
+        Disabled src/krnlif.c because it caused a compile error on my
+        machine
 
         Removed perl based tools
 

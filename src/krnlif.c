@@ -1,6 +1,6 @@
-/* @(#) $Id: krnlif.c,v 1.8 1999-06-20 19:03:51 deyke Exp $ */
+/* @(#) $Id: krnlif.c,v 1.9 2007-12-09 19:22:54 deyke Exp $ */
 
-#if defined linux
+#if defined linux_not_defined
 
 /*****************************************************************************/
 
