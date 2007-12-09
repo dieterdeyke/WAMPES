@@ -1,3 +1,0 @@
-.\" @(#) $Id: 2!,v 1.5 1998-03-09 17:46:53 deyke Exp $ -*- Mode: Nroff -*-
-.H 2 "!" " \fIshell_command_line\fP"
-An alias for the \fBshell\fP command.
