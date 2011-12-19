@@ -1,11 +1,9 @@
-#ifndef __lint
-static const char rcsid[] = "@(#) $Id: qth.c,v 1.19 1999-06-20 17:47:48 deyke Exp $";
-#endif
+/*
+   qth: qth, locator, distance, and course computations
 
-/* qth: qth, locator, distance, and course computations */
-
-/* This is a work around for the -pedantic problem with math.h on RedHat Linux 6.0 */
-#define __OPTIMIZE_SIZE__ 1
+   Author: Dieter Deyke <dieter.deyke@gmail.com>
+   Time-stamp: <2011-12-19 08:44:09 deyke>
+*/
 
 #include <ctype.h>
 #include <math.h>
@@ -24,10 +22,6 @@ static char **argv;
 static long mylatitude  =  (48L *3600L + 38L *60L + 33L);
 static long mylongitude = -( 8L *3600L + 53L *60L + 28L);
 
-#ifdef __hpux
-#pragma OPTIMIZE OFF
-#endif
-
 /*---------------------------------------------------------------------------*/
 
 static void usage(void)
@@ -38,7 +32,6 @@ static void usage(void)
   printf("                          <grd> [<min> [<sec>]] north|south\n");
   printf("\n");
   printf("Examples: qth jn48kp\n");
-  printf("          qth ei25e\n");
   printf("          qth 8 53 28 east 48 38 33 north\n");
   printf("          qth jn48aa 9 east 48 30 north\n");
   exit(1);
@@ -64,18 +57,6 @@ static double norm_course(double a)
 
 /*---------------------------------------------------------------------------*/
 
-static long centervalue(long value, long center, long period)
-{
-  long range;
-
-  range = period / 2;
-  while (value > center + range) value -= period;
-  while (value < center - range) value += period;
-  return value;
-}
-
-/*---------------------------------------------------------------------------*/
-
 static void sec_to_loc(long longitude, long latitude, char *loc)
 {
   longitude = 180 * 3600L - longitude;
@@ -87,28 +68,6 @@ static void sec_to_loc(long longitude, long latitude, char *loc)
   *loc++ = (char) (longitude /   300 + 'A');
   *loc++ = (char) (latitude  /   150 + 'A');
   *loc   = 0;
-}
-
-/*---------------------------------------------------------------------------*/
-
-static void sec_to_qra(long longitude, long latitude, char *qra)
-{
-
-  long z;
-  static const char table[] = "fedgjchab";
-
-  longitude = -longitude;
-  while (longitude < 0) longitude += 26 * 7200L;
-  latitude = latitude - 40 * 3600L;
-  while (latitude < 0) latitude += 26 * 3600L;
-  *qra++ = (char) ((longitude / 7200) % 26 + 'A'); longitude = longitude % 7200;
-  *qra++ = (char) ((latitude  / 3600) % 26 + 'A'); latitude  = latitude  % 3600;
-  z  = (longitude / 720) + 71; longitude = longitude % 720;
-  z -= (latitude  / 450) * 10; latitude  = latitude  % 450;
-  *qra++ = (char) (z / 10 + '0');
-  *qra++ = (char) (z % 10 + '0');
-  *qra++ = table[longitude / 240 + (latitude / 150) * 3];
-  *qra   = 0;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -139,48 +98,6 @@ static void loc_to_sec(char *loc, long *longitude, long *latitude)
 	       +      3600L * (loc[3] - '0')
 	       +       150L * (loc[5] - 'A')
 	       +        75L;
-}
-
-/*---------------------------------------------------------------------------*/
-
-static void qra_to_sec(char *qra, long *longitude, long *latitude)
-{
-
-  static const long ltab[] = {
-    240L, 480L, 480L, 480L, 240L, 0L,   0L,   0L, 0L, 240L
-  };
-  static const long btab[] = {
-    300L, 300L, 150L,   0L,   0L, 0L, 150L, 300L, 0L, 150L
-  };
-
-  char *p;
-  long z;
-
-  for (p = qra; *p; p++)
-    if (*p >= 'a' && *p <= 'z') *p -= 32;
-
-  if (qra[0] < 'A' || qra[0] > 'Z' ||
-      qra[1] < 'A' || qra[1] > 'Z' ||
-      qra[2] < '0' || qra[2] > '8' ||
-      qra[3] < '0' || qra[3] > '9' ||
-      qra[4] < 'A' || qra[4] > 'J' || qra[4] == 'I' ||
-      qra[5]) usage();
-
-  z = 10 * (qra[2] - '0') + qra[3] - '0';
-  if (z < 1 || z > 80) usage();
-
-  *longitude = - (qra[0] - 'A') * 7200L
-	       - (z - 1) % 10 * 720L
-	       - ltab[qra[4] - 'A']
-	       - 120L;
-
-  *latitude  =   40 * 3600L
-	       + (qra[1] - 'A') * 3600L
-	       + (7 - (z - 1) / 10) * 450L
-	       + btab[qra[4] - 'A']
-	       + 75L;
-  *longitude = centervalue(*longitude, mylongitude, 26 * 7200L);
-  *latitude  = centervalue(*latitude,  mylatitude,  26 * 3600L);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -220,7 +137,7 @@ static int get_int(const char *s, int lower, int upper)
 
 /*---------------------------------------------------------------------------*/
 
-static void print_qth(const char *prompt, long longitude, long latitude, const char *loc, const char *qra)
+static void print_qth(const char *prompt, long longitude, long latitude, const char *loc)
 {
   char *pl, *pb;
 
@@ -228,7 +145,7 @@ static void print_qth(const char *prompt, long longitude, long latitude, const c
   else                 pl = "West";
   if (latitude  < 0) { pb = "South"; latitude = -latitude; }
   else                 pb = "North";
-  printf("%s%3ld %2ld' %2ld\" %s  %3ld %2ld' %2ld\" %s  -->  %s = %s\n",
+  printf("%s%3ld %2ld' %2ld\" %s  %3ld %2ld' %2ld\" %s  -->  %s\n",
 	 prompt,
 	 longitude / 3600,
 	 longitude / 60 % 60,
@@ -238,8 +155,7 @@ static void print_qth(const char *prompt, long longitude, long latitude, const c
 	 latitude / 60 % 60,
 	 latitude % 60,
 	 pb,
-	 loc,
-	 qra);
+	 loc);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -251,17 +167,7 @@ static int parse_arg(long *longitude, long *latitude)
   if (! *argv) return -1;
 
   if (isalpha(*argv[0])) {
-    switch (strlen(*argv)) {
-    case 5:
-      qra_to_sec(*argv, longitude, latitude);
-      break;
-    case 6:
-      loc_to_sec(*argv, longitude, latitude);
-      break;
-    default:
-      usage();
-      break;
-    }
+    loc_to_sec(*argv, longitude, latitude);
     argv++;
     return 0;
   }
@@ -309,8 +215,6 @@ int main(int pargc, char **pargv)
 
   char loc1[7];
   char loc2[7];
-  char qra1[6];
-  char qra2[6];
   double a1;
   double a2;
   double b1;
@@ -337,7 +241,6 @@ int main(int pargc, char **pargv)
 
   if (parse_arg(&longitude1, &latitude1)) usage();
   sec_to_loc(longitude1, latitude1, loc1);
-  sec_to_qra(longitude1, latitude1, qra1);
 
   two_is_me = 0;
   if (parse_arg(&longitude2, &latitude2)) {
@@ -346,7 +249,6 @@ int main(int pargc, char **pargv)
     two_is_me = 1;
   }
   sec_to_loc(longitude2, latitude2, loc2);
-  sec_to_qra(longitude2, latitude2, qra2);
 
   if (*argv) usage();
 
@@ -358,15 +260,15 @@ int main(int pargc, char **pargv)
   e = safe_acos(sin(b1) * sin(b2) + cos(b1) * cos(b2) * cos(l2-l1));
 
   if (!e)
-    print_qth("qth:  ", longitude1, latitude1, loc1, qra1);
+    print_qth("qth:  ", longitude1, latitude1, loc1);
   else {
     if (two_is_me) {
-      print_qth("your qth:       ", longitude1, latitude1, loc1, qra1);
-      print_qth(" my  qth:       ", longitude2, latitude2, loc2, qra2);
+      print_qth("your qth:       ", longitude1, latitude1, loc1);
+      print_qth(" my  qth:       ", longitude2, latitude2, loc2);
     }
     else {
-      print_qth("1st  qth:       ", longitude1, latitude1, loc1, qra1);
-      print_qth("2nd  qth:       ", longitude2, latitude2, loc2, qra2);
+      print_qth("1st  qth:       ", longitude1, latitude1, loc1);
+      print_qth("2nd  qth:       ", longitude2, latitude2, loc2);
     }
 
     printf("distance:       %.1f km = %.1f miles\n", e * RADIUS, e * RADIUS / 1.609344);
