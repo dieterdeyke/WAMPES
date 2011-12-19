@@ -4,7 +4,7 @@
    qth: qth, locator, distance, and course computations
 
    Author: Dieter Deyke <dieter.deyke@gmail.com>
-   Time-stamp: <2011-12-19 14:24:35 deyke>
+   Time-stamp: <2011-12-19 15:06:27 deyke>
 */
 
 #include <ctype.h>
@@ -21,8 +21,8 @@
 #define RADIUS          6370.0
 
 static char **argv;
-static double mylatitude  = 49.008461;
-static double mylongitude = -9.889875;
+static double mylatitude  = 49.008519;
+static double mylongitude = -9.889892;
 
 /*---------------------------------------------------------------------------*/
 
@@ -233,7 +233,7 @@ static int parse_arg(double *longitude, double *latitude)
 
   *longitude = 0.0;
   step = 1.0;
-  while (isdigit(*argv[0])) {
+  while (*argv && isdigit(*argv[0])) {
     *longitude += atof(*argv) * step;
     step /= 60;
     argv++;
@@ -250,7 +250,7 @@ static int parse_arg(double *longitude, double *latitude)
 
   *latitude = 0.0;
   step = 1.0;
-  while (isdigit(*argv[0])) {
+  while (*argv && isdigit(*argv[0])) {
     *latitude += atof(*argv) * step;
     step /= 60;
     argv++;
