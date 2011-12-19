@@ -1,8 +1,10 @@
+/* -*- c-basic-offset: 2; -*- */
+
 /*
    qth: qth, locator, distance, and course computations
 
    Author: Dieter Deyke <dieter.deyke@gmail.com>
-   Time-stamp: <2011-12-19 08:44:09 deyke>
+   Time-stamp: <2011-12-19 14:24:35 deyke>
 */
 
 #include <ctype.h>
@@ -19,8 +21,8 @@
 #define RADIUS          6370.0
 
 static char **argv;
-static long mylatitude  =  (48L *3600L + 38L *60L + 33L);
-static long mylongitude = -( 8L *3600L + 53L *60L + 28L);
+static double mylatitude  = 49.008461;
+static double mylongitude = -9.889875;
 
 /*---------------------------------------------------------------------------*/
 
@@ -28,11 +30,12 @@ static void usage(void)
 {
   printf("Usage:    qth <place> [<place>]\n");
   printf("              <place> ::= <locator>\n");
-  printf("              <place> ::= <grd> [<min> [<sec>]] east|west\n");
-  printf("                          <grd> [<min> [<sec>]] north|south\n");
+  printf("              <place> ::= <deg> [<min> [<sec>]] east|west\n");
+  printf("                          <deg> [<min> [<sec>]] north|south\n");
   printf("\n");
   printf("Examples: qth jn48kp\n");
   printf("          qth 8 53 28 east 48 38 33 north\n");
+  printf("          qth 9.9 east 49.1 north\n");
   printf("          qth jn48aa 9 east 48 30 north\n");
   exit(1);
 }
@@ -41,8 +44,12 @@ static void usage(void)
 
 static double safe_acos(double a)
 {
-  if (a >=  1.0) return 0;
-  if (a <= -1.0) return M_PI;
+  if (a >=  1.0) {
+    return 0.0;
+  }
+  if (a <= -1.0) {
+    return M_PI;
+  }
   return acos(a);
 }
 
@@ -57,47 +64,87 @@ static double norm_course(double a)
 
 /*---------------------------------------------------------------------------*/
 
-static void sec_to_loc(long longitude, long latitude, char *loc)
+static int double_to_char(double *dp, double step, int base_char)
 {
-  longitude = 180 * 3600L - longitude;
-  latitude  =  90 * 3600L + latitude;
-  *loc++ = (char) (longitude / 72000 + 'A'); longitude = longitude % 72000;
-  *loc++ = (char) (latitude  / 36000 + 'A'); latitude  = latitude  % 36000;
-  *loc++ = (char) (longitude /  7200 + '0'); longitude = longitude %  7200;
-  *loc++ = (char) (latitude  /  3600 + '0'); latitude  = latitude  %  3600;
-  *loc++ = (char) (longitude /   300 + 'A');
-  *loc++ = (char) (latitude  /   150 + 'A');
+  int dint = *dp / step;
+  int c = dint + base_char;
+  *dp = *dp - dint * step;
+  return c;
+}
+
+/*---------------------------------------------------------------------------*/
+
+static void deg_to_loc(double longitude, double latitude, char *loc)
+{
+  double step = 180.0;
+  longitude = 180.0 - longitude;
+  latitude  = latitude + 90.0;
+  step /= 18;
+  *loc++ = double_to_char(&longitude, 2 * step, 'A');
+  *loc++ = double_to_char(&latitude,      step, 'A');
+  step /= 10;
+  *loc++ = double_to_char(&longitude, 2 * step, '0');
+  *loc++ = double_to_char(&latitude,      step, '0');
+  step /= 24;
+  *loc++ = double_to_char(&longitude, 2 * step, 'a');
+  *loc++ = double_to_char(&latitude,      step, 'a');
+  step /= 10;
+  *loc++ = double_to_char(&longitude, 2 * step, '0');
+  *loc++ = double_to_char(&latitude,      step, '0');
+  step /= 24;
+  *loc++ = double_to_char(&longitude, 2 * step, 'a');
+  *loc++ = double_to_char(&latitude,      step, 'a');
   *loc   = 0;
 }
 
 /*---------------------------------------------------------------------------*/
 
-static void loc_to_sec(char *loc, long *longitude, long *latitude)
+static double char_to_double(int c, double step, int base_char)
 {
-  char *p;
+  if (c >= 'a' && c <= 'z') {
+    c -= 32;
+  }
+  return step * (c - base_char);
+}
 
-  for (p = loc; *p; p++)
-    if (*p >= 'a' && *p <= 'z') *p -= 32;
+/*---------------------------------------------------------------------------*/
 
-  if (loc[0] < 'A' || loc[0] > 'R' ||
-      loc[1] < 'A' || loc[1] > 'R' ||
-      loc[2] < '0' || loc[2] > '9' ||
-      loc[3] < '0' || loc[3] > '9' ||
-      loc[4] < 'A' || loc[4] > 'X' ||
-      loc[5] < 'A' || loc[5] > 'X' ||
-      loc[6]) usage();
+static void loc_to_deg(const char *loc, double *longitude, double *latitude)
+{
 
-  *longitude =  180 * 3600L
-	       - 20 * 3600L * (loc[0] - 'A')
-	       -  2 * 3600L * (loc[2] - '0')
-	       -  5 *   60L * (loc[4] - 'A')
-	       -       150L;
+  double la = 0.0;
+  double lo = 0.0;
+  double step = 180.0;
 
-  *latitude  = - 90 * 3600L
-	       + 10 * 3600L * (loc[1] - 'A')
-	       +      3600L * (loc[3] - '0')
-	       +       150L * (loc[5] - 'A')
-	       +        75L;
+  if (strlen(loc) >= 2) {
+    step /= 18;
+    lo += char_to_double(*loc++, 2 * step, 'A');
+    la += char_to_double(*loc++,     step, 'A');
+  }
+  if (strlen(loc) >= 2) {
+    step /= 10;
+    lo += char_to_double(*loc++, 2 * step, '0');
+    la += char_to_double(*loc++,     step, '0');
+  }
+  if (strlen(loc) >= 2) {
+    step /= 24;
+    lo += char_to_double(*loc++, 2 * step, 'A');
+    la += char_to_double(*loc++,     step, 'A');
+  }
+  if (strlen(loc) >= 2) {
+    step /= 10;
+    lo += char_to_double(*loc++, 2 * step, '0');
+    la += char_to_double(*loc++,     step, '0');
+  }
+  if (strlen(loc) >= 2) {
+    step /= 24;
+    lo += char_to_double(*loc++, 2 * step, 'A');
+    la += char_to_double(*loc++,     step, 'A');
+  }
+  lo += step;     /* middle of field */
+  la += step / 2; /* middle of field */
+  *longitude = 180.0 - lo;
+  *latitude = la - 90.0;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -126,83 +173,95 @@ static const char *course_name(double a)
 
 /*---------------------------------------------------------------------------*/
 
-static int get_int(const char *s, int lower, int upper)
+static void print_deg_min_sec(double d)
 {
-  int i;
 
-  if (!sscanf((char *) s, "%d", &i)) usage();
-  if (i < lower || i > upper) usage();
-  return i;
+  int deg;
+  int min;
+  int sec;
+
+  deg = (int) d;
+  d = (d - deg) * 60;
+  min = (int) d;
+  d = (d - min) * 60;
+  sec = (int) round(d);
+  printf("%d %d' %d\"", deg, min, sec);
 }
 
 /*---------------------------------------------------------------------------*/
 
-static void print_qth(const char *prompt, long longitude, long latitude, const char *loc)
+static void print_qth(const char *prompt, double longitude, double latitude, const char *loc)
 {
-  char *pl, *pb;
 
-  if (longitude < 0) { pl = "East"; longitude = -longitude; }
-  else                 pl = "West";
-  if (latitude  < 0) { pb = "South"; latitude = -latitude; }
-  else                 pb = "North";
-  printf("%s%3ld %2ld' %2ld\" %s  %3ld %2ld' %2ld\" %s  -->  %s\n",
-	 prompt,
-	 longitude / 3600,
-	 longitude / 60 % 60,
-	 longitude % 60,
-	 pl,
-	 latitude / 3600,
-	 latitude / 60 % 60,
-	 latitude % 60,
-	 pb,
-	 loc);
+  const char *plo;
+  const char *pla;
+
+  if (longitude < 0.0) {
+    plo = "East";
+    longitude = -longitude;
+  } else {
+    plo = "West";
+  }
+  if (latitude  < 0.0) {
+    pla = "South";
+    latitude = -latitude;
+  } else {
+    pla = "North";
+  }
+  printf("%s", prompt);
+  print_deg_min_sec(longitude);
+  printf(" %s ", plo);
+  print_deg_min_sec(latitude);
+  printf(" %s --> %s\n", pla, loc);
 }
 
 /*---------------------------------------------------------------------------*/
 
-static int parse_arg(long *longitude, long *latitude)
+static int parse_arg(double *longitude, double *latitude)
 {
+
+  double step;
   int c;
 
   if (! *argv) return -1;
 
   if (isalpha(*argv[0])) {
-    loc_to_sec(*argv, longitude, latitude);
+    loc_to_deg(*argv, longitude, latitude);
     argv++;
     return 0;
   }
 
-  *longitude = 3600L * get_int(*argv, 0, 179);
-  argv++;
-  if (*argv && isdigit(*argv[0])) {
-    *longitude += 60L * get_int(*argv, 0, 59);
+  *longitude = 0.0;
+  step = 1.0;
+  while (isdigit(*argv[0])) {
+    *longitude += atof(*argv) * step;
+    step /= 60;
     argv++;
-    if (*argv && isdigit(*argv[0])) {
-      *longitude += get_int(*argv, 0, 59);
-      argv++;
-    }
   }
   if (! *argv) usage();
   c = *argv[0];
-  if (c == 'E' || c == 'e') *longitude = - *longitude;
-  else if (c != 'W' && c != 'w') usage();
+  if (c == 'E' || c == 'e') {
+    *longitude = - *longitude;
+  } else if (c != 'W' && c != 'w') {
+    usage();
+  }
   argv++;
+  if (! *argv) usage();
 
-  if (! *argv) usage();
-  *latitude = 3600L * get_int(*argv, 0, 89);
-  argv++;
-  if (*argv && isdigit(*argv[0])) {
-    *latitude += 60L * get_int(*argv, 0, 59);
+  *latitude = 0.0;
+  step = 1.0;
+  while (isdigit(*argv[0])) {
+    *latitude += atof(*argv) * step;
+    step /= 60;
     argv++;
-    if (*argv && isdigit(*argv[0])) {
-      *latitude += get_int(*argv, 0, 59);
-      argv++;
-    }
   }
   if (! *argv) usage();
   c = *argv[0];
-  if (c == 'S' || c == 's') *latitude = - *latitude;
-  else if (c != 'N' && c != 'n') usage();
+  if (c == 'S' || c == 's') {
+    *latitude = - *latitude;
+  } else if (c != 'N' && c != 'n') {
+    usage();
+  }
   argv++;
 
   return 0;
@@ -213,8 +272,9 @@ static int parse_arg(long *longitude, long *latitude)
 int main(int pargc, char **pargv)
 {
 
-  char loc1[7];
-  char loc2[7];
+  FILE *fp;
+  char loc1[11];
+  char loc2[11];
   double a1;
   double a2;
   double b1;
@@ -222,15 +282,14 @@ int main(int pargc, char **pargv)
   double e;
   double l1;
   double l2;
-  FILE *fp;
+  double latitude1;
+  double latitude2;
+  double longitude1;
+  double longitude2;
   int two_is_me;
-  long latitude1;
-  long latitude2;
-  long longitude1;
-  long longitude2;
 
   if ((fp = fopen(CONFFILE, "r"))) {
-    if (fscanf(fp, "%ld %ld", &longitude1, &latitude1) == 2) {
+    if (fscanf(fp, "%lf %lf", &longitude1, &latitude1) == 2) {
       mylongitude = longitude1;
       mylatitude = latitude1;
     }
@@ -240,7 +299,7 @@ int main(int pargc, char **pargv)
   argv = ++pargv;
 
   if (parse_arg(&longitude1, &latitude1)) usage();
-  sec_to_loc(longitude1, latitude1, loc1);
+  deg_to_loc(longitude1, latitude1, loc1);
 
   two_is_me = 0;
   if (parse_arg(&longitude2, &latitude2)) {
@@ -248,14 +307,14 @@ int main(int pargc, char **pargv)
     latitude2  = mylatitude;
     two_is_me = 1;
   }
-  sec_to_loc(longitude2, latitude2, loc2);
+  deg_to_loc(longitude2, latitude2, loc2);
 
   if (*argv) usage();
 
-  l1 = longitude1 / 648000.0 * M_PI;
-  l2 = longitude2 / 648000.0 * M_PI;
-  b1 = latitude1  / 648000.0 * M_PI;
-  b2 = latitude2  / 648000.0 * M_PI;
+  l1 = longitude1 / 180.0 * M_PI;
+  l2 = longitude2 / 180.0 * M_PI;
+  b1 = latitude1  / 180.0 * M_PI;
+  b2 = latitude2  / 180.0 * M_PI;
 
   e = safe_acos(sin(b1) * sin(b2) + cos(b1) * cos(b2) * cos(l2-l1));
 
@@ -273,11 +332,8 @@ int main(int pargc, char **pargv)
 
     printf("distance:       %.1f km = %.1f miles\n", e * RADIUS, e * RADIUS / 1.609344);
 
-    a1 = safe_acos((sin(b2) - sin(b1) * cos(e)) / sin(e) / cos(b1)) / M_PI * 180.0;
-    a2 = safe_acos((sin(b1) - sin(b2) * cos(e)) / sin(e) / cos(b2)) / M_PI * 180.0;
-
-    if (l2 > l1) a1 = 360.0 - a1;
-    if (l1 > l2) a2 = 360.0 - a2;
+    a1 = atan2(sin(l1 - l2), cos(b1) * tan(b2) - sin(b1) * cos(l2 - l1)) / M_PI * 180.0;
+    a2 = atan2(sin(l2 - l1), cos(b2) * tan(b1) - sin(b2) * cos(l1 - l2)) / M_PI * 180.0;
 
     a1 = norm_course(a1);
     a2 = norm_course(a2);
