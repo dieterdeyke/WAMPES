@@ -4,7 +4,7 @@
    qth: qth, locator, distance, and course computations
 
    Author: Dieter Deyke <dieter.deyke@gmail.com>
-   Time-stamp: <2011-12-19 15:06:27 deyke>
+   Time-stamp: <2011-12-31 08:41:09 deyke>
 */
 
 #include <ctype.h>
@@ -121,25 +121,15 @@ static void loc_to_deg(const char *loc, double *longitude, double *latitude)
     lo += char_to_double(*loc++, 2 * step, 'A');
     la += char_to_double(*loc++,     step, 'A');
   }
-  if (strlen(loc) >= 2) {
+  while (strlen(loc) >= 2) {
     step /= 10;
     lo += char_to_double(*loc++, 2 * step, '0');
     la += char_to_double(*loc++,     step, '0');
-  }
-  if (strlen(loc) >= 2) {
-    step /= 24;
-    lo += char_to_double(*loc++, 2 * step, 'A');
-    la += char_to_double(*loc++,     step, 'A');
-  }
-  if (strlen(loc) >= 2) {
-    step /= 10;
-    lo += char_to_double(*loc++, 2 * step, '0');
-    la += char_to_double(*loc++,     step, '0');
-  }
-  if (strlen(loc) >= 2) {
-    step /= 24;
-    lo += char_to_double(*loc++, 2 * step, 'A');
-    la += char_to_double(*loc++,     step, 'A');
+    if (strlen(loc) >= 2) {
+      step /= 24;
+      lo += char_to_double(*loc++, 2 * step, 'A');
+      la += char_to_double(*loc++,     step, 'A');
+    }
   }
   lo += step;     /* middle of field */
   la += step / 2; /* middle of field */
