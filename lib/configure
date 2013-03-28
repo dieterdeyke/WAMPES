@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2011-12-18 10:09:50 deyke>
+# Time-stamp: <2013-03-28 20:27:35 deyke>
 
 CC='cc'
 CFLAGS='-O -I../lib'
@@ -48,6 +48,8 @@ Linux*)
 	if [ -f /usr/lib/libndbm.so -o -f /usr/lib/libndbm.a ]; then
 		LIBDBM='ndbm'
 	elif [ -f /usr/lib/libgdbm.so -o -f /usr/lib/libgdbm.a ]; then
+		LIBDBM='gdbm -lgdbm_compat'
+	elif [ -f /usr/lib/i386-linux-gnu/libgdbm.so -o -f /usr/lib/i386-linux-gnu/libgdbm.a ]; then
 		LIBDBM='gdbm -lgdbm_compat'
 	elif [ -f /usr/lib/libdbm.so -o -f /usr/lib/libdbm.a ]; then
 		LIBDBM='dbm'
