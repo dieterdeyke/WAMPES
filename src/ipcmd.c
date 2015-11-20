@@ -1,5 +1,3 @@
-/* @(#) $Id: ipcmd.c,v 1.19 1999-04-25 17:09:06 deyke Exp $ */
-
 /* IP-related user commands
  * Copyright 1991 Phil Karn, KA9Q
  */

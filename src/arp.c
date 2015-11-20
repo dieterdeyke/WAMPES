@@ -1,5 +1,3 @@
-/* @(#) $Id: arp.c,v 1.20 1999-01-27 18:45:40 deyke Exp $ */
-
 /* Address Resolution Protocol (ARP) functions. Sits between IP and
  * Level 2, mapping IP to Level 2 addresses for all outgoing datagrams.
  * Copyright 1991 Phil Karn, KA9Q

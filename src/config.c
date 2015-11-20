@@ -1,5 +1,3 @@
-/* @(#) $Id: config.c,v 1.58 2000-02-05 23:54:48 deyke Exp $ */
-
 /* Copyright 1991 Phil Karn, KA9Q
  */
 

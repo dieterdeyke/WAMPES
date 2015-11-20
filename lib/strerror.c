@@ -1,5 +1,3 @@
-/* @(#) $Id: strerror.c,v 1.6 1998-03-09 17:46:26 deyke Exp $ */
-
 #include "configure.h"
 
 #if !HAS_STRERROR

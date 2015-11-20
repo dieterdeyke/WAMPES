@@ -1,5 +1,3 @@
-/* @(#) $Id: n8250.c,v 1.45 1996-08-19 16:30:14 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include <fcntl.h>

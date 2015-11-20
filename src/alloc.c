@@ -1,5 +1,3 @@
-/* @(#) $Id: alloc.c,v 1.38 1999-12-15 04:05:47 deyke Exp $ */
-
 /* memory allocation routines
  */
 

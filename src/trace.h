@@ -1,5 +1,3 @@
-/* @(#) $Id: trace.h,v 1.14 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _TRACE_H
 #define _TRACE_H
 

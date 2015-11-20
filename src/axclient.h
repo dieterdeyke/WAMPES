@@ -1,5 +1,3 @@
-/* @(#) $Id: axclient.h,v 1.6 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _AXCLIENT_H
 #define _AXCLIENT_H
 

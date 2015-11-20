@@ -1,7 +1,5 @@
 #! /usr/bin/env python
 
-# @(#) $Id: make_depend,v 1.3 2007-12-09 17:19:19 deyke Exp $
-
 import os
 import re
 

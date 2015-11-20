@@ -1,5 +1,3 @@
-/* @(#) $Id: ni.c,v 1.17 1998-03-23 17:11:05 deyke Exp $ */
-
 #include "configure.h"
 
 #if HAS_NI

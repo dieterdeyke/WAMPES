@@ -1,5 +1,3 @@
-/* @(#) $Id: ftpserv.c,v 1.41 1998-07-27 16:08:14 deyke Exp $ */
-
 /* Internet FTP Server
  * Copyright 1991 Phil Karn, KA9Q
  */

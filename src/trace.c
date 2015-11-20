@@ -1,5 +1,3 @@
-/* @(#) $Id: trace.c,v 1.24 1999-01-22 21:20:07 deyke Exp $ */
-
 /* Packet tracing - top level and generic routines, including hex/ascii
  * Copyright 1991 Phil Karn, KA9Q
  */

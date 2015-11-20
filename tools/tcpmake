@@ -1,7 +1,5 @@
 #! /bin/bash
 
-# @(#) $Id: tcpmake,v 1.44 2007-12-09 17:19:19 deyke Exp $
-
 #------------------------------------------------------------------------------
 
 save_file()
@@ -66,25 +64,6 @@ for dir in \
                 make_depend
                 check_file $file
         fi
-        for file in *.[ch]; do
-                if [[ -f $file && $file != configure.h ]]; then
-                        case $(grep -F -c '@(#) $Id' $file) in
-                        0)
-                                save_file $file
-                                echo '/* @(#) $Id\c' > $file
-                                echo '$ */\n' >> $file
-                                cat $file.old >> $file
-                                check_file $file
-                                echo RCS Id inserted in $file
-                                ;;
-                        1)
-                                ;;
-                        *)
-                                echo $file has too many RCS Ids
-                                ;;
-                        esac
-                fi
-        done
 done
 
 for manual in bbs bridge smack wampes; do
@@ -97,7 +76,7 @@ for manual in bbs bridge smack wampes; do
 
         file=../../doc/$manual.mm
         save_file $file
-        cat $(< filelist) | grep -v '@(#) $Id' > $file
+        cat $(< filelist) > $file
         check_file $file
 
 done

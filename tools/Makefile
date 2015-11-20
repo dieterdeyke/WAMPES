@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.46 2007-12-09 17:19:18 deyke Exp $
-
 TARGETS = \
 	     check_seteugid \
 	     connect \

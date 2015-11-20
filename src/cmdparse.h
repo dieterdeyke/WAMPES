@@ -1,5 +1,3 @@
-/* @(#) $Id: cmdparse.h,v 1.14 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _CMDPARSE_H
 #define _CMDPARSE_H
 

@@ -1,5 +1,3 @@
-/* @(#) $Id: mail.h,v 1.19 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _MAIL_H
 #define _MAIL_H
 

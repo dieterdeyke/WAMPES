@@ -1,5 +1,3 @@
-/* @(#) $Id: asy.c,v 1.17 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Generic serial line interface routines
  * Copyright 1992 Phil Karn, KA9Q
  */

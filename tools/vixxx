@@ -1,7 +1,5 @@
 #! /usr/bin/env python
 
-# @(#) $Id: vixxx,v 1.11 2007-12-09 17:19:19 deyke Exp $
-
 import os
 
 p = os.popen("less", "w")

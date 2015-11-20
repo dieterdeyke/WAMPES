@@ -1,5 +1,3 @@
-/* @(#) $Id: n8250.h,v 1.9 1996-08-12 18:51:17 deyke Exp $ */
-
 /* Various I/O definitions specific to asynch I/O */
 #ifndef _N8250_H
 #define _N8250_H

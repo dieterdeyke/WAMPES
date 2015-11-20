@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.46 2000-01-15 18:34:10 deyke Exp $
-
 TARGETS    = convers conversd
 
 all:;        @. ../lib/configure.mak; $(MAKE) -i _all

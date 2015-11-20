@@ -1,5 +1,3 @@
-/* @(#) $Id: arpcmd.c,v 1.19 1999-01-27 18:45:40 deyke Exp $ */
-
 /* ARP commands
  * Copyright 1991, Phil Karn, KA9Q
  */

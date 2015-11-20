@@ -1,5 +1,3 @@
-/* @(#) $Id: hpux.c,v 1.63 2000-01-01 16:12:54 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include <errno.h>

@@ -1,5 +1,3 @@
-/* @(#) $Id: smisc.c,v 1.19 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Miscellaneous Internet servers: discard, echo and remote
  * Copyright 1991 Phil Karn, KA9Q
  */

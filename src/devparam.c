@@ -1,5 +1,3 @@
-/* @(#) $Id: devparam.c,v 1.8 1999-01-22 21:20:07 deyke Exp $ */
-
 #include <ctype.h>
 #include "global.h"
 #include "devparam.h"

@@ -1,5 +1,3 @@
-/* @(#) $Id: ax25cmd.c,v 1.17 1999-01-22 21:20:07 deyke Exp $ */
-
 /* AX25 control commands
  * Copyright 1991 Phil Karn, KA9Q
  */

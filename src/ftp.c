@@ -1,5 +1,3 @@
-/* @(#) $Id: ftp.c,v 1.14 1996-08-19 16:30:14 deyke Exp $ */
-
 /* Stuff common to both the FTP server and client */
 #include <stdio.h>
 #include "global.h"

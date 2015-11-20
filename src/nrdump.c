@@ -1,5 +1,3 @@
-/* @(#) $Id: nrdump.c,v 1.7 1996-08-19 16:30:14 deyke Exp $ */
-
 /* NET/ROM header tracing routines
  * Copyright 1991 Phil Karn, KA9Q
  */

@@ -1,5 +1,3 @@
-/* @(#) $Id: strdup.c,v 1.11 1998-03-09 17:46:26 deyke Exp $ */
-
 #include "configure.h"
 
 #if !HAS_STRDUP || defined _AIX

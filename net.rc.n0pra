@@ -1,5 +1,3 @@
-# @(#) $Id: net.rc.n0pra,v 1.22 2000-02-13 19:01:35 deyke Exp $
-
 domain usegethostby on
 
 hostname     n0pra
@@ -56,6 +54,9 @@ start echo
 start sntp
 start time
 
-fkey 1 "flexnet link"
-fkey 2 "flexnet dest"
-fkey 3 "ax25 route list"
+fkey 1 "flexnet link
+"
+fkey 2 "flexnet dest
+"
+fkey 3 "ax25 route list
+"

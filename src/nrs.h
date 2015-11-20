@@ -1,5 +1,3 @@
-/* @(#) $Id: nrs.h,v 1.14 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _NRS_H
 #define _NRS_H
 

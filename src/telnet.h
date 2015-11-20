@@ -1,5 +1,3 @@
-/* @(#) $Id: telnet.h,v 1.11 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _TELNET_H
 #define _TELNET_H
 

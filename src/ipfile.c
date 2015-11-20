@@ -1,5 +1,3 @@
-/* @(#) $Id: ipfile.c,v 1.19 1996-08-12 18:51:17 deyke Exp $ */
-
 #include <stdio.h>
 
 #include "global.h"

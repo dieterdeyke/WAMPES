@@ -1,5 +1,3 @@
-/* @(#) $Id: ping.h,v 1.4 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _PING_H
 #define _PING_H
 

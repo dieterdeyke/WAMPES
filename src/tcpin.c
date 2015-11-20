@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpin.c,v 1.20 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Process incoming TCP segments. Page number references are to ARPA RFC-793,
  * the TCP specification.
  *

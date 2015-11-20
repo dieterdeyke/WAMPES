@@ -1,5 +1,3 @@
-/* @(#) $Id: global.h,v 1.48 1999-02-01 22:24:25 deyke Exp $ */
-
 #ifndef _GLOBAL_H
 #define _GLOBAL_H
 

@@ -1,5 +1,3 @@
-/* @(#) $Id: lapb.h,v 1.25 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _LAPB_H
 #define _LAPB_H
 

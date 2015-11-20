@@ -1,4 +1,4 @@
-.\" @(#) $Id: reget,v 1.5 1998-03-09 17:48:00 deyke Exp $ -*- Mode: Nroff -*-
+.\" -*- Mode: Nroff -*-
 .H 2 "reget" " \fIremote-file\fP [\fIlocal-file\fP]"
 \fBreget\fP acts like \fBget\fP, except that if \fIlocal-file\fP exists and is
 smaller than \fIremote-file\fP, \fIlocal-file\fP is presumed to be a

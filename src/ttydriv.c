@@ -1,5 +1,3 @@
-/* @(#) $Id: ttydriv.c,v 1.31 1999-02-01 22:24:25 deyke Exp $ */
-
 /* TTY input line editing
  */
 #include <stdio.h>

@@ -1,5 +1,3 @@
-/* @(#) $Id: domhdr.c,v 1.12 1996-08-19 16:30:14 deyke Exp $ */
-
 /* Domain header conversion routines
  * Copyright 1991 Phil Karn, KA9Q
  */

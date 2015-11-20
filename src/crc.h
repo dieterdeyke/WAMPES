@@ -1,5 +1,3 @@
-/* @(#) $Id: crc.h,v 1.6 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _CRC_H
 #define _CRC_H
 

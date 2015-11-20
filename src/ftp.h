@@ -1,5 +1,3 @@
-/* @(#) $Id: ftp.h,v 1.15 1998-03-09 17:42:56 deyke Exp $ */
-
 #ifndef _FTP_H
 #define _FTP_H
 

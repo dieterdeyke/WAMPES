@@ -1,5 +1,3 @@
-/* @(#) $Id: cmdparse.c,v 1.21 2007-12-09 19:22:54 deyke Exp $ */
-
 /* Parse command line, set up command arguments Unix-style, and call function.
  * Note: argument is modified (delimiters are overwritten with nulls)
  *

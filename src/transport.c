@@ -1,5 +1,3 @@
-/* @(#) $Id: transport.c,v 1.23 2000-03-04 18:31:14 deyke Exp $ */
-
 #include "global.h"
 #include "netuser.h"
 #include "mbuf.h"

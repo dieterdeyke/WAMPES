@@ -1,7 +1,5 @@
 #! /bin/ksh
 
-# @(#) $Id: mkrc,v 1.11 1996-08-12 18:52:58 deyke Exp $
-
 for i in 1 2 3 4 5 6 7 8 9; do
 cat > i${i} << EOF
 
@@ -42,9 +40,12 @@ arp add 2.2.2.2 netrom test2
 
 trace i 11
 
-fkey 1 "flexnet link"
-fkey 2 "flexnet dest"
-fkey 3 "ax25 route list"
+fkey 1 "flexnet link
+"
+fkey 2 "flexnet dest
+"
+fkey 3 "ax25 route list
+"
 
 EOF
 done

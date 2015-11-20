@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.60 2000-01-15 18:34:09 deyke Exp $
-
 TARGETS    = bbs
 
 all:;        @. ../lib/configure.mak; $(MAKE) -i _all

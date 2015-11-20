@@ -1,5 +1,3 @@
-/* @(#) $Id: ip.c,v 1.19 1999-12-17 04:36:15 deyke Exp $ */
-
 /* Upper half of IP, consisting of send/receive primitives, including
  * fragment reassembly, for higher level protocols.
  * Not needed when running as a standalone gateway.

@@ -1,5 +1,3 @@
-/* @(#) $Id: icmpmsg.c,v 1.8 1996-08-12 18:51:17 deyke Exp $ */
-
 /* ICMP message type tables
  * Copyright 1991 Phil Karn, KA9Q
  */

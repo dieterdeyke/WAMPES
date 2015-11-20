@@ -1,5 +1,3 @@
-/* @(#) $Id: udp.h,v 1.13 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _UDP_H
 #define _UDP_H
 

@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpgate.c,v 1.18 1997-08-04 16:06:42 deyke Exp $ */
-
 #include "global.h"
 
 #include <sys/types.h>

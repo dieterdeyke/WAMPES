@@ -1,7 +1,3 @@
-#ifndef __lint
-static const char rcsid[] = "@(#) $Id: md5drivr.c,v 1.6 1999-01-22 21:22:04 deyke Exp $";
-#endif
-
 /*
  ***********************************************************************
  ** md5driver.c -- sample test routines                               **

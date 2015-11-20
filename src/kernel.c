@@ -1,5 +1,3 @@
-/* @(#) $Id: kernel.c,v 1.30 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Non pre-empting synchronization kernel, machine-independent portion
  * Copyright 1992 Phil Karn, KA9Q
  */

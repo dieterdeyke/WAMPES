@@ -1,5 +1,3 @@
-/* @(#) $Id: icmp.h,v 1.13 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _ICMP_H
 #define _ICMP_H
 

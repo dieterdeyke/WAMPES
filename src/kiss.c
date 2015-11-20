@@ -1,5 +1,3 @@
-/* @(#) $Id: kiss.c,v 1.21 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Routines for AX.25 encapsulation in KISS TNC
  * Copyright 1991 Phil Karn, KA9Q
  */

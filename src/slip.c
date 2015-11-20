@@ -1,5 +1,3 @@
-/* @(#) $Id: slip.c,v 1.22 1999-02-01 22:24:25 deyke Exp $ */
-
 /* SLIP (Serial Line IP) encapsulation and control routines.
  * Copyright 1991 Phil Karn
  *

@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpsubr.c,v 1.23 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Low level TCP routines:
  *  control block management
  *  sequence number logical operations

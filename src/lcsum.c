@@ -1,5 +1,3 @@
-/* @(#) $Id: lcsum.c,v 1.13 1999-01-24 22:23:24 deyke Exp $ */
-
 /*
  * Word aligned linear buffer checksum routine.  Called from mbuf checksum
  * routine with simple args.  Intent is that this routine may be replaced

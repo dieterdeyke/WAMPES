@@ -1,5 +1,3 @@
-/* @(#) $Id: strmatch.c,v 1.6 1996-08-12 18:53:41 deyke Exp $ */
-
 #include "strmatch.h"
 
 int stringmatch(const char *s, const char *p)

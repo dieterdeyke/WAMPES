@@ -1,5 +1,3 @@
-/* @(#) $Id: arp.h,v 1.16 2000-03-04 18:31:13 deyke Exp $ */
-
 #ifndef _ARP_H
 #define _ARP_H
 

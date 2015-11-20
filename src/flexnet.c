@@ -1,5 +1,3 @@
-/* @(#) $Id: flexnet.c,v 1.14 2000-03-04 18:31:13 deyke Exp $ */
-
 #include <stdio.h>
 
 #include "global.h"

@@ -1,5 +1,3 @@
-/* @(#) $Id: ipfilter.c,v 1.10 1999-06-20 17:47:46 deyke Exp $ */
-
 #include <stdio.h>
 
 #include "global.h"

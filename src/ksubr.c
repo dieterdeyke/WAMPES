@@ -1,5 +1,3 @@
-/* @(#) $Id: ksubr.c,v 1.36 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Machine or compiler-dependent portions of kernel
  *
  * Copyright 1991 Phil Karn, KA9Q

@@ -1,5 +1,3 @@
-/* @(#) $Id: ax25user.c,v 1.13 1999-02-01 22:24:25 deyke Exp $ */
-
 /* User interface subroutines for AX.25
  * Copyright 1991 Phil Karn, KA9Q
  */

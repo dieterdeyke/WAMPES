@@ -1,4 +1,4 @@
-.\" @(#) $Id: smack,v 1.6 1998-03-09 17:48:35 deyke Exp $ -*- Mode: Nroff -*-
+.\" -*- Mode: Nroff -*-
 .nr Ej 0 \" No new page for all headers
 .H 1 "Introduction"
 .P

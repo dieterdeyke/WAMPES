@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.37 2000-01-15 18:34:12 deyke Exp $
-
 LIBRARY       = libutil.a
 
 OBJS          = buildsaddr.o \

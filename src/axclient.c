@@ -1,5 +1,3 @@
-/* @(#) $Id: axclient.c,v 1.20 1999-02-11 19:26:49 deyke Exp $ */
-
 #include <stdio.h>
 
 #include "global.h"

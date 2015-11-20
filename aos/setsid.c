@@ -1,5 +1,3 @@
-/* @(#) $Id: setsid.c,v 1.4 1996-08-12 18:53:54 deyke Exp $ */
-
 /* setsid.c
  * remove tty association
  * 17/01/94 J.Jaeger, PA3EFU.

@@ -1,5 +1,3 @@
-/* @(#) $Id: putenv.c,v 1.1 1998-03-09 17:49:34 deyke Exp $ */
-
 /*-
  * Copyright (c) 1988 The Regents of the University of California.
  * All rights reserved.

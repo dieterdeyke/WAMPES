@@ -1,5 +1,3 @@
-/* @(#) $Id: udp.c,v 1.13 1999-01-22 21:20:07 deyke Exp $ */
-
 /* Internet User Data Protocol (UDP)
  * Copyright 1991 Phil Karn, KA9Q
  */

@@ -1,5 +1,3 @@
-/* @(#) $Id: ipip.c,v 1.22 1996-08-19 16:30:14 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include "global.h"

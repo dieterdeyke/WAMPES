@@ -1,5 +1,3 @@
-/* @(#) $Id: axserver.c,v 1.16 1996-08-12 18:51:17 deyke Exp $ */
-
 #include "global.h"
 #include "mbuf.h"
 #include "ax25.h"

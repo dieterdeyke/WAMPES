@@ -1,5 +1,3 @@
-/* @(#) $Id: ax25.c,v 1.33 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Low level AX.25 code:
  *  incoming frame processing (including digipeating)
  *  IP encapsulation

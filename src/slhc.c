@@ -1,5 +1,3 @@
-/* @(#) $Id: slhc.c,v 1.11 1999-01-27 18:45:40 deyke Exp $ */
-
 /*
  * Routines to compress and uncompress tcp packets (for transmission
  * over low speed serial lines).

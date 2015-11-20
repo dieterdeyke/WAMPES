@@ -1,7 +1,5 @@
 #! /bin/ksh
 
-# @(#) $Id: fixnetrc,v 1.10 2007-12-09 17:19:18 deyke Exp $
-
 empty=/tmp/tmp1$$
 tmp=/tmp/tmp2$$
 

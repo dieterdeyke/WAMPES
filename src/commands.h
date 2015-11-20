@@ -1,5 +1,3 @@
-/* @(#) $Id: commands.h,v 1.34 2000-01-01 16:12:53 deyke Exp $ */
-
 #ifndef _COMMANDS_H
 #define _COMMANDS_H
 

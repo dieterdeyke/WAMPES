@@ -1,5 +1,3 @@
-/* @(#) $Id: icmp.c,v 1.22 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Internet Control Message Protocol (ICMP)
  * Copyright 1991 Phil Karn, KA9Q
  */

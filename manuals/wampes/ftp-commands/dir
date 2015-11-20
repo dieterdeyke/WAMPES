@@ -1,4 +1,4 @@
-.\" @(#) $Id: dir,v 1.5 1998-03-09 17:48:00 deyke Exp $ -*- Mode: Nroff -*-
+.\" -*- Mode: Nroff -*-
 .H 2 "dir" " [\fIremote-directory\fP [\fIlocal-file\fP]]"
 Write a listing of \fIremote-directory\fP to standard output or optionally to
 \fIlocal-file\fP.

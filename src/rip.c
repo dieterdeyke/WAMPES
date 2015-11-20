@@ -1,5 +1,3 @@
-/* @(#) $Id: rip.c,v 1.16 1996-08-19 16:30:14 deyke Exp $ */
-
 /* This file contains code to implement the Routing Information Protocol (RIP)
  * and is derived from 4.2BSD code. Mike Karels of Berkeley has stated on
  * TCP-IP that the code may be freely used as long as UC Berkeley is

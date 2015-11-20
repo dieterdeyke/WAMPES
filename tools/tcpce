@@ -1,7 +1,5 @@
 #! /bin/ksh
 
-# @(#) $Id: tcpce,v 1.1 1999-01-27 18:30:08 deyke Exp $
-
 if hp9000s300; then
 	cutarg='-c15-'
 else

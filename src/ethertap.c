@@ -1,5 +1,3 @@
-/* @(#) $Id: ethertap.c,v 1.2 2000-01-15 18:34:15 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include <errno.h>

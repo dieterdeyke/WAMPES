@@ -1,5 +1,3 @@
-/* @(#) $Id: iface.c,v 1.32 1999-10-08 03:33:34 deyke Exp $ */
-
 /* IP interface control and configuration routines
  * Copyright 1991 Phil Karn, KA9Q
  */

@@ -1,5 +1,3 @@
-/* @(#) $Id: ax25subr.c,v 1.26 2000-03-04 18:31:13 deyke Exp $ */
-
 /* Low level AX.25 routines:
  *  callsign conversion
  *  control block management

@@ -1,5 +1,3 @@
-/* @(#) $Id: rip.h,v 1.10 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _RIP_H
 #define _RIP_H
 

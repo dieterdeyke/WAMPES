@@ -1,5 +1,3 @@
-/* @(#) $Id: ftpcli.c,v 1.25 1999-01-22 21:20:07 deyke Exp $ */
-
 /* Internet FTP client (interactive user)
  * Copyright 1991 Phil Karn, KA9Q
  */

@@ -1,5 +1,3 @@
-/* @(#) $Id: domain.c,v 1.29 2006-12-22 04:04:30 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include <ctype.h>

@@ -1,5 +1,3 @@
-/* @(#) $Id: session.h,v 1.14 1999-02-01 22:24:25 deyke Exp $ */
-
 #ifndef _SESSION_H
 #define _SESSION_H
 

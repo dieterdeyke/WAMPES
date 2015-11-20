@@ -1,5 +1,3 @@
-/* @(#) $Id: lapb.c,v 1.41 1996-08-19 16:30:14 deyke Exp $ */
-
 /* Link Access Procedures Balanced (LAPB), the upper sublayer of
  * AX.25 Level 2.
  *

@@ -1,4 +1,4 @@
-.\" @(#) $Id: ifconfig,v 1.13 1999-10-08 03:33:34 deyke Exp $ -*- Mode: Nroff -*-
+.\" -*- Mode: Nroff -*-
 .H 2 "ifconfig" " [\fIinterface\fP [[\fIsubcommand\fP \fIparameter\fP] ...]"
 Without arguments display the status of all interfaces.
 When only \fIinterface\fP is given, the status of that interface is displayed.

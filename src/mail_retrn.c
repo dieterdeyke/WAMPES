@@ -1,5 +1,3 @@
-/* @(#) $Id: mail_retrn.c,v 1.24 1996-08-12 18:51:17 deyke Exp $ */
-
 /* Mail Delivery Agent for returned Mails */
 
 #include <sys/types.h>

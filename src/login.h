@@ -1,5 +1,3 @@
-/* @(#) $Id: login.h,v 1.12 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _LOGIN_H
 #define _LOGIN_H
 

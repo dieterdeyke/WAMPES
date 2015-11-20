@@ -1,5 +1,3 @@
-/* @(#) $Id: slhcdump.c,v 1.7 1996-08-19 16:30:14 deyke Exp $ */
-
 #include <stdio.h>
 #include "global.h"
 #include "mbuf.h"

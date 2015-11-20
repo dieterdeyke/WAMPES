@@ -1,7 +1,3 @@
-#ifndef __lint
-static const char rcsid[] = "@(#) $Id: import.c,v 1.5 1996-08-12 18:52:58 deyke Exp $";
-#endif
-
 /*
 
    This program will be called via .forward whenever mail for adm@mdddhd

@@ -1,5 +1,3 @@
-/* @(#) $Id: finger.c,v 1.17 1999-02-11 19:26:49 deyke Exp $ */
-
 /*
  *
  *      Finger support...

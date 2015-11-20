@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpuser.c,v 1.26 1999-02-01 22:24:25 deyke Exp $ */
-
 /* User calls to TCP
  * Copyright 1991 Phil Karn, KA9Q
  */

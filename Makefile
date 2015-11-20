@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.50 2000-03-04 18:31:08 deyke Exp $
-
 DIRS       = lib \
 	     aos \
 	     NeXT \

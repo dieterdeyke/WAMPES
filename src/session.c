@@ -1,5 +1,3 @@
-/* @(#) $Id: session.c,v 1.23 1999-02-11 19:26:49 deyke Exp $ */
-
 /* NOS User Session control
  * Copyright 1991 Phil Karn, KA9Q
  */

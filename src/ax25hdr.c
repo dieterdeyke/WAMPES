@@ -1,5 +1,3 @@
-/* @(#) $Id: ax25hdr.c,v 1.11 1996-08-19 16:30:14 deyke Exp $ */
-
 /* AX25 header conversion routines
  * Copyright 1991 Phil Karn, KA9Q
  */

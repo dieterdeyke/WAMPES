@@ -1,5 +1,3 @@
-/* @(#) $Id: axheard.c,v 1.7 1999-02-01 22:24:25 deyke Exp $ */
-
 /* AX25 link callsign monitoring. Also contains beginnings of
  * an automatic link quality monitoring scheme (incomplete)
  *

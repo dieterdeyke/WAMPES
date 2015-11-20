@@ -1,5 +1,3 @@
-/* @(#) $Id: buildsaddr.c,v 1.17 1996-08-12 18:53:41 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include <ctype.h>

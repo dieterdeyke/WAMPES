@@ -1,5 +1,3 @@
-/* @(#) $Id: kissdump.c,v 1.11 1996-08-12 18:51:17 deyke Exp $ */
-
 /* Tracing routines for KISS TNC
  * Copyright 1991 Phil Karn, KA9Q
  */

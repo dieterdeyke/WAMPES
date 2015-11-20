@@ -1,5 +1,3 @@
-/* @(#) $Id: iproute.c,v 1.40 1999-04-25 16:56:41 deyke Exp $ */
-
 /* Lower half of IP, consisting of gateway routines
  * Includes routing and options processing code
  *

@@ -1,5 +1,3 @@
-/* @(#) $Id: strmatch.h,v 1.3 1996-08-12 18:53:41 deyke Exp $ */
-
 #ifndef _STRMATCH_H
 #define _STRMATCH_H
 

@@ -1,5 +1,3 @@
-/* @(#) $Id: tcp.h,v 1.22 1999-01-22 21:20:07 deyke Exp $ */
-
 #ifndef _TCP_H
 #define _TCP_H
 

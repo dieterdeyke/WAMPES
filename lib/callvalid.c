@@ -1,5 +1,3 @@
-/* @(#) $Id: callvalid.c,v 1.4 1996-08-12 18:53:41 deyke Exp $ */
-
 #include <ctype.h>
 #include <string.h>
 

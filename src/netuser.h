@@ -1,5 +1,3 @@
-/* @(#) $Id: netuser.h,v 1.14 1999-01-27 18:45:40 deyke Exp $ */
-
 #ifndef _NETUSER_H
 #define _NETUSER_H
 

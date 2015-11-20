@@ -1,5 +1,3 @@
-/* @(#) $Id: mbuf.c,v 1.19 1996-08-19 16:30:14 deyke Exp $ */
-
 /* mbuf (message buffer) primitives
  * Copyright 1991 Phil Karn, KA9Q
  */

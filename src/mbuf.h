@@ -1,5 +1,3 @@
-/* @(#) $Id: mbuf.h,v 1.17 1999-01-27 18:45:40 deyke Exp $ */
-
 #ifndef _MBUF_H
 #define _MBUF_H
 

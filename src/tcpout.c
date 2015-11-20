@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpout.c,v 1.21 1999-02-01 22:24:25 deyke Exp $ */
-
 /* TCP output segment processing
  * Copyright 1991 Phil Karn, KA9Q
  */

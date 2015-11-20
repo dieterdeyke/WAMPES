@@ -1,5 +1,3 @@
-/* @(#) $Id: sntp.c,v 1.17 1999-01-22 21:20:07 deyke Exp $ */
-
 /* Simple Network Time Protocol (SNTP) (see RFC1361) */
 
 #include <sys/types.h>

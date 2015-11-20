@@ -1,5 +1,3 @@
-@(#) $Id: ChangeLog,v 1.80 2007-12-09 19:22:54 deyke Exp $
-
 071209 Dieter Deyke <deyke@yahoo.com>
 
         Fixed compiler warning in src/cmdparse.c

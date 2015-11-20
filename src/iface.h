@@ -1,5 +1,3 @@
-/* @(#) $Id: iface.h,v 1.27 2000-03-04 18:31:13 deyke Exp $ */
-
 #ifndef _IFACE_H
 #define _IFACE_H
 

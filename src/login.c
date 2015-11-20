@@ -1,5 +1,3 @@
-/* @(#) $Id: login.c,v 1.71 1999-02-01 22:24:25 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include <stdio.h>      /* must be before pwd.h */

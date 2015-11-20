@@ -1,5 +1,3 @@
-/* @(#) $Id: iphdr.c,v 1.13 1996-08-23 15:49:05 deyke Exp $ */
-
 /* IP header conversion routines
  * Copyright 1991 Phil Karn, KA9Q
  */

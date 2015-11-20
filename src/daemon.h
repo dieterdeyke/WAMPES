@@ -1,5 +1,3 @@
-/* @(#) $Id: daemon.h,v 1.7 1999-02-11 19:26:49 deyke Exp $ */
-
 #ifndef _DAEMON_H
 #define _DAEMON_H
 

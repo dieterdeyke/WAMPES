@@ -1,5 +1,3 @@
-/* @(#) $Id: timer.c,v 1.23 1999-02-01 22:24:25 deyke Exp $ */
-
 /* General purpose software timer facilities
  * Copyright 1991 Phil Karn, KA9Q
  */

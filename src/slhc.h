@@ -1,5 +1,3 @@
-/* @(#) $Id: slhc.h,v 1.10 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _SLHC_H
 #define _SLHC_H
 /*

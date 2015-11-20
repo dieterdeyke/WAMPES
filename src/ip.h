@@ -1,5 +1,3 @@
-/* @(#) $Id: ip.h,v 1.19 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _IP_H
 #define _IP_H
 

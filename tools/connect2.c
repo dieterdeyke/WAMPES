@@ -1,7 +1,3 @@
-#ifndef __lint
-static const char rcsid[] = "@(#) $Id: connect2.c,v 1.11 1999-01-22 21:21:39 deyke Exp $";
-#endif
-
 #include <sys/types.h>
 
 #include <fcntl.h>

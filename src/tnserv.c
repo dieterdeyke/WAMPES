@@ -1,5 +1,3 @@
-/* @(#) $Id: tnserv.c,v 1.17 1997-08-04 16:06:42 deyke Exp $ */
-
 #include "global.h"
 #include "mbuf.h"
 #include "socket.h"

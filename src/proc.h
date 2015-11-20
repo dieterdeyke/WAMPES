@@ -1,5 +1,3 @@
-/* @(#) $Id: proc.h,v 1.14 1999-02-01 22:24:25 deyke Exp $ */
-
 #ifndef _PROC_H
 #define _PROC_H
 

@@ -1,5 +1,3 @@
-/* @(#) $Id: timep.c,v 1.7 1996-08-19 16:30:14 deyke Exp $ */
-
 /* Time Protocol (see RFC868) */
 
 #include <time.h>

@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.105 2000-01-15 18:34:14 deyke Exp $
-
 DEST          = /tcp
 
 EXTHDRS       = ../lib/buildsaddr.h \

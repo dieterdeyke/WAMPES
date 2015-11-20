@@ -1,4 +1,4 @@
-.\" @(#) $Id: route,v 1.11 1999-04-25 16:56:40 deyke Exp $ -*- Mode: Nroff -*-
+.\" -*- Mode: Nroff -*-
 .H 2 "route" " [\fIsubcommand\fP]"
 Without an argument, display the IP routing table.
 .H 3 "route add" " \fIhostid\fP[/\fIbits\fP]|default \fIinterface\fP [\fIgateway_hostid\fP [\fImetric\fP [\fIttl\fP]]]"

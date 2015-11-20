@@ -1,5 +1,3 @@
-/* @(#) $Id: ctime.c,v 1.4 1996-08-12 18:53:54 deyke Exp $ */
-
 /*
  * Copyright (c) 1987, 1989 Regents of the University of California.
  * All rights reserved.

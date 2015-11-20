@@ -1,5 +1,3 @@
-/* @(#) $Id: axip.c,v 1.29 1999-01-22 21:20:07 deyke Exp $ */
-
 #include <sys/types.h>
 
 #include "global.h"

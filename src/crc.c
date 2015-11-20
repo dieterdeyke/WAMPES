@@ -1,5 +1,3 @@
-/* @(#) $Id: crc.c,v 1.9 1996-08-12 18:51:17 deyke Exp $ */
-
 #include "global.h"
 #include "mbuf.h"
 #include "crc.h"

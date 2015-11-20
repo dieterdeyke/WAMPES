@@ -1,5 +1,3 @@
-/* @(#) $Id: netrom.c,v 1.58 2000-03-04 18:31:14 deyke Exp $ */
-
 #include <ctype.h>
 #include <stdio.h>
 

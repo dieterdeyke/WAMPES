@@ -1,5 +1,3 @@
-/* @(#) $Id: tun.c,v 1.5 1998-03-09 17:42:56 deyke Exp $ */
-
 /*
    Interface to FreeBSD's tun device - Olaf Erb, dc1ik 960728
    parts and idea taken from FreeBSD's ppp implementation

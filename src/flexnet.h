@@ -1,5 +1,3 @@
-/* @(#) $Id: flexnet.h,v 1.4 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _FLEXNET_H
 #define _FLEXNET_H
 

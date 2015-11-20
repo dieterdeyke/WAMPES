@@ -1,5 +1,3 @@
-/* @(#) $Id: icmpcmd.c,v 1.21 1999-01-22 21:20:07 deyke Exp $ */
-
 /* ICMP-related user commands
  * Copyright 1991 Phil Karn, KA9Q
  */

@@ -1,5 +1,3 @@
-/* @(#) $Id: udpdump.c,v 1.11 1996-08-19 16:30:14 deyke Exp $ */
-
 /* UDP packet tracing
  * Copyright 1991 Phil Karn, KA9Q
  */

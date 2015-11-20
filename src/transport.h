@@ -1,5 +1,3 @@
-/* @(#) $Id: transport.h,v 1.12 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _TRANSPORT_H
 #define _TRANSPORT_H
 

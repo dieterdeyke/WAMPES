@@ -1,5 +1,3 @@
-/* @(#) $Id: services.c,v 1.17 2000-02-12 19:39:28 deyke Exp $ */
-
 #include <ctype.h>
 #include <stdio.h>
 

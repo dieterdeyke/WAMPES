@@ -1,5 +1,3 @@
-/* @(#) $Id: adjtime.c,v 1.11 1998-03-09 17:42:56 deyke Exp $ */
-
 #include "configure.h"
 
 #if defined __hpux && !HAS_ADJTIME

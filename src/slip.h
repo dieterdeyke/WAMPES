@@ -1,5 +1,3 @@
-/* @(#) $Id: slip.h,v 1.18 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _SLIP_H
 #define _SLIP_H
 

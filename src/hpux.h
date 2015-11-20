@@ -1,5 +1,3 @@
-/* @(#) $Id: hpux.h,v 1.17 1996-08-12 18:51:17 deyke Exp $ */
-
 #ifndef _HPUX_H
 #define _HPUX_H
 

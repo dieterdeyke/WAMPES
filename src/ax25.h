@@ -1,5 +1,3 @@
-/* @(#) $Id: ax25.h,v 1.22 2000-03-04 18:31:13 deyke Exp $ */
-
 #ifndef _AX25_H
 #define _AX25_H
 

@@ -1,5 +1,3 @@
-/* @(#) $Id: cdefs.h,v 1.4 1996-08-12 18:53:54 deyke Exp $ */
-
 /*
  * Copyright (c) 1991, 1993
  *      The Regents of the University of California.  All rights reserved.

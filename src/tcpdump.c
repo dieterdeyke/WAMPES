@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpdump.c,v 1.12 1996-08-19 16:30:14 deyke Exp $ */
-
 /* TCP header tracing routines
  * Copyright 1991 Phil Karn, KA9Q
  */

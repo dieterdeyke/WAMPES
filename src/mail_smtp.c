@@ -1,5 +1,3 @@
-/* @(#) $Id: mail_smtp.c,v 1.21 1996-08-12 18:51:17 deyke Exp $ */
-
 /* SMTP Mail Delivery Agent */
 
 #include <ctype.h>

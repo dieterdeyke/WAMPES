@@ -1,5 +1,3 @@
-/* @(#) $Id: socket.h,v 1.24 1999-01-27 18:45:40 deyke Exp $ */
-
 #ifndef _SOCKET_H
 #define _SOCKET_H
 

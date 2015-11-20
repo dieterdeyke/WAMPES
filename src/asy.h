@@ -1,5 +1,3 @@
-/* @(#) $Id: asy.h,v 1.20 1999-01-27 18:45:40 deyke Exp $ */
-
 #ifndef _ASY_H
 #define _ASY_H
 

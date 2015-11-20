@@ -1,5 +1,3 @@
-# @(#) $Id: Makefile,v 1.5 2000-01-15 18:34:09 deyke Exp $
-
 LIBRARY       = libnext.a
 
 OBJS          = next.o \

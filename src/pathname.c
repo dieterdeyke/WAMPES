@@ -1,5 +1,3 @@
-/* @(#) $Id: pathname.c,v 1.10 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Convert relative to absolute pathnames
  * Copyright 1991 Phil Karn, KA9Q
  */

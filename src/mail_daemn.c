@@ -1,5 +1,3 @@
-/* @(#) $Id: mail_daemn.c,v 1.28 1999-02-01 22:24:25 deyke Exp $ */
-
 /* Mail Daemon, checks for outbound mail and starts mail delivery agents */
 
 #include <sys/types.h>

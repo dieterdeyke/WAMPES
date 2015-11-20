@@ -1,5 +1,3 @@
-/* @(#) $Id: tty.h,v 1.6 1999-02-01 22:24:25 deyke Exp $ */
-
 #ifndef _TTY_H
 #define _TTY_H
 

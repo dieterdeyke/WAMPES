@@ -1,5 +1,3 @@
-/* @(#) $Id: tcpcmd.c,v 1.22 1999-01-22 21:20:07 deyke Exp $ */
-
 /* TCP control and status routines
  * Copyright 1991 Phil Karn, KA9Q
  */

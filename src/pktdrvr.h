@@ -1,5 +1,3 @@
-/* @(#) $Id: pktdrvr.h,v 1.12 1999-01-27 18:45:40 deyke Exp $ */
-
 #ifndef _PKTDRVR_H
 #define _PKTDRVR_H
 

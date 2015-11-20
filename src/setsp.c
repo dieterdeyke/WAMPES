@@ -1,5 +1,3 @@
-/* @(#) $Id: setsp.c,v 1.16 1999-02-01 22:24:25 deyke Exp $ */
-
 #ifndef __lint
 
 #ifdef __hp9000s300

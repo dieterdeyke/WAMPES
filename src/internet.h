@@ -1,5 +1,3 @@
-/* @(#) $Id: internet.h,v 1.11 1996-08-19 16:30:14 deyke Exp $ */
-
 #ifndef _INTERNET_H
 #define _INTERNET_H
 

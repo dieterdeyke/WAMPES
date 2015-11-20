@@ -1,5 +1,3 @@
-/* @(#) $Id: ripcmd.c,v 1.10 1999-01-22 21:20:07 deyke Exp $ */
-
 /* RIP-related user commands
  *   Al Broscious, N3FCT
  *   Phil Karn, KA9Q

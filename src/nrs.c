@@ -1,5 +1,3 @@
-/* @(#) $Id: nrs.c,v 1.20 1999-02-01 22:24:25 deyke Exp $ */
-
 /* This module implements the serial line framing method used by
  * net/rom nodes.  This allows the net/rom software to talk to
  * an actual net/rom over its serial interface, which is useful

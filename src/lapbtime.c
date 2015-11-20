@@ -1,5 +1,3 @@
-/* @(#) $Id: lapbtime.c,v 1.10 1996-08-19 16:30:14 deyke Exp $ */
-
 /* LAPB (AX25) timer recovery routines
  * Copyright 1991 Phil Karn, KA9Q
  */

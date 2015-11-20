@@ -1,7 +1,3 @@
-#if 0
-static const char rcsid[] = "@(#) $Id: udpbridge.c,v 1.4 1996-08-12 18:52:58 deyke Exp $";
-#endif
-
 #include <sys/types.h>
 
 #include <netinet/in.h>
