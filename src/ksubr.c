@@ -215,6 +215,12 @@ struct env {
 };
 #define getstackptr(ep) ((ep)->sp)
 #elif defined linux
+#ifdef __x86_64__
+struct env {
+	long    unknown;
+};
+#define getstackptr(ep) (0)
+#else
 struct env {
 	long    ebx;
 	long    esi;
@@ -224,6 +230,7 @@ struct env {
 	long    epc;
 };
 #define getstackptr(ep) ((ep)->esp)
+#endif
 #elif defined __386BSD__
 struct env {
 	long    unknown0;
@@ -390,13 +397,13 @@ struct proc *pp)
 	struct env *ep;
 
 	ep = (struct env *)&pp->env;
-	printf("%08lx  %08lx  %7u   %6u    %08lx  %c%c%c %3d %3d  %s\n",
+	printf("%08lx  %08lx  %7u   %6u    %08lx  %c%c%c %3ld %3ld  %s\n",
 	 (long)pp,getstackptr(ep),pp->stksize,stkutil(pp),
 	 (long)pp->event,
 	 ' ',
 	 pp->flags.waiting ? 'W' : ' ',
 	 pp->flags.suspend ? 'S' : ' ',
-	 (int)pp->input,(int)pp->output,pp->name);
+	 (long)pp->input,(long)pp->output,pp->name);
 }
 static int
 stkutil(
@@ -423,5 +430,5 @@ void *event)
 	/* If PHASH is a power of two, this will simply mask off the
 	 * higher order bits
 	 */
-	return (int)event % PHASH;
+	return (long)event % PHASH;
 }

@@ -206,7 +206,7 @@ static struct tcb *transport_open_tcp(const char *address, struct transport_cb *
   if (!(fsocket.port = tcp_port_number(port))) return 0;
   lsocket.address = INADDR_ANY;
   lsocket.port = Lport++;
-  return open_tcp(&lsocket, &fsocket, TCP_ACTIVE, 0, transport_recv_upcall_tcp, transport_send_upcall_tcp, transport_state_upcall_tcp, 0, (int) tp);
+  return open_tcp(&lsocket, &fsocket, TCP_ACTIVE, 0, transport_recv_upcall_tcp, transport_send_upcall_tcp, transport_state_upcall_tcp, 0, (long) tp);
 }
 
 /*---------------------------------------------------------------------------*/

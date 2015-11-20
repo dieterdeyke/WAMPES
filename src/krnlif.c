@@ -427,6 +427,8 @@ int krnlif_attach(int argc, char *argv[], void *p)
 
 #else
 
+#include <stdio.h>
+
 int krnlif_attach(int argc, char *argv[], void *p)
 {
 	printf("kernel interface not implemented.\n");

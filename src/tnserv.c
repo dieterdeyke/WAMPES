@@ -38,7 +38,7 @@ static void tnserv_state_upcall(struct tcb *tcb, enum tcp_state old, enum tcp_st
 {
   switch (new) {
   case TCP_ESTABLISHED:
-    tcb->user = (int) login_open(pinet_tcp(&tcb->conn.remote), "TELNET", (void (*)(void *)) tnserv_send_upcall, (void (*)(void *)) close_tcp, tcb);
+    tcb->user = (long) login_open(pinet_tcp(&tcb->conn.remote), "TELNET", (void (*)(void *)) tnserv_send_upcall, (void (*)(void *)) close_tcp, tcb);
     if (!tcb->user)
       close_tcp(tcb);
     else

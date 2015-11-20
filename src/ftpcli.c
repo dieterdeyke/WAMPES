@@ -135,7 +135,7 @@ int doftp(int argc, char *argv[], void *p)
 
 	/* Now open the control connection */
 	tcb = open_tcp(&lsocket,&fsocket,TCP_ACTIVE,
-		0,ftpccr,NULL,ftpccs,0,(int)ftp);
+		0,ftpccr,NULL,ftpccs,0,(long)ftp);
 	ftp->control = tcb;
 	go(argc, argv, p);
 	return 0;
@@ -483,7 +483,7 @@ static int ftpsetup(struct ftp *ftp, void (*recv)(struct tcb *,int32), void (*se
 
 	/* Post a listen on the data connection */
 	ftp->data = open_tcp(&lsocket,NULL,TCP_PASSIVE,0,
-		recv,send,state,0,(int)ftp);
+		recv,send,state,0,(long)ftp);
 	return 0;
 }
 

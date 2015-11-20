@@ -593,7 +593,7 @@ static int dosntpadd(int argc, char **argv, void *p)
 		free(peer);
 		return 1;
 	}
-	peer->ucb->user = (int) peer;
+	peer->ucb->user = (long) peer;
 	peer->timer.func = sntp_client_send;
 	peer->timer.arg = peer;
 	set_timer(&peer->timer, interval * 1000L);

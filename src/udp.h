@@ -55,7 +55,7 @@ struct udp_cb {
 				/* Function to call when one arrives */
 	struct mbuf *rcvq;      /* Queue of pending datagrams */
 	int rcvcnt;             /* Count of pending datagrams */
-	int user;               /* User link */
+	long user;              /* User link */
 };
 extern struct udp_cb *Udps;     /* Hash table for UDP structures */
 

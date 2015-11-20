@@ -100,7 +100,7 @@ void *p)
 	s->cb.telnet = tn;      /* Downward pointer */
 
 	tcb = open_tcp(&lsocket,&fsocket,TCP_ACTIVE,0,
-	 rcv_char,tn_tx,t_state,0,(int)tn);
+	 rcv_char,tn_tx,t_state,0,(long)tn);
 
 	tn->tcb = tcb;  /* Downward pointer */
 	go(argc, argv, p);

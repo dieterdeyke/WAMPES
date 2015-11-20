@@ -1,7 +1,7 @@
 /* memory allocation routines
  */
 
-#if defined PURIFY || defined __NeXT__ || defined __NetBSD__ || defined __sgi
+#if __x86_64__ || defined PURIFY || defined __NeXT__ || defined __NetBSD__ || defined __sgi
 #define USE_WAMPES_MALLOC 0
 #else
 #define USE_WAMPES_MALLOC 1
