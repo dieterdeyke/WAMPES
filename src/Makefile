@@ -284,43 +284,6 @@ install:;    @. ../lib/configure.mak; $(MAKE) -i _install
 
 _all:           $(PROGRAM)
 
-setsp.o: setsp.c
-	@case "`uname -sr`" in \
-	HP-UX*) \
-		$(CC) -E $< > setsp.s; as setsp.s -o $@;; \
-	AIX*) \
-		$(CC) $(CFLAGS) -c setsp.c;; \
-	IRIX*) \
-		$(CC) $(CFLAGS) -c setsp.c;; \
-	Linux*) \
-		$(CC) -E $< > setsp.s; cc -c setsp.s;; \
-	386BSD*) \
-		$(CC) -E $< > setsp.s; cc -c setsp.s;; \
-	NetBSD*) \
-		$(CC) -E $< > setsp.s; cc -c setsp.s;; \
-	FreeBSD*) \
-		$(CC) -E $< > setsp.s; cc -c setsp.s;; \
-	BSD/386*) \
-		cpp $< > setsp.s; cc -c setsp.s;; \
-	SunOS\ 4.*) \
-		$(CC) $(CFLAGS) -c setsp.c;; \
-	SunOS\ 5.*) \
-		$(CC) $(CFLAGS) -c setsp.c;; \
-	ULTRIX*) \
-		/bin/cc -c setsp.c;; \
-	A/UX*) \
-		$(CC) $(CFLAGS) -c setsp.c;; \
-	RISC\ iX*) \
-		$(CC) -E -DRISCiX $< > setsp.s; cc -c setsp.s;; \
-	AOS*) \
-		$(CC) $(CFLAGS) -c setsp.c;; \
-	NeXT*) \
-		gcc -E $< | grep -v '^#' > setsp.s; as setsp.s -o $@;; \
-	*) \
-		echo System `uname -sr` is not supported;; \
-	esac
-	@rm -f setsp.s
-
 $(PROGRAM):     $(OBJS) $(LIBS)
 		@echo "Linking $(PROGRAM) ..."
 		$(RMTARGET)
