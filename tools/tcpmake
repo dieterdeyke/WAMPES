@@ -1,48 +1,9 @@
 #! /bin/bash
 
-#------------------------------------------------------------------------------
-
-save_file()
-{
-        if [[ -f $1 ]]; then
-                cp -p $1 $1.old
-        fi
-}
-
-#------------------------------------------------------------------------------
-
-check_file()
-{
-        if [[ -f $1.old ]]; then
-                if cmp -s $1.old $1; then
-                        rm -f $1
-                        mv $1.old $1
-                else
-                        rm -f $1.old
-                fi
-        fi
-}
-
-#------------------------------------------------------------------------------
-
 export PATH=~/tcp/tools:$PATH
-
-date=$(date +%y%m%d)
 
 cd ~/tcp/lib; make
 cd ~/tcp/tools; make
-
-cd ~/tcp
-file=README
-save_file $file
-sed "s/wampes-....../wampes-$date/g" < $file.old > $file
-check_file $file
-
-cd ~/tcp/src
-file=version.c
-save_file $file
-sed "s/WAMPES-....../WAMPES-$date/g" < $file.old > $file
-check_file $file
 
 for dir in \
         ~/tcp \
@@ -60,69 +21,46 @@ for dir in \
         cd $dir
         file=Makefile
         if [[ -f $file ]]; then
-                save_file $file
                 make_depend
-                check_file $file
         fi
 done
 
 for manual in bbs bridge smack wampes; do
         cd ~/tcp/manuals/$manual
-
-        file=frontpage
-        save_file $file
-        sed "s/Version [0-9][0-9][0-9][0-9][0-9][0-9]/Version $date/g" < $file.old > $file
-        check_file $file
-
-        file=../../doc/$manual.mm
-        save_file $file
-        cat $(< filelist) > $file
-        check_file $file
-
+        cat $(< filelist) > ../../doc/$manual.mm
 done
 
 cd ~/tcp/doc
-for file in *.gif; do
-        save_file $file
-done
 for manual in bbs bridge smack wampes; do
-        file=$manual.html
-        save_file $file
-        mm2html.py $manual.mm > $file
-        check_file $file
-done
-for file in *.gif; do
-        check_file $file
+        mm2html.py $manual.mm > $manual.html
 done
 
-cd ~/tcp/bbs
-file=bbs.help
-save_file $file
-groff -p -t -mgm -Tascii < ~/tcp/doc/bbs.mm | sed 's/.//g' | awk '
-        /BBS Reference Manual.*Version/ {
-                next
-        }
-        /^ *CONTENTS *$/ {
-                exit
-        }
-        /^[0-9][0-9]*\.[0-9]* \ / {
-                print ""
-                print "^" $2
-                print ""
-                sub("^[0-9][0-9]*\.[0-9]* \ ", "")
-                print
-                next
-        }
-        {
-                print
-        }
-' | trim -s > $file
-check_file $file
+# cd ~/tcp/bbs
+# file=bbs.help
+# save_file $file
+# groff -p -t -mgm -Tascii < ~/tcp/doc/bbs.mm | sed 's/.//g' | awk '
+#         /BBS Reference Manual.*Version/ {
+#                 next
+#         }
+#         /^ *CONTENTS *$/ {
+#                 exit
+#         }
+#         /^[0-9][0-9]*\.[0-9]* \ / {
+#                 print ""
+#                 print "^" $2
+#                 print ""
+#                 sub("^[0-9][0-9]*\.[0-9]* \ ", "")
+#                 print
+#                 next
+#         }
+#         {
+#                 print
+#         }
+# ' | trim -s > $file
+# check_file $file
 
 cd ~/tcp
 make
-make distrib
-sudo make
 
 cd ~/tcp/src
 make tags TAGS

@@ -1,3 +1,7 @@
+151122 Dieter Deyke <deyke@yahoo.com>
+
+	ChangeLog will be discontinued, use git log instead.
+
 071209 Dieter Deyke <deyke@yahoo.com>
 
         Fixed compiler warning in src/cmdparse.c

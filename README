@@ -1,7 +1,6 @@
-wampes-000304.tar.gz is a gzipped tar archive of WAMPES, a NET/NOS
-port to various flavors of Unix.
+WAMPES is a NET/NOS port to various flavors of Unix.
 
-WAMPES currently supports the following configurations:
+In the past WAMPES supported the following configurations:
 
 |---------------+-----------------+---------------------------------|
 | OS:           | Hardware:       | Contact Person:                 |
@@ -45,21 +44,19 @@ WAMPES currently supports the following configurations:
 | NeXTStep3.3   |                 | <thomas@x-berg.in-berlin.de>    |
 |---------------+-----------------+---------------------------------|
 
-To unpack this archive you have to:
+Currently WAMPES is used on a Debian x86_64 system, and infrequently
+checked on a Debian i386 system.
 
+To get WAMPES you have to:
+
+        cd
+	git clone https://github.com/dieterdeyke/WAMPES.git
+        cd WAMPES
         su
         mkdir /tcp
-        cd /tcp
-        gzip -d < wampes-000304.tar.gz | tar xvf -
+        make -i
 
-After unpacking please read the file /tcp/doc/intro.txt. For FreeBSD
-2.1 and later, "GNU make (gmake)" must be used instead of
-/usr/bin/make. For RISC iX you have to copy *.R to /usr/lib. Now
-type "make -i" to compile and install everything.
-
-wampes-000304.tar.gz can be found at
-
-        (currently not available)
+After building please read the file /tcp/doc/intro.txt.
 
 73,
 Dieter Deyke - deyke@yahoo.com
