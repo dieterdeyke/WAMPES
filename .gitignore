@@ -1,6 +1,9 @@
 *.a
 *.o
+.sconf_temp/
+.sconsign.dblite
 bbs/bbs
+config.log
 convers/convers
 convers/conversd
 lib/configure.h
