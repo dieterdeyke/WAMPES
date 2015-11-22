@@ -5,7 +5,6 @@ TARGETS = \
 	     filter \
 	     import \
 	     makeiprt \
-	     mm2html \
 	     ms2mm \
 	     udpbridge
 
@@ -40,10 +39,6 @@ makeiprt: makeiprt.o $(LIBS)
 	$(RMTARGET)
 	$(LD) $(LDFLAGS) makeiprt.o $(LIBS) $(SLIBS) -o $@
 
-mm2html: mm2html.o $(LIBS)
-	$(RMTARGET)
-	$(LD) $(LDFLAGS) mm2html.o $(LIBS) $(SLIBS) -o $@
-
 ms2mm: ms2mm.o $(LIBS)
 	$(RMTARGET)
 	$(LD) $(LDFLAGS) ms2mm.o $(LIBS) $(SLIBS) -o $@
@@ -77,8 +72,6 @@ import.o:\
 makeiprt.o:\
 	../lib/configure.h\
 	makeiprt.c
-mm2html.o:\
-	mm2html.c
 ms2mm.o:\
 	ms2mm.c
 pty-test.o:\

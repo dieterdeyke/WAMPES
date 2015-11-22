@@ -12,7 +12,6 @@ tools/connect2
 tools/filter
 tools/import
 tools/makeiprt
-tools/mm2html
 tools/ms2mm
 tools/udpbridge
 util/bridge

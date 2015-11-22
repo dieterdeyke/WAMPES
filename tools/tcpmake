@@ -88,7 +88,7 @@ done
 for manual in bbs bridge smack wampes; do
         file=$manual.html
         save_file $file
-        mm2html $manual.mm > $file
+        mm2html.py $manual.mm > $file
         check_file $file
 done
 for file in *.gif; do
