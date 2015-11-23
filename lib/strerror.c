@@ -1,6 +1,6 @@
 #include "configure.h"
 
-#if !HAS_STRERROR
+#if !HAVE_STRERROR
 
 extern char *sys_errlist[];
 extern int sys_nerr;

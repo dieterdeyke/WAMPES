@@ -9,13 +9,13 @@
 
 #include "configure.h"
 
-#if HAS_NDBM
+#if HAVE_NDBM_H
 #include <ndbm.h>
 #else
-#if HAS_DB1_NDBM
+#if HAVE_DB1_NDBM_H
 #include <db1/ndbm.h>
 #else
-#if HAS_GDBM_NDBM
+#if HAVE_GDBM_NDBM_H
 #include <gdbm-ndbm.h>
 #else
 #error Cannot find ndbm.h header file

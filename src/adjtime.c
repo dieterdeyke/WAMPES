@@ -1,6 +1,6 @@
 #include "configure.h"
 
-#if defined __hpux && !HAS_ADJTIME
+#if defined __hpux && !HAVE_ADJTIME
 
 #include <sys/types.h>
 

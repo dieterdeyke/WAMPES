@@ -5,7 +5,7 @@
 #include "configure.h"
 #endif
 
-#if !HAS_STRTOUL
+#if !HAVE_STRTOUL
 
 /* In strtoul.c: */
 unsigned long strtoul(const char *nptr, char **endptr, register int base);

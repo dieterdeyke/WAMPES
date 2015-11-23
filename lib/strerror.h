@@ -5,7 +5,7 @@
 #include "configure.h"
 #endif
 
-#if !HAS_STRERROR
+#if !HAVE_STRERROR
 
 /* In strerror.c: */
 char *strerror(int errnum);

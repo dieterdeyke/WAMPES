@@ -1,6 +1,6 @@
 #include "configure.h"
 
-#if !HAS_STRTOUL
+#if !HAVE_STRTOUL
 
 /*
  * Copyright (c) 1990 Regents of the University of California.

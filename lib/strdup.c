@@ -1,6 +1,6 @@
 #include "configure.h"
 
-#if !HAS_STRDUP || defined _AIX
+#if !HAVE_STRDUP || defined _AIX
 
 #include <stdlib.h>
 #include <string.h>

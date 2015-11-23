@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-23 15:49:12 deyke>
+# Time-stamp: <2015-11-23 20:55:55 deyke>
 
 import glob
 import os
@@ -88,26 +88,14 @@ findprog("RNEWS_PROG", ["/usr/local/news/bin/rnews",
 findprog("SENDMAIL_PROG", ["/usr/sbin/sendmail",
                            "/usr/lib/sendmail", ])
 
-if conf.CheckCHeader("ndbm.h"):
-    conf.Define("HAS_NDBM", "1")
+conf.CheckCHeader("ndbm.h")
+conf.CheckCHeader("db1/ndbm.h")
+conf.CheckCHeader("gdbm-ndbm.h")
 
-if conf.CheckCHeader("db1/ndbm.h"):
-    conf.Define("HAS_DB1_NDBM", "1")
-
-if conf.CheckCHeader("gdbm-ndbm.h"):
-    conf.Define("HAS_GDBM_NDBM", "1")
-
-if conf.CheckFunc("adjtime"):
-    conf.Define("HAS_ADJTIME", "1")
-
-if conf.CheckFunc("strdup"):
-    conf.Define("HAS_STRDUP", "1")
-
-if conf.CheckFunc("strerror"):
-    conf.Define("HAS_STRERROR", "1")
-
-if conf.CheckFunc("strtoul"):
-    conf.Define("HAS_STRTOUL", "1")
+conf.CheckFunc("adjtime")
+conf.CheckFunc("strdup")
+conf.CheckFunc("strerror")
+conf.CheckFunc("strtoul")
 
 if conf.CheckType("fd_set", "#include <sys/types.h>"):
     conf.Define("TYPE_FD_SET", "fd_set")
@@ -153,6 +141,8 @@ for manual in ("bbs", "bridge", "smack", "wampes", ):
         [ "doc/" + manual + ".mm", "tools/mm2html.py", ],
         "tools/mm2html.py doc/" + manual + ".mm > $TARGET"
     )
+
+# install
 
 env.Install("/tcp", source = [
     "convers/conversd",

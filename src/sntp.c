@@ -18,7 +18,7 @@
 
 #include "configure.h"
 
-#if defined __hpux && !HAS_ADJTIME
+#if defined __hpux && !HAVE_ADJTIME
 int adjtime(const struct timeval *delta, struct timeval *olddelta);
 #endif
 
@@ -498,7 +498,7 @@ static void sntp_client_recv(struct iface *iface, struct udp_cb *ucb, int cnt)
 
 	abs_offset = fpabs(peer->offset);
 	if (abs_offset.i < Step_threshold) {
-#if HAS_ADJTIME || defined __hpux
+#if HAVE_ADJTIME || defined __hpux
 		tv.tv_sec = (int) peer->offset.i;
 		tv.tv_usec = (long) (peer->offset.f / USEC2F);
 		if (!adjtime(&tv, 0)) {

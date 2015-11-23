@@ -1,6 +1,6 @@
 #include "configure.h"
 
-#if HAS_NI
+#if HAVE_NI
 
 #include "global.h"
 #undef  hiword

@@ -130,7 +130,7 @@ struct cmds Attab[] = {
 	{ "ipip", ipip_attach, 0, 1,
 	"attach ipip [<label> [ip|udp [protocol|port]]]" },
 
-#if HAS_NI
+#if HAVE_NI
 	{ "ni", ni_attach, 0, 3,
 	"attach ni <label> <dest> [mask]" },
 #endif

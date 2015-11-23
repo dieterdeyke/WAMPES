@@ -5,7 +5,7 @@
 #include "configure.h"
 #endif
 
-#if !HAS_STRDUP
+#if !HAVE_STRDUP
 
 /* In strdup.c: */
 char *strdup(const char *s);
