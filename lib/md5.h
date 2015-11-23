@@ -38,7 +38,11 @@
  */
 
 /* typedef a 32-bit type */
+#ifdef __x86_64__
+typedef unsigned int UINT4;
+#else
 typedef unsigned long int UINT4;
+#endif
 
 /* Data structure for MD5 (Message-Digest) computation */
 typedef struct {
