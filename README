@@ -47,16 +47,22 @@ In the past WAMPES supported the following configurations:
 Currently WAMPES is used on a Debian x86_64 system, and infrequently
 checked on a Debian i386 system.
 
-To get WAMPES you have to:
+To install WAMPES you have to:
 
         cd
-	git clone https://github.com/dieterdeyke/WAMPES.git
+        git clone https://github.com/dieterdeyke/WAMPES.git
         cd WAMPES
+        scons
         su
-        mkdir /tcp
-        make -i
+        scons /
 
-After building please read the file /tcp/doc/intro.txt.
+After building please read the file doc/intro.txt.
+
+To uninstall WAMPES do:
+
+        cd ~/WAMPES
+        su
+        scons -c /
 
 73,
 Dieter Deyke - deyke@yahoo.com

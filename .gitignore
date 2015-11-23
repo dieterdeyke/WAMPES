@@ -16,7 +16,6 @@ doc/smack.mm
 doc/wampes.html
 doc/wampes.mm
 lib/configure.h
-lib/configure.mak
 src/TAGS
 src/net
 src/tags

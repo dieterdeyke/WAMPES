@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-22 11:37:15 deyke>
+# Time-stamp: <2015-11-23 15:49:12 deyke>
 
 import glob
 import os
@@ -153,3 +153,24 @@ for manual in ("bbs", "bridge", "smack", "wampes", ):
         [ "doc/" + manual + ".mm", "tools/mm2html.py", ],
         "tools/mm2html.py doc/" + manual + ".mm > $TARGET"
     )
+
+env.Install("/tcp", source = [
+    "convers/conversd",
+    "src/net",
+    "util/bridge",
+    ])
+
+env.Install("/usr/local/bin", source = [
+    "bbs/bbs",
+    "convers/convers",
+    "util/cnet",
+    "util/md5",
+    "util/path",
+    "util/qth",
+    ])
+
+env.Install("/usr/local/lib", source = [
+    "bbs/bbs.help",
+    ])
+
+env.Clean("/", FindInstalledFiles())

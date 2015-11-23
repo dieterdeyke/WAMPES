@@ -1,12 +1,10 @@
 .\" -*- Mode: Nroff -*-
 .\"
-.PF "^WAMPES Reference Manual^-\\\\nP-^Version 000304" \" Page footer
+.PF "^WAMPES Reference Manual" \" Page footer
 .\"
 .S 30
 .ce
 \fBWAMPES Reference Manual\fP
-.ce
-Version 000304
 .S
 .SP 2
 .S 15

@@ -1,7 +1,7 @@
 .\" -*- Mode: Nroff -*-
 .nr Ej 0 \" No new page for all headers
 .H 1 "The bridge utility"
-Usage: /tcp/util/bridge [-a] [-f \fIfailures\fP]
+Usage: /tcp/bridge [-a] [-f \fIfailures\fP]
 .SP
 \fBbridge\fP allows multiple \fBnet\fP programs to communicate with each other.
 .SP

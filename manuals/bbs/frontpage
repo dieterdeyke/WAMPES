@@ -1,12 +1,10 @@
 .\" -*- Mode: Nroff -*-
 .\"
-.PF "^BBS Reference Manual^-\\\\nP-^Version 000304" \" Page footer
+.PF "^BBS Reference Manual" \" Page footer
 .\"
 .S 30
 .ce
 \fBBBS Reference Manual\fP
-.ce
-Version 000304
 .S
 .SP 2
 .S 15
