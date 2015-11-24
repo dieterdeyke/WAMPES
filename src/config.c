@@ -81,7 +81,6 @@ struct cmds Cmds[] = {
 	{ "ipfilter",     doipfilter,     0, 0, NULL },
 	{ "log",          dolog,          0, 0, NULL },
 	{ "login",        dologin,        0, 0, NULL },
-	{ "memory",       domem,          0, 0, NULL },
 	{ "mkdir",        domkd,          0, 2, "mkdir <directory>" },
 	{ "netrom",       donetrom,       0, 0, NULL },
 	{ "nrstat",       donrstat,       0, 0, NULL },

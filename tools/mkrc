@@ -20,7 +20,6 @@ echo refuse
 icmp trace on
 ip rtimer 100
 ip ttl 30
-memory debug on
 tcp mss 216
 tcp window 2048
 

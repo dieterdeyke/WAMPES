@@ -108,7 +108,7 @@ typedef unsigned char uint8;    /* 8-bit unsigned integer */
 #define lonibble(x)     ((x) & 0xf)
 
 /* Various low-level and miscellaneous functions */
-void *callocw(unsigned nelem,unsigned size);
+#define callocw calloc
 #define FREE(p)         {free(p); p = NULL;}
 int htob(char c);
 int htoi(char *);
@@ -118,7 +118,7 @@ uint hash_ip(int32 addr);
 void logmsg(void *tcb,const char *fmt,const char *arg);
 int ilog2(uint x);
 #define ltop(x) ((void *) (x))
-void *mallocw(unsigned nb);
+#define mallocw malloc
 int memcnt(const uint8 *buf,uint8 c,int size);
 void memxor(uint8 *,uint8 *,unsigned int);
 void rip(char *);

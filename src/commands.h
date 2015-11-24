@@ -4,9 +4,6 @@
 /* In n8250.c, amiga.c: */
 int doasystat(int argc,char *argv[],void *p);
 
-/* In alloc.c: */
-int domem(int argc,char *argv[],void *p);
-
 /* In arpcmd.c: */
 int doarp(int argc,char *argv[],void *p);
 
