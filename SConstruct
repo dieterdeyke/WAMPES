@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-23 20:55:55 deyke>
+# Time-stamp: <2015-11-25 17:42:25 deyke>
 
 import glob
 import os
@@ -148,6 +148,7 @@ env.Install("/tcp", source = [
     "convers/conversd",
     "src/net",
     "util/bridge",
+    "util/mkhostdb",
     ])
 
 env.Install("/usr/local/bin", source = [
@@ -162,5 +163,16 @@ env.Install("/usr/local/bin", source = [
 env.Install("/usr/local/lib", source = [
     "bbs/bbs.help",
     ])
+
+for filename in os.listdir("examples"):
+    if not os.path.exists("/tcp/" + filename):
+        env.Command("/tcp/" + filename,
+                    "examples/" + filename,
+                    Copy('$TARGET', '$SOURCE'))
+
+env.Command("/tcp/hostname.dir",
+            ["/tcp/mkhostdb", "/tcp/domain.txt", "/tcp/domain.local", "/tcp/hosts", ],
+            "/tcp/mkhostdb"
+            )
 
 env.Clean("/", FindInstalledFiles())

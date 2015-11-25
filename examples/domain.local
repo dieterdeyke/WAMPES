@@ -1,0 +1,8 @@
+# Sample domain.local file.
+# THIS FILE MUST BE MODIFIED TO MATCH YOUR CONFIGURATION.
+
+# This file belongs in /tcp/domain.local.
+
+$origin ampr.org.
+
+; db0ham IN A 44.225.124.18

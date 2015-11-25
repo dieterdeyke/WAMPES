@@ -1,0 +1,12 @@
+# Sample domain.txt file.
+# THIS FILE MUST BE MODIFIED TO MATCH YOUR CONFIGURATION.
+
+# This file belongs in /tcp/domain.txt.
+
+$origin ampr.org.
+
+ns IN A 44.0.0.1
+
+; db0afz IN A 44.225.134.2
+; db0feu IN CNAME router.db0feu
+; router.db0feu IN A 44.225.44.17
