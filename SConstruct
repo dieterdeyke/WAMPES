@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-25 17:42:25 deyke>
+# Time-stamp: <2015-11-26 07:04:11 deyke>
 
 import glob
 import os
@@ -175,4 +175,20 @@ env.Command("/tcp/hostname.dir",
             "/tcp/mkhostdb"
             )
 
+# clean
+
 env.Clean("/", FindInstalledFiles())
+
+def same(filename1, filename2):
+    try:
+        if open(filename1).read() == open(filename2).read():
+            return True
+    except:
+        pass
+    return False
+
+for filename in os.listdir("examples"):
+    if same("/tcp/" + filename, "examples/" + filename):
+        env.Clean("/", "/tcp/" + filename)
+
+env.Clean("/", Glob("/tcp/hostname.*") + Glob("/tcp/hostaddr.*"))
