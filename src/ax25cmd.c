@@ -378,7 +378,7 @@ int argc,
 char *argv[],
 void *p)
 {
-	return setlong(&Blimit,"blimit",argc,argv);
+	return setint32(&Blimit,"blimit",argc,argv);
 }
 static int
 doversion(

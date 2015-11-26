@@ -18,7 +18,7 @@ int subcmd(struct cmds tab[],int argc,char *argv[],void *p);
 int setbool(int *var,char *label,int argc,char *argv[]);
 int bitcmd(uint *bits, uint mask, char *label, int argc, char *argv[]);
 int setint(int *var,char *label,int argc,char *argv[]);
-int setlong(int32 *var,char *label,int argc,char *argv[]);
+int setint32(int32 *var,char *label,int argc,char *argv[]);
 int setshort(unsigned short *var,char *label,int argc,char *argv[]);
 int setuns(unsigned *var,char *label,int argc,char *argv[]);
 int setintrc(int *var,char *label,int argc,char *argv[],int minval,int maxval);

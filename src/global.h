@@ -66,17 +66,17 @@ typedef int pid_t;
 #define WRITE_TEXT      "w"
 #define APPEND_TEXT     "a+"
 
-/* These two lines assume that your compiler's longs are 32 bits and
- * shorts are 16 bits. It is already assumed that chars are 8 bits,
- * but it doesn't matter if they're signed or unsigned.
- */
-#if !HAS_INT32
+#ifdef __x86_64__
+typedef int int32;              /* 32-bit signed integer */
+#else
 typedef long int32;             /* 32-bit signed integer */
 #endif
-#if !HAS_UINT
 typedef unsigned int uint;      /* 16 or 32-bit unsigned integer */
-#endif
+#ifdef __x86_64__
+typedef unsigned int uint32;    /* 32-bit unsigned integer */
+#else
 typedef unsigned long uint32;   /* 32-bit unsigned integer */
+#endif
 typedef unsigned short uint16;  /* 16-bit unsigned integer */
 typedef unsigned char byte_t;   /*  8-bit unsigned integer */
 typedef unsigned char uint8;    /* 8-bit unsigned integer */

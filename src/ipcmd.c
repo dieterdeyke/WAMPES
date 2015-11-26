@@ -94,7 +94,7 @@ int argc,
 char *argv[],
 void *p)
 {
-	return setlong(&ipReasmTimeout,"IP reasm timeout (sec)",argc,argv);
+	return setint32(&ipReasmTimeout,"IP reasm timeout (sec)",argc,argv);
 }
 static int
 dottl(
@@ -102,7 +102,7 @@ int argc,
 char *argv[],
 void *p)
 {
-	return setlong(&ipDefaultTTL,"IP Time-to-live",argc,argv);
+	return setint32(&ipDefaultTTL,"IP Time-to-live",argc,argv);
 }
 
 /* Display and/or manipulate routing table */

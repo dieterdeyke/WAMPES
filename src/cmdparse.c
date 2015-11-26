@@ -327,10 +327,10 @@ char *argv[])
 	return result;
 }
 
-/* Subroutine for setting and displaying long variables */
+/* Subroutine for setting and displaying int32 variables */
 int
-setlong(
-long *var,
+setint32(
+int32 *var,
 char *label,
 int argc,
 char *argv[])
@@ -338,7 +338,7 @@ char *argv[])
 	if(argc < 2)
 		printf("%s: %ld\n",label,*var);
 	else
-		*var = atol(argv[1]);
+               *var = (int32) atol(argv[1]);
 
 	return 0;
 }

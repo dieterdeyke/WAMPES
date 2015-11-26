@@ -104,7 +104,7 @@ void *p)
 		rtt_add(addr,atol(argv[2]));
 		return 0;
 	}
-	setlong(&Tcp_irtt,"TCP default irtt",argc,argv);
+	setint32(&Tcp_irtt,"TCP default irtt",argc,argv);
 	if(argc < 2){
 		for(tp = Tcp_rtt;tp;tp=tp->next){
 			if(tp->addr != 0){
