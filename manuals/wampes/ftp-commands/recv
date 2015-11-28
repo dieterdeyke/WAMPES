@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "recv" " \fIremote-file\fP [\fIlocal-file\fP]"
-An alias for the \fBget\fP command.

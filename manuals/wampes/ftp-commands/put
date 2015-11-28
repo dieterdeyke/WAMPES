@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "put" " \fIlocal-file\fP [\fIremote-file\fP]"
-Copy \fIlocal-file\fP to \fIremote-file\fP. If \fIremote-file\fP is unspecified,
-ftp assigns the \fIlocal-file\fP name to the \fIremote-file\fP name.

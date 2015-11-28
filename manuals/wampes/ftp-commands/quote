@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "quote" " \fIftp-command\fP"
-Send \fIftp-command\fP, verbatim, to the server host.

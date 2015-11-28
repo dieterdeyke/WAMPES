@@ -1,5 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "<cr>"
-Entering a carriage return (empty line) while in command mode
-puts you in converse mode with the current session. If there is
-no current session, \fBWAMPES\fP remains in command mode.

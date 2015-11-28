@@ -1,0 +1,53 @@
+Bridge Reference Manual
+=======================
+Dieter Deyke, DK5SG/N0PRA <deyke@yahoo.com>
+
+== The bridge utility
+Usage: /tcp/bridge [-a] [-f _failures_]
+
+*bridge* allows multiple *net* programs to communicate with each other.
+
+One common problem for packet users is only having one AX.25 callsign
+while using WAMPES. You have to run another copy of the *net* program
+if you want a second callsign for connects. Many people achieve this by
+using a tty/pty pair to connect one *net* to another, which isn't a very
+nice method.
+
+An easier solution is *bridge*.
+
+*bridge* listens on a host tcp socket, and relays received packets like
+a digipeater.
+
+*bridge* may be started with the following, optional switches:
+
+The *-a* switch relays received packets to all connections, even back to
+the connection a packet was received from. This is useful
+for certain forms of input stress testing.
+
+The *-f* _failures_ switch (0 <= _failures_ <= 100) specifies
+the percentage of packets dropped by *bridge*.
+This is useful to test retry behavior.
+The default is 0 (no packets are dropped).
+
+*bridge* doesn't run in the background by itself, so don't forget to add
+an '&' if you start it somewhere in your system startup files.
+
+Once *bridge* is running the interface in *net* is attached with this
+command:
+
+....
+
+# open 127.0.0.1, port 4713 where bridge is listening:
+attach asy 7f000001 4713 kissui br0 0 256 19200
+#
+
+....
+
+The interface is named *br0* here, but you can choose any name you like.
+
+You can use the same attach command for multiple *net* programs. Don't
+forget to start each *net* with
+
+net -g net.rc._xxx_
+
+to prevent unlinking of the unix domain sockets, and using a different net.rc.

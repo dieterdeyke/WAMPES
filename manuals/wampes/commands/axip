@@ -1,9 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "axip" " \fIsubcommand\fP"
-TO BE WRITTEN.
-.H 3 "axip route"
-TO BE WRITTEN.
-.H 4 "axip route add" " \fIax25_addr\fP \fIhostid\fP"
-TO BE WRITTEN.
-.H 4 "axip route drop" " \fIax25_addr\fP"
-TO BE WRITTEN.

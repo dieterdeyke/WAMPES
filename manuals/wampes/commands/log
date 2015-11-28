@@ -1,7 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "log" " [stop|\fIfilename\fP]"
-Display the current log filename or set the filename for logging
-server sessions. If \fBstop\fP is given as the argument,
-logging is terminated (the servers themselves are unaffected).
-If a file name is given as an argument, server session log
-entries will be appended to it.

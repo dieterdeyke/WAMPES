@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "ascii"
-Set the file transfer type to network ASCII. This is the default type.
-See also the \fBtype\fP command.

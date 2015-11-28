@@ -1,8 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "session" " [\fIsession#\fP]"
-Without arguments, display the list of current sessions,
-including session number, remote TCP, AX.25, or NET/ROM address
-and the address of the TCP, AX.25, or NET/ROM control block.
-An asterisk (*) is shown next to the current session.
-Entering a session number as an argument to the \fBsession\fP
-command will put you in converse mode with that session.

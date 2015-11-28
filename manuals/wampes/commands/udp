@@ -1,6 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "udp" " \fIsubcommand\fP"
-These commands control the User Datagram Protocol (UDP) service.
-.H 3 "udp status"
-Display several UDP-level statistics, plus a summary of
-all existing UDP control blocks.

@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "user" " \fIuser-name\fP [\fIpassword\fP]"
-Log into the server host on the current connection, which must
-already be open.

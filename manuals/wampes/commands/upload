@@ -1,6 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "upload" " [stop|\fIfilename\fP]"
-Open \fIfilename\fP and send it on the current session as though it were
-typed on the terminal.
-The command \fBupload stop\fP stops uploading and closes the file.
-If no argument is specified the current status is displayed.

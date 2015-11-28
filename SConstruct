@@ -1,7 +1,6 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-26 07:04:11 deyke>
+# Time-stamp: <2015-11-28 17:22:34 deyke>
 
-import glob
 import os
 import stat
 
@@ -130,16 +129,12 @@ env.Program("bbs/bbs", ["bbs/bbs.c", "lib/libutil.a",])
 
 # doc
 
-for manual in ("bbs", "bridge", "smack", "wampes", ):
+for manual in env.Glob("doc/*.asciidoc", strings=True):
+    html = manual[:-9] + ".html"
     env.Command(
-        "doc/" + manual + ".mm",
-        [ sorted(glob.glob(os.path.join("manuals", manual, f.strip()))) for f in open(os.path.join("manuals", manual, "filelist")).readlines() ],
-        "cat $SOURCES > $TARGET"
-    )
-    env.Command(
-        "doc/" + manual + ".html",
-        [ "doc/" + manual + ".mm", "tools/mm2html.py", ],
-        "tools/mm2html.py doc/" + manual + ".mm > $TARGET"
+        html,
+        manual,
+        "asciidoc -a toc -a numbered " + manual
     )
 
 # install

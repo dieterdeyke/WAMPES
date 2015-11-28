@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "size" " \fIremote-file\fP"
-Show the size of \fIremote-file\fP.

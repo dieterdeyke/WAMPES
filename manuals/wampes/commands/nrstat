@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "nrstat"
-Display statistics on all attached NET/ROM serial interfaces.

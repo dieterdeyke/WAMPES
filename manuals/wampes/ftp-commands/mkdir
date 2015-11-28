@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "mkdir" " \fIremote-directory\fP"
-Create \fIremote-directory\fP.

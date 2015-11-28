@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "disconnect" " [\fIsession#\fP]"
-An alias for the \fBclose\fP command (for the benefit of AX.25 users).

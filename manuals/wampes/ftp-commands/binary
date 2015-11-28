@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "binary"
-Set the file transfer type to BINARY/IMAGE.
-See also the \fBtype\fP command.

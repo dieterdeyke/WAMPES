@@ -1,0 +1,16 @@
+WAMPES Documentation
+====================
+Dieter Deyke, DK5SG/N0PRA <deyke@yahoo.com>
+
+* link:../README[README]
+* link:intro.txt[Introduction]
+* Manuals
+** link:wampes.html[WAMPES Reference Manual]
+** link:bbs.html[BBS Reference Manual]
+** link:bridge.html[Bridge Reference Manual]
+** link:smack.html[The SMACK Protocol]
+* link:../ChangeLog[Change Log]
+* Examples
+** link:../examples/bbs.conf[bbs.conf]
+** link:../examples/convers.conf[convers.conf]
+** link:../examples/mail.conf[mail.conf]

@@ -1,5 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "topt" " [on|off]"
-Display or set the flag controlling the display of client Telnet's
-option processing.
-The default is \fBoff\fP.

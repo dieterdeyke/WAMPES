@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "rhelp" " [\fIcommand-name\fP]"
-Request help from the server host. If \fIcommand-name\fP is specified,
-supply it to the server.

@@ -1,9 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.nr Cl 7 \" Max level of header for table of contents
-.H 1 "Credits"
-This manual is based in part on publications authored by
-.DS I
-Phil Karn, KA9Q
-Bdale Garbee, N3EUA
-Gerard van der Grinten, PA0GRI
-.DE

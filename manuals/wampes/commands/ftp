@@ -1,8 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "ftp" " \fIhostid\fP [\fIport\fP]"
-Open a FTP control channel to the specified remote host
-and enter converse mode on the new session.
-If \fIport\fP is given that port is used. Default port is 21.
-Responses from the remote server are displayed directly on the screen.
-See the \fBFTP Subcommands\fP chapter for descriptions of the commands
-available in a FTP session.

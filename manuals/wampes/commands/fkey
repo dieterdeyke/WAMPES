@@ -1,7 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "fkey" " \fIkey#\fP \fItext\fP"
-Set the value for a programmable key on the keyboard.
-To enter a control character from the keyboard it has
-to be prefixed by Control-V.
-\fIText\fP has to be enclosed in double quotes if it
-contains white space.

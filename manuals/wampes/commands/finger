@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "finger" " [\fIuser\fP]@\fIhostid\fP"
-Issue a network finger request for user \fIuser\fP at host \fIhostid\fP. If only
-\fB@\fP\fIhostid\fP is given, all users on that host are identified.

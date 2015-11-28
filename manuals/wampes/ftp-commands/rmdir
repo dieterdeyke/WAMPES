@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "rmdir" " \fIremote-directory\fP"
-Delete \fIremote-directory\fP. \fIremote-directory\fP must be an empty
-directory.

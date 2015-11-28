@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "modtime" " \fIremote-file\fP"
-Show the last modification time of \fIremote-file\fP.

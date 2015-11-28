@@ -1,3 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "delete" " \fIremote-file\fP"
-Delete \fIremote-file\fP. \fIremote-file\fP can be an empty directory.

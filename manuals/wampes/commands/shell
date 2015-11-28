@@ -1,6 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "shell" " \fIshell_command_line\fP"
-Suspend \fBWAMPES\fP and execute a subshell (/bin/sh).
-When the subshell exits, \fBWAMPES\fP resumes.
-Background activity (FTP servers, etc) is also suspended
-while the subshell executes.

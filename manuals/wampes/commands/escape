@@ -1,6 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "escape" " [\fIcharacter\fP]"
-Display or set the current command-mode escape character.
-To enter a control character from the keyboard it has
-to be prefixed by Control-V.
-The default is Control-] (0x1d, ASCII GS).

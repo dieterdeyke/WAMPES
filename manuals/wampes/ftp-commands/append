@@ -1,5 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "append" " \fIlocal-file\fP [\fIremote-file\fP]"
-Copy \fIlocal-file\fP to the end of \fIremote-file\fP.
-If \fIremote-file\fP is left unspecified,
-the local file name is used in naming the remote file.

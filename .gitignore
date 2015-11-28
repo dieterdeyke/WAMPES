@@ -6,15 +6,11 @@ bbs/bbs
 config.log
 convers/convers
 convers/conversd
-doc/bbs.1.gif
 doc/bbs.html
-doc/bbs.mm
 doc/bridge.html
-doc/bridge.mm
+doc/index.html
 doc/smack.html
-doc/smack.mm
 doc/wampes.html
-doc/wampes.mm
 lib/configure.h
 src/TAGS
 src/net
@@ -25,7 +21,6 @@ tools/connect2
 tools/filter
 tools/import
 tools/makeiprt
-tools/ms2mm
 tools/udpbridge
 util/bridge
 util/cnet

@@ -1,4 +1,0 @@
-.\" -*- Mode: Nroff -*-
-.H 2 "restart" " \fIoffset\fP"
-Restart the immediately following \fBget\fP or \fBput\fP
-at the indicated \fIoffset\fP.
