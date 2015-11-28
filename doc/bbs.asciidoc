@@ -49,7 +49,7 @@ redefined:
 |CHECK|"DIR"
 |ERASE|"DELETE"
 |EXIT|"QUIT"
-|INFO|"SHELL 'cat /usr/local/lib/station.data'"
+|INFO|"SHELL \'cat /usr/local/lib/station.data'"
 |KILL|"DELETE"
 |MAIL|"SHELL mailx"
 |MORE|"PIPE more"
@@ -169,7 +169,7 @@ sequences are recognized:
 |\u|user name
 |\w|current group
 |\xxx|character with octal code xxx
-|\\|backslash character
+|\\ |backslash character
 |====
 
 The default _prompt-string_ is "\w:\c > ".
@@ -255,7 +255,7 @@ Some BBS commands take patterns as arguments. The syntax of patterns is:
 | |The NOT operator ! can be specified immediately
 | |following the left bracket to match any single
 | |character not enclosed in the brackets.
-|\\ |Removes any special meaning of the following character.
+|\ |Removes any special meaning of the following character.
 | |Any other character matches itself.
 |====
 
