@@ -3,6 +3,7 @@
 .sconf_temp/
 .sconsign.dblite
 bbs/bbs
+bbs/bbs.help
 config.log
 convers/convers
 convers/conversd

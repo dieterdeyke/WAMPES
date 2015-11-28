@@ -1,7 +1,8 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-28 17:22:34 deyke>
+# Time-stamp: <2015-11-28 19:50:44 deyke>
 
 import os
+import re
 import stat
 
 env = Environment(parse_flags = "-Ilib -lgdbm -lgdbm_compat") # this is a hack !!!!!!!!!!!!!!!!!!!!
@@ -135,6 +136,25 @@ for manual in env.Glob("doc/*.asciidoc", strings=True):
         html,
         manual,
         "asciidoc -a toc -a numbered " + manual
+    )
+
+def make_bbs_help_file(target, source, env):
+    f = open("bbs/bbs.help", "w")
+    for line in os.popen("w3m -dump doc/bbs.html", "r"):
+        line = line.rstrip()
+        m = re.match("^[0-9][0-9.]* (.*)", line)
+        if m:
+            word = m.group(1).split()[0]
+            f.write("\n^" + word + "\n\n" + m.group(1) + "\n\n")
+        else:
+            f.write(line + "\n")
+    f.close()
+    return 0
+
+env.Command(
+    "bbs/bbs.help",
+    "doc/bbs.html",
+    make_bbs_help_file,
     )
 
 # install
