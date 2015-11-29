@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-28 19:50:44 deyke>
+# Time-stamp: <2015-11-29 07:17:36 deyke>
 
 import os
 import re
@@ -136,6 +136,12 @@ for manual in env.Glob("doc/*.asciidoc", strings=True):
         html,
         manual,
         "asciidoc -a toc -a numbered " + manual
+    )
+
+env.Command(
+    "doc/bbs.1.gif",
+    "doc/sf_pic.dot",
+    "dot -Tgif $SOURCE -o $TARGET",
     )
 
 def make_bbs_help_file(target, source, env):

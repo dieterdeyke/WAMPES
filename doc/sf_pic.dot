@@ -1,0 +1,24 @@
+digraph G {
+
+        node [shape=box]; bbs; inn; net; sendmail; "mail to news gw";
+        node [shape=circle]; "news spool"; "mail spool";
+        node [shape=diamond]; "other news systems"; "other bbs systems"; "other smtp systems";
+
+        "mail spool" -> bbs;
+        "mail spool" -> net;
+        "mail to news gw" -> inn;
+        "news spool" -> bbs;
+        "other bbs systems" -> bbs;
+        "other news systems" -> inn;
+        "other smtp systems" -> net;
+        bbs -> "other bbs systems";
+        bbs -> inn [label = "bulletins"];
+        bbs -> sendmail [label = "personal mail"];
+        inn -> "news spool";
+        inn -> "other news systems";
+        net -> "other smtp systems";
+        net -> sendmail;
+        sendmail -> "mail spool";
+        sendmail -> "mail to news gw";
+
+}
