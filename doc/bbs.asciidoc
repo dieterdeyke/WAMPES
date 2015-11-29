@@ -274,4 +274,4 @@ Some BBS commands take ranges as arguments. The syntax of ranges is:
 |====
 
 == S&F data flow
-image:bbs.1.gif[picture]
+image:sf_pic.png[sf_pic]
