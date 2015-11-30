@@ -1,11 +1,17 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-29 07:37:20 deyke>
+# Time-stamp: <2015-11-30 12:57:25 deyke>
 
 import os
 import re
 import stat
 
-env = Environment(parse_flags = "-Ilib -lgdbm -lgdbm_compat") # this is a hack !!!!!!!!!!!!!!!!!!!!
+force_32_bit_build = False
+if force_32_bit_build:
+    env = Environment(parse_flags = "-Ilib /usr/lib/i386-linux-gnu/libgdbm.so.3 /usr/lib/i386-linux-gnu/libgdbm_compat.so.3 ") # this is a hack !!!!!!!!!!!!!!!!!!!!
+    env["CFLAGS"] = "-m32"
+    env["LINKFLAGS"] = "-m32"
+else:
+    env = Environment(parse_flags = "-Ilib -lgdbm -lgdbm_compat") # this is a hack !!!!!!!!!!!!!!!!!!!!
 
 # lib
 
