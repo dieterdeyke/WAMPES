@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-11-30 12:57:25 deyke>
+# Time-stamp: <2015-12-01 19:41:01 deyke>
 
 import os
 import re
@@ -7,11 +7,10 @@ import stat
 
 force_32_bit_build = False
 if force_32_bit_build:
-    env = Environment(parse_flags = "-Ilib /usr/lib/i386-linux-gnu/libgdbm.so.3 /usr/lib/i386-linux-gnu/libgdbm_compat.so.3 ") # this is a hack !!!!!!!!!!!!!!!!!!!!
-    env["CFLAGS"] = "-m32"
-    env["LINKFLAGS"] = "-m32"
+    env = Environment(parse_flags = "-m32 -Ilib")
+    env["LINKFLAGS"] = "-m32 /usr/lib/i386-linux-gnu/libgdbm.so.3 /usr/lib/i386-linux-gnu/libgdbm_compat.so.3 " # this is a hack !!!!!!!!!!!!!!!!!!!!
 else:
-    env = Environment(parse_flags = "-Ilib -lgdbm -lgdbm_compat") # this is a hack !!!!!!!!!!!!!!!!!!!!
+    env = Environment(parse_flags = "-Ilib")
 
 # lib
 
@@ -95,8 +94,13 @@ findprog("SENDMAIL_PROG", ["/usr/sbin/sendmail",
                            "/usr/lib/sendmail", ])
 
 conf.CheckCHeader("ndbm.h")
+conf.CheckLib("ndbm", "dbm_open")
+
 conf.CheckCHeader("db1/ndbm.h")
+
 conf.CheckCHeader("gdbm-ndbm.h")
+conf.CheckLib("gdbm", "gdbm_open")
+conf.CheckLib("gdbm_compat", "dbm_open")
 
 conf.CheckFunc("adjtime")
 conf.CheckFunc("strdup")
