@@ -96,6 +96,8 @@ static const struct keytable Keytable[] = {
 	{ "\033OB",     TT_ANSI,        KA_NEXT },
 	{ "\033OC",     TT_ANSI,        KA_RIGHT_CHAR },
 	{ "\033OD",     TT_ANSI,        KA_LEFT_CHAR },
+	{ "\033OF",     TT_ANSI,        KA_RIGHT_MAX },
+	{ "\033OH",     TT_ANSI,        KA_LEFT_MAX },
 	{ "\033OP",     TT_ANSI,        KA_FK1 },
 	{ "\033OQ",     TT_ANSI,        KA_FK2 },
 	{ "\033OR",     TT_ANSI,        KA_FK3 },
@@ -131,6 +133,8 @@ static const struct keytable Keytable[] = {
 	{ "\033[21~",   TT_ANSI,        KA_FK10 },
 	{ "\033[23~",   TT_ANSI,        KA_FK11 },
 	{ "\033[24~",   TT_ANSI,        KA_FK12 },
+	{ "\033[2~",    TT_ANSI,        KA_IGNORE }, /* INSERT */
+	{ "\033[3~",    TT_ANSI,        KA_DEL_CURR_CHAR },
 	{ "\033[5~",    TT_ANSI,        KA_PREV },
 	{ "\033[6~",    TT_ANSI,        KA_NEXT },
 	{ "\033[A",     TT_ANSI,        KA_PREV },
@@ -570,4 +574,3 @@ int ttydriv(int chr, char **buf)
 	if (cnt) *buf = linebuf;
 	return cnt;
 }
-
