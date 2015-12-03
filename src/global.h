@@ -149,7 +149,6 @@ extern char Badhost[];
 extern char Nospace[];
 extern char Notval[];
 extern char *Hostname;
-extern char *Version;
 extern char Whitespace[];
 
 struct asy;

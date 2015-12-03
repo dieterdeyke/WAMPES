@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-12-01 19:41:01 deyke>
+# Time-stamp: <2015-12-03 19:38:48 deyke>
 
 import os
 import re
@@ -48,6 +48,8 @@ def finddir(symbol, values):
     conf.Define(symbol, '""')
 
 conf = Configure(env, config_h="lib/configure.h")
+
+conf.Define("VERSION", '"WAMPES ' + os.popen("git log --first-parent -n1 --pretty=format:'%ci'", "r").read()[:10] + '"')
 
 finddir("HOME_DIR", ["/home",
                      "/users",

@@ -103,7 +103,7 @@ main(int argc,char *argv[])
 	Cmdpp = mainproc("cmdintrp");
 
 	Sessions = (struct session *)callocw(Nsessions,sizeof(struct session));
-	printf("\n================ %s ================\n", Version);
+	printf("\n================ %s ================\n", VERSION);
 	printf("(c) Copyright 1990-2015 by Dieter Deyke, DK5SG / N0PRA\n");
 	printf("(c) Copyright 1986" "-1996 by Phil Karn, KA9Q\n");
 	printf("\n");
