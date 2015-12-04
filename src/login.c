@@ -158,6 +158,17 @@ static int find_pty(char *ptyname)
     close(fd);
   }
 
+#elif defined linux
+
+  if ((fd = open("/dev/ptmx", O_RDWR | O_NONBLOCK, 0600)) >= 0) {
+    if ((n = ptsname(fd))) {
+      strcpy(ptyname, n);
+      unlockpt(fd);
+      return fd;
+    }
+    close(fd);
+  }
+
 #endif
 
   /* Search Berkeley style pty */
