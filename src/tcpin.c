@@ -872,7 +872,7 @@ struct tcp *seg,
 struct mbuf **bpp,
 uint *length
 ){
-	long dupcnt,excess;
+	int32 dupcnt,excess;
 	uint len;               /* Segment length including flags */
 	char accept = 0;
 
