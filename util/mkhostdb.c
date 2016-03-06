@@ -7,29 +7,19 @@
 
 #include "configure.h"
 
-#if HAVE_NDBM_H
-#include <ndbm.h>
-#else
-#if HAVE_DB1_NDBM_H
-#include <db1/ndbm.h>
-#else
-#if HAVE_GDBM_NDBM_H
-#include <gdbm-ndbm.h>
-#else
-#error Cannot find ndbm.h header file
-#endif
-#endif
-#endif
+#ifdef HAVE_GDBM_H
 
-#define DBHOSTADDR      "/tcp/hostaddr"
-#define DBHOSTNAME      "/tcp/hostname"
+#include <gdbm.h>
+
+#define DBHOSTADDR      "/tcp/hostaddr.gdbm"
+#define DBHOSTNAME      "/tcp/hostname.gdbm"
 #define DOMAINFILE      "/tcp/domain.txt"
 #define HOSTSFILE       "/tcp/hosts"
 #define LOCALDOMAIN     "ampr.org"
 #define LOCALDOMAINFILE "/tcp/domain.local"
 
-static DBM *Dbhostaddr;
-static DBM *Dbhostname;
+static GDBM_FILE Dbhostaddr;
+static GDBM_FILE Dbhostname;
 static char origin[1024];
 
 /*---------------------------------------------------------------------------*/
@@ -84,15 +74,15 @@ static void store_in_db(const char *name, const char *addrstr)
   dname.dsize = strlen(name) + 1;
   daddr.dptr = (char *) &addr;
   daddr.dsize = sizeof(addr);
-  i = dbm_store(Dbhostaddr, dname, daddr, DBM_INSERT);
+  i = gdbm_store(Dbhostaddr, dname, daddr, GDBM_INSERT);
   if (i < 0) {
-    perror("dbm_store");
+    perror("gdbm_store");
     exit(1);
   }
   if (i > 0) fprintf(stderr, "duplicate name: %s\n", name);
-  i = dbm_store(Dbhostname, daddr, dname, DBM_INSERT);
+  i = gdbm_store(Dbhostname, daddr, dname, GDBM_INSERT);
   if (i < 0) {
-    perror("dbm_store");
+    perror("gdbm_store");
     exit(1);
   }
   if (i > 0) fprintf(stderr, "duplicate addr: %s\n", addrstr);
@@ -234,12 +224,13 @@ static void read_domain_file(const char *filename)
 
     dname.dptr = fix_name(p);
     dname.dsize = strlen(dname.dptr) + 1;
-    daddr = dbm_fetch(Dbhostaddr, dname);
+    daddr = gdbm_fetch(Dbhostaddr, dname);
     if (!daddr.dptr) {
       fprintf(stderr, "no such key: %s\n", dname.dptr);
       continue;
     }
     memcpy((char *) &addr, daddr.dptr, sizeof(addr));
+    free(daddr.dptr);
 
     store_in_db(fix_name(name), ntoa(addr));
 
@@ -265,9 +256,10 @@ static void qaddr(const char *name)
     fullname[len-1] = 0;
     dname.dptr = fullname;
     dname.dsize = strlen(fullname) + 1;
-    daddr = dbm_fetch(Dbhostaddr, dname);
+    daddr = gdbm_fetch(Dbhostaddr, dname);
     if (daddr.dptr) {
       memcpy((char *) &addr, daddr.dptr, sizeof(addr));
+      free(daddr.dptr);
       printf("%s  %s\n", ntoa(addr), fullname);
     } else
       fprintf(stderr, "no such key: %s\n", fullname);
@@ -278,18 +270,20 @@ static void qaddr(const char *name)
   strcat(fullname, LOCALDOMAIN);
   dname.dptr = fullname;
   dname.dsize = strlen(fullname) + 1;
-  daddr = dbm_fetch(Dbhostaddr, dname);
+  daddr = gdbm_fetch(Dbhostaddr, dname);
   if (daddr.dptr) {
     memcpy((char *) &addr, daddr.dptr, sizeof(addr));
+    free(daddr.dptr);
     printf("%s  %s\n", ntoa(addr), fullname);
     return;
   }
 
   dname.dptr = (char *) name;
   dname.dsize = strlen(name) + 1;
-  daddr = dbm_fetch(Dbhostaddr, dname);
+  daddr = gdbm_fetch(Dbhostaddr, dname);
   if (daddr.dptr) {
     memcpy((char *) &addr, daddr.dptr, sizeof(addr));
+    free(daddr.dptr);
     printf("%s  %s\n", ntoa(addr), name);
   } else
     fprintf(stderr, "no such key: %s\n", name);
@@ -310,11 +304,13 @@ static void qname(const char *addrstr)
   }
   daddr.dptr = (char *) &addr;
   daddr.dsize = sizeof(addr);
-  dname = dbm_fetch(Dbhostname, daddr);
-  if (dname.dptr)
+  dname = gdbm_fetch(Dbhostname, daddr);
+  if (dname.dptr) {
     printf("%s  %s\n", ntoa(addr), dname.dptr);
-  else
+    free(dname.dptr);
+  } else {
     fprintf(stderr, "no such key: %s\n", addrstr);
+  }
 }
 
 /*---------------------------------------------------------------------------*/
@@ -324,31 +320,27 @@ int main(int argc, char **argv)
   int i;
 
   if (argc >= 1 && strstr(*argv, "qaddr")) {
-    if (!(Dbhostaddr = dbm_open(DBHOSTADDR, O_RDONLY, 0644))) {
+    if (!(Dbhostaddr = gdbm_open(DBHOSTADDR, 512, GDBM_READER, 0644, NULL))) {
       perror(DBHOSTADDR);
       exit(1);
     }
     for (i = 1; i < argc; i++) qaddr(argv[i]);
-    dbm_close(Dbhostaddr);
+    gdbm_close(Dbhostaddr);
   } else if (argc >= 1 && strstr(*argv, "qname")) {
-    if (!(Dbhostname = dbm_open(DBHOSTNAME, O_RDONLY, 0644))) {
+    if (!(Dbhostname = gdbm_open(DBHOSTNAME, 512, GDBM_READER, 0644, NULL))) {
       perror(DBHOSTNAME);
       exit(1);
     }
     for (i = 1; i < argc; i++) qname(argv[i]);
-    dbm_close(Dbhostname);
+    gdbm_close(Dbhostname);
   } else {
-    remove(DBHOSTADDR ".db");
-    remove(DBHOSTADDR ".dir");
-    remove(DBHOSTADDR ".pag");
-    remove(DBHOSTNAME ".db");
-    remove(DBHOSTNAME ".dir");
-    remove(DBHOSTNAME ".pag");
-    if (!(Dbhostname = dbm_open(DBHOSTNAME, O_RDWR | O_CREAT, 0644))) {
+    remove(DBHOSTADDR);
+    remove(DBHOSTNAME);
+    if (!(Dbhostname = gdbm_open(DBHOSTNAME, 512, GDBM_NEWDB, 0644, NULL))) {
       perror(DBHOSTNAME);
       exit(1);
     }
-    if (!(Dbhostaddr = dbm_open(DBHOSTADDR, O_RDWR | O_CREAT, 0644))) {
+    if (!(Dbhostaddr = gdbm_open(DBHOSTADDR, 512, GDBM_NEWDB, 0644, NULL))) {
       perror(DBHOSTADDR);
       exit(1);
     }
@@ -356,8 +348,17 @@ int main(int argc, char **argv)
     read_domain_file(LOCALDOMAINFILE);
     read_hosts_file(HOSTSFILE);
     read_domain_file(DOMAINFILE);
-    dbm_close(Dbhostname);
-    dbm_close(Dbhostaddr);
+    gdbm_close(Dbhostname);
+    gdbm_close(Dbhostaddr);
   }
   return 0;
 }
+
+#else
+
+int main(int argc, char **argv)
+{
+  return 0;
+}
+
+#endif

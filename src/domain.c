@@ -5,22 +5,13 @@
 #include <netdb.h>
 #include <netinet/in.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/socket.h>
 
 #include "configure.h"
 
-#if HAVE_NDBM_H
-#include <ndbm.h>
-#else
-#if HAVE_DB1_NDBM_H
-#include <db1/ndbm.h>
-#else
-#if HAVE_GDBM_NDBM_H
-#include <gdbm-ndbm.h>
-#else
-#error Cannot find ndbm.h header file
-#endif
-#endif
+#ifdef HAVE_GDBM_H
+#include <gdbm.h>
 #endif
 
 #include "global.h"
@@ -34,8 +25,8 @@
 #include "cmdparse.h"
 #include "domain.h"
 
-#define DBHOSTADDR      "/tcp/hostaddr"
-#define DBHOSTNAME      "/tcp/hostname"
+#define DBHOSTADDR      "/tcp/hostaddr.gdbm"
+#define DBHOSTNAME      "/tcp/hostname.gdbm"
 #define LOCALDOMAIN     "ampr.org"
 
 struct cache {
@@ -66,8 +57,11 @@ static char *Dtypes[] = {
 };
 static int Ndtypes = 17;
 
-static DBM *Dbhostaddr;
-static DBM *Dbhostname;
+#ifdef HAVE_GDBM_H
+static GDBM_FILE Dbhostaddr;
+static GDBM_FILE Dbhostname;
+#endif
+
 static int Usegethostby;
 static int32 Nextcacheflushtime;
 static struct cache *Cache;
@@ -159,14 +153,16 @@ void *p)
     Cache = cp->next;
     free(cp);
   }
+#ifdef HAVE_GDBM_H
   if (Dbhostaddr) {
-    dbm_close(Dbhostaddr);
+    gdbm_close(Dbhostaddr);
     Dbhostaddr = 0;
   }
   if (Dbhostname) {
-    dbm_close(Dbhostname);
+    gdbm_close(Dbhostname);
     Dbhostname = 0;
   }
+#endif
   Nextcacheflushtime = secclock() + 86400;
   return 0;
 }
@@ -259,13 +255,16 @@ char *name)
 
   char *p;
   char names[3][1024];
-  datum daddr;
-  datum dname;
   int i;
   int32 addr;
   struct cache *curr;
   struct cache *prev;
   struct hostent *hp;
+
+#ifdef HAVE_GDBM_H
+  datum daddr;
+  datum dname;
+#endif
 
   if (!name || !*name) return 0;
 
@@ -297,17 +296,20 @@ char *name)
       }
   }
 
-  if (Dbhostaddr || (Dbhostaddr = dbm_open(DBHOSTADDR, O_RDONLY, 0644)))
+#ifdef HAVE_GDBM_H
+  if (Dbhostaddr || (Dbhostaddr = gdbm_open(DBHOSTADDR, 512, GDBM_READER, 0644, NULL)))
     for (i = 0; names[i][0]; i++) {
       dname.dptr = names[i];
       dname.dsize = strlen(names[i]) + 1;
-      daddr = dbm_fetch(Dbhostaddr, dname);
+      daddr = gdbm_fetch(Dbhostaddr, dname);
       if (daddr.dptr) {
 	memcpy(&addr, daddr.dptr, sizeof(addr));
+        free(daddr.dptr);
 	add_to_cache(names[i], addr);
 	return addr;
       }
     }
+#endif
 
   if (Usegethostby && (hp = gethostbyname(name))) {
     addr = ntohl(((struct in_addr *)(hp->h_addr))->s_addr);
@@ -327,12 +329,15 @@ int shorten)
 {
 
   char buf[1024];
-  datum daddr;
-  datum dname;
   struct cache *curr;
   struct cache *prev;
   struct hostent *hp;
   struct in_addr in_addr;
+
+#ifdef HAVE_GDBM_H
+  datum daddr;
+  datum dname;
+#endif
 
   if (!addr) return "*";
 
@@ -348,15 +353,18 @@ int shorten)
       return Cache->name;
     }
 
-  if (Dbhostname || (Dbhostname = dbm_open(DBHOSTNAME, O_RDONLY, 0644))) {
+#ifdef HAVE_GDBM_H
+  if (Dbhostname || (Dbhostname = gdbm_open(DBHOSTNAME, 512, GDBM_READER, 0644, NULL))) {
     daddr.dptr = (char *) &addr;
     daddr.dsize = sizeof(addr);
-    dname = dbm_fetch(Dbhostname, daddr);
+    dname = gdbm_fetch(Dbhostname, daddr);
     if (dname.dptr) {
       add_to_cache(dname.dptr, addr);
+      free(dname.dptr);
       return Cache->name;
     }
   }
+#endif
 
   if (Usegethostby) {
     in_addr.s_addr = htonl(addr);

@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2015-12-03 19:38:48 deyke>
+# Time-stamp: <2016-03-06 11:41:47 deyke>
 
 import os
 import re
@@ -8,7 +8,7 @@ import stat
 force_32_bit_build = False
 if force_32_bit_build:
     env = Environment(parse_flags = "-m32 -Ilib")
-    env["LINKFLAGS"] = "-m32 /usr/lib/i386-linux-gnu/libgdbm.so.3 /usr/lib/i386-linux-gnu/libgdbm_compat.so.3 " # this is a hack !!!!!!!!!!!!!!!!!!!!
+    env["LINKFLAGS"] = "-m32 /usr/lib/i386-linux-gnu/libgdbm.so.3 " # this is a hack !!!!!!!!!!!!!!!!!!!!
 else:
     env = Environment(parse_flags = "-Ilib")
 
@@ -95,14 +95,8 @@ findprog("RNEWS_PROG", ["/usr/local/news/bin/rnews",
 findprog("SENDMAIL_PROG", ["/usr/sbin/sendmail",
                            "/usr/lib/sendmail", ])
 
-conf.CheckCHeader("ndbm.h")
-conf.CheckLib("ndbm", "dbm_open")
-
-conf.CheckCHeader("db1/ndbm.h")
-
-conf.CheckCHeader("gdbm-ndbm.h")
+conf.CheckCHeader("gdbm.h")
 conf.CheckLib("gdbm", "gdbm_open")
-conf.CheckLib("gdbm_compat", "dbm_open")
 
 conf.CheckFunc("adjtime")
 conf.CheckFunc("strdup")
@@ -205,7 +199,7 @@ for filename in os.listdir("examples"):
                     "examples/" + filename,
                     Copy('$TARGET', '$SOURCE'))
 
-env.Command("/tcp/hostname.dir",
+env.Command("/tcp/hostname.gdbm",
             ["/tcp/mkhostdb", "/tcp/domain.txt", "/tcp/domain.local", "/tcp/hosts", ],
             "/tcp/mkhostdb"
             )
@@ -226,4 +220,4 @@ for filename in os.listdir("examples"):
     if same("/tcp/" + filename, "examples/" + filename):
         env.Clean("/", "/tcp/" + filename)
 
-env.Clean("/", Glob("/tcp/hostname.*") + Glob("/tcp/hostaddr.*"))
+env.Clean("/", ["/tcp/hostname.gdbm", "/tcp/hostaddr.gdbm"])
