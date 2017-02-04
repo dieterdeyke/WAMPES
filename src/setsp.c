@@ -5,7 +5,7 @@
 asm(".global setstack\n\t"
     "setstack:\n\t"
     "mov %rsp, %rbp\n\t"
-    "mov newstackptr, %rsp\n\t"
+    "mov newstackptr(%rip), %rsp\n\t"
     "jmp *(%rbp)");
 
 #else
