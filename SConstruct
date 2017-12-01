@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2016-03-06 11:41:47 deyke>
+# Time-stamp: <2017-12-01 11:09:18 deyke>
 
 import os
 import re
@@ -141,7 +141,7 @@ for manual in env.Glob("doc/*.asciidoc", strings=True):
     env.Command(
         html,
         manual,
-        "asciidoc -a toc -a numbered " + manual
+        "asciidoctor " + manual
     )
 
 for picture in env.Glob("doc/*.gv", strings=True):

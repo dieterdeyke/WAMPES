@@ -1632,20 +1632,20 @@ into an IP datagram so that it gets "piggy-backed".
 
 Here are some examples of the *route* command:
 
-# Route datagrams to IP address 44.0.0.3 to SLIP line #0. +
-# No gateway is needed because SLIP is point-to point. +
-route add 44.0.0.3 sl0 +
+ # Route datagrams to IP address 44.0.0.3 to SLIP line #0. +
+ # No gateway is needed because SLIP is point-to point. +
+ route add 44.0.0.3 sl0 +
 
-# The station with IP address 44.0.0.10 is on the local AX.25 channel. +
-route add 44.0.0.10 ax0 +
+ # The station with IP address 44.0.0.10 is on the local AX.25 channel. +
+ route add 44.0.0.10 ax0 +
 
-# The local Ethernet has an ARPA Class-C address assignment. +
-# Route all IP addresses beginning with 192.4.8 to it. +
-route add 192.4.8/24 ec0 +
+ # The local Ethernet has an ARPA Class-C address assignment. +
+ # Route all IP addresses beginning with 192.4.8 to it. +
+ route add 192.4.8/24 ec0 +
 
-# Route all default traffic to the gateway on the local Ethernet +
-# with IP address 192.4.8.1. +
-route add default ec0 192.4.8.1 +
+ # Route all default traffic to the gateway on the local Ethernet +
+ # with IP address 192.4.8.1. +
+ route add default ec0 192.4.8.1 +
 
 ==== route addprivate _hostid_[/_bits_]|default _interface_ [_gateway_hostid_ [_metric_]]
 This command is identical to *route add* except that it also marks the new
