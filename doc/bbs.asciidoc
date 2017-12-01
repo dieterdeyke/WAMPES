@@ -1,6 +1,6 @@
-BBS Reference Manual
-====================
+= BBS Reference Manual
 Dieter Deyke, DK5SG/N0PRA <deyke@yahoo.com>
+:toc:
 
 == Start
 To start the BBS you must type 'bbs' after you have connected to the

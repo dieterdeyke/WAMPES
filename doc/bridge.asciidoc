@@ -1,6 +1,6 @@
-Bridge Reference Manual
-=======================
+= Bridge Reference Manual
 Dieter Deyke, DK5SG/N0PRA <deyke@yahoo.com>
+:toc:
 
 == The bridge utility
 Usage: /tcp/bridge [-a] [-f _failures_]

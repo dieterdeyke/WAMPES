@@ -1,6 +1,6 @@
-WAMPES Reference Manual
-=======================
+= WAMPES Reference Manual
 Dieter Deyke, DK5SG/N0PRA <deyke@yahoo.com>
+:toc:
 
 == Credits
 This manual is based in part on publications authored by
@@ -388,7 +388,7 @@ decimal notation (eg. 44.0.0.1), or as symbolic names stored in the
 domain name database. _netmask_ defaults to 255.0.0.0 if not
 specified. Example:
 
-attach ni ni dk5sg-u # ip to host ip +
+ attach ni ni dk5sg-u # ip to host ip +
 
 *attach ni* is available on HP-UX systems only.
 
@@ -397,9 +397,9 @@ This creates an IP point-to-point link between *WAMPES* and UNIX,
 by creating a new interface named _name_ on the *WAMPES* side.
 Example:
 
-shell ifconfig tap0 44.128.4.5 up mtu 256 +
-attach ethertap tap0 # ip to host ip +
-ifconfig tap0 mtu 256 +
+ shell ifconfig tap0 44.128.4.5 up mtu 256 +
+ attach ethertap tap0 # ip to host ip +
+ ifconfig tap0 mtu 256 +
 
 *attach ethertap* is available only on systems supporting ethertap
 devices (eg Linux kernel 2.2 and up).
@@ -952,7 +952,7 @@ with 1's in the network and subnet parts of the address,
 and 0's in the host part of the address.
 Example:
 
-ifconfig ec0 netmask 0xffffff00 +
+ ifconfig ec0 netmask 0xffffff00 +
 
 for a class C network (24 bits).
 This is related to the *broadcast* subcommand.
@@ -1019,22 +1019,22 @@ If two _hostid_s are specified, those two IP addresses and all
 IP addresses in between are allowed or denied.
 For example:
 
-ipfilter allow 44.1.2.0 to 44.1.2.255 +
+ ipfilter allow 44.1.2.0 to 44.1.2.255 +
 
 is equivalent to
 
-ipfilter allow 44.1.2/24 +
+ ipfilter allow 44.1.2/24 +
 
 In case one or both of the _hostid_s has a /_bits_ suffix,
 the range of IP addresses allowed or denied
 is from the lowest to the highest IP address.
 For example:
 
-ipfilter allow 44.1/16 to 44.3/16 +
+ ipfilter allow 44.1/16 to 44.3/16 +
 
 is equivalent to
 
-ipfilter allow 44.1.0.0 to 44.3.255.255 +
+ ipfilter allow 44.1.0.0 to 44.3.255.255 +
 
 The *ipfilter* command tries to combine multiple *allow* and *deny*
 commands into as few IP filter table entries as possible.
@@ -1043,14 +1043,14 @@ the first *ipfilter* command must be *deny* to have any effect.
 To only allow certain IP addresses use something like
 the following command sequence:
 
-ipfilter deny 0/0 # default is deny +
-ipfilter allow 127.0.0.1 # loopback +
-ipfilter allow 44.128.4/24 +
-ipfilter allow 44.130/16 +
-ipfilter allow 44.142/16 +
-ipfilter allow 44.143/16 +
-ipfilter allow ke0gb +
-ipfilter allow winfree.n3eua +
+ ipfilter deny 0/0 # default is deny +
+ ipfilter allow 127.0.0.1 # loopback +
+ ipfilter allow 44.128.4/24 +
+ ipfilter allow 44.130/16 +
+ ipfilter allow 44.142/16 +
+ ipfilter allow 44.143/16 +
+ ipfilter allow ke0gb +
+ ipfilter allow winfree.n3eua +
 
 === kick [_session#_]
 Kick all control blocks associated with a session.
@@ -1112,7 +1112,7 @@ Example:
 If *login homedir* is set to /home/radio the home directory for
 n0pra will be:
 
-/home/radio/n0p.../n0pra +
+ /home/radio/n0p.../n0pra +
 
 The default is HOME_DIR/funk.
 
@@ -1166,7 +1166,7 @@ Note that there is currently no way to delete an entry from the table
 (short of restarting *WAMPES*).
 Example:
 
-netrom broadcast tnc0 NODES +
+ netrom broadcast tnc0 NODES +
 
 ==== netrom connect _node_ [_user_]
 Initiate a NETROM session to the specified NET/ROM _node_.
@@ -1347,7 +1347,7 @@ On a KISS TNC interface, the *param* command generates and sends
 control packets to the TNC. Data bytes are treated as decimal.
 For example,
 
-param ax0 TxDelay 255 +
+ param ax0 TxDelay 255 +
 
 will set the keyup timer
 (type field = 1) on the KISS TNC configured as ax0 to 2.55
@@ -1458,7 +1458,7 @@ remote system should invoke the *WAMPES* program automatically upon booting,
 preferably from */etc/inittab*.
 For example:
 
-net :23456:respawn:env TZ=MST7MDT /tcp/net +
+ net :23456:respawn:env TZ=MST7MDT /tcp/net +
 
 ==== remote -s _key_
 The *exit* and *reset* subcommands of *remote* require a password.
@@ -1478,7 +1478,7 @@ Before each iteration the screen is cleared.
 or if _command_ returns an error.
 Example:
 
-repeat 2000 tcp status +
+ repeat 2000 tcp status +
 
 executes "tcp status" every two seconds.
 
@@ -1524,7 +1524,7 @@ unusual subnet or cluster-addressed networks may require special attention.
 However, an *arp add* command will be required to translate this address to
 the appropriate link level broadcast address. For example:
 
-arp add 44.255.255.255 ax25 QST-0 +
+ arp add 44.255.255.255 ax25 QST-0 +
 
 for an AX.25 packet radio channel.
 
@@ -1604,7 +1604,7 @@ many hosts all sharing a common bit string prefix in their IP addresses.
 For example, ARPA Class A, B and C networks would use suffixes of /8,
 /16 and /24 respectively. The command
 
-route add 44/8 sl0 44.64.0.2 +
+ route add 44/8 sl0 44.64.0.2 +
 
 causes any IP addresses beginning with "44" in the first 8 bits to be
 routed via sl0 to 44.64.0.2, the remaining 24 bits are "don't-cares".

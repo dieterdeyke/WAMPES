@@ -1,5 +1,4 @@
-The SMACK Protocol
-==================
+= The SMACK Protocol
 
 Version 1.0, (27 February 1992)
 

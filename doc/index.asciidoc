@@ -1,5 +1,4 @@
-WAMPES Documentation
-====================
+= WAMPES Documentation
 Dieter Deyke, DK5SG/N0PRA <deyke@yahoo.com>
 
 * link:../README[README]
