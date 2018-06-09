@@ -1,5 +1,5 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2017-12-01 11:09:18 deyke>
+# Time-stamp: <2018-06-09 07:35:41 deyke>
 
 import os
 import re
@@ -8,7 +8,7 @@ import stat
 force_32_bit_build = False
 if force_32_bit_build:
     env = Environment(parse_flags = "-m32 -Ilib")
-    env["LINKFLAGS"] = "-m32 /usr/lib/i386-linux-gnu/libgdbm.so.3 " # this is a hack !!!!!!!!!!!!!!!!!!!!
+    env["LINKFLAGS"] = "-m32 "
 else:
     env = Environment(parse_flags = "-Ilib")
 
