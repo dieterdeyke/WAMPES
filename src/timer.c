@@ -12,7 +12,7 @@
 #include "socket.h"
 
 int32 Msclock;
-int32 Secclock;
+time_t Secclock;
 
 /* Head of running timer chain.
  * The list of running timers is sorted in increasing order of expiration;

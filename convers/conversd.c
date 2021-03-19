@@ -160,7 +160,7 @@ static const char *conffile = "/tcp/convers.conf";
 static int debug;
 static int maxfd = -1;
 static int min_waittime = MIN_WAITTIME;
-static long currtime;
+static time_t currtime;
 static long next_desttime;
 static struct host my, *hosts = &my;
 static struct link *links;
@@ -347,7 +347,7 @@ static void trace(enum e_dir dir, const struct link *lp, const char *string)
     sprintf(buf, "%08lx", (long) lp);
     name = buf;
   }
-  cp = ctime((time_t *) &currtime);
+  cp = ctime(&currtime);
   cp[24] = 0;
   if (dir == OUTBOUND)
     printf("\n%s SEND %s->%s:\n%s", cp, my.h_name, name, string);
@@ -536,14 +536,14 @@ static char *formatline(const char *prefix, const char *text)
 
 /*---------------------------------------------------------------------------*/
 
-static char *localtimestring(long utc)
+static char *localtimestring(time_t utc)
 {
 
   static char buffer[8];
   static const char monthnames[] = "JanFebMarAprMayJunJulAugSepOctNovDec";
   struct tm *tm;
 
-  tm = localtime((time_t *) &utc);
+  tm = localtime(&utc);
   if (utc + 24 * 60 * 60 > currtime)
     sprintf(buffer, " %2d:%02d", tm->tm_hour, tm->tm_min);
   else
@@ -2066,7 +2066,7 @@ int main(int argc, char **argv)
 
   umask(022);
 
-  time((time_t *) &currtime);
+  time(&currtime);
 
   gethostname(buffer, sizeof(buffer));
   if ((cp = strchr(buffer, '.')))
@@ -2178,7 +2178,7 @@ int main(int argc, char **argv)
     timeout.tv_sec = 10;
     timeout.tv_usec = 0;
     i = select(maxfd + 1, &actread, &actwrite, 0, &timeout);
-    time((time_t *) &currtime);
+    time(&currtime);
     if (i > 0)
       for (i = maxfd; i >= 0; i--) {
 	if (readfnc [i] && FD_ISSET(i, &actread )) (*readfnc [i])(readarg [i]);

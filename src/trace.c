@@ -70,13 +70,13 @@ struct mbuf *bp
 		 && (ift->addrtest != NULL)
 		 && (*ift->addrtest)(ifp,bp) == 0)
 			return;         /* broadcasts are suppressed */
-		timer = (time_t) secclock();
+		timer = secclock();
 		cp = ctime(&timer);
 		cp[24] = '\0';
 		fprintf(fp,"\n%s - %s recv:\n",cp,ifp->name);
 		break;
 	case IF_TRACE_OUT:
-		timer = (time_t) secclock();
+		timer = secclock();
 		cp = ctime(&timer);
 		cp[24] = '\0';
 		fprintf(fp,"\n%s - %s sent:\n",cp,ifp->name);
@@ -313,13 +313,13 @@ trace_log(struct iface *ifp,char *fmt, ...)
 {
 	va_list ap;
 	char *cp;
-	long t;
+	time_t t;
 	FILE *fp;
 
 	if((fp = ifp->trfp) == NULL)
 		return;
 	t = secclock();
-	cp = ctime((time_t *) &t);
+	cp = ctime(&t);
 	rip(cp);
 	fprintf(fp,"%s - ",cp);
 	va_start(ap,fmt);

@@ -63,7 +63,7 @@ struct ax_route {
 	struct iface *ifp;
 	int perm;
 	int jumpstart;
-	long time;
+	time_t time;
 };
 
 #define AXROUTESIZE     499

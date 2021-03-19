@@ -27,13 +27,13 @@ struct ax_route {
 	const struct iface *ifp;
 /*      int perm; */
 /*      int jumpstart; */
-	long time;
+	time_t time;
 };
 
 struct axroute_saverecord_1 {
   uint8 call[AXALEN];
   uint8 digi[AXALEN];
-  long time;
+  time_t time;
 /*char ifname[]; */
 };
 
@@ -240,7 +240,7 @@ static void doroutelistentry(const struct ax_route *rp)
   const struct iface *ifp = 0;
   struct tm *tm;
 
-  tm = localtime((time_t *) &rp->time);
+  tm = localtime(&rp->time);
   cp = pax25(buf, rp->target);
   for (n = 0; rp; rp = rp->digi) {
     rp_stack[++n] = rp;

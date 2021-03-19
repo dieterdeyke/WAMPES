@@ -221,7 +221,7 @@ void fixutmpfile(void)
       up->ut_exit.e_termination = 0;
       up->ut_exit.e_exit = 0;
 #endif
-      up->ut_time = (time_t) secclock();
+      up->ut_time = secclock();
       pututline(up);
     }
   endutent();
@@ -389,7 +389,7 @@ static FILE *fopen_logfile(const char *user, const char *protocol)
   if (!*Logfiledir) return 0;
   sprintf(filename, "%s/log.%05d.%04d", Logfiledir, (int) getpid(), cnt++);
   if ((fp = fopen(filename, "a"))) {
-    tm = localtime((time_t *) &Secclock);
+    tm = localtime(&Secclock);
     fprintf(fp,
 	    "%s at %2d-%.3s-%02d %2d:%02d:%02d by %s\n",
 	    protocol,
@@ -625,7 +625,7 @@ struct login_cb *login_open(const char *user, const char *protocol, void (*read_
     utmpbuf.ut_pid = getpid();
     utmpbuf.ut_type = LOGIN_PROCESS;
 #endif
-    utmpbuf.ut_time = (time_t) secclock();
+    utmpbuf.ut_time = secclock();
 #if defined __hpux || defined __NeXT__
     strncpy(utmpbuf.ut_host, protocol, sizeof(utmpbuf.ut_host));
 #endif
@@ -684,7 +684,7 @@ void login_close(struct login_cb *tp)
       while (read(fdut, &utmpbuf, sizeof(utmpbuf)) == sizeof(utmpbuf))
 	if (!strcmp(utmpbuf.ut_line, tp->ptyname + 5)) {
 	  utmpbuf.ut_name[0] = 0;
-	  utmpbuf.ut_time = (time_t) secclock();
+	  utmpbuf.ut_time = secclock();
 #ifdef DEAD_PROCESS
 	  utmpbuf.ut_type = DEAD_PROCESS;
 #ifndef linux

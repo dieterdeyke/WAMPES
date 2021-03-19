@@ -423,13 +423,13 @@ static void getstring(char *s)
 
 /*---------------------------------------------------------------------------*/
 
-static char *rfc822_date_string(long gmt)
+static char *rfc822_date_string(time_t gmt)
 {
 
   static char buf[32];
   struct tm *tm;
 
-  tm = gmtime((time_t *) &gmt);
+  tm = gmtime(&gmt);
   sprintf(buf, "%.3s, %d %.3s %d %02d:%02d:%02d GMT",
 	  daynames + 3 * tm->tm_wday,
 	  tm->tm_mday,
@@ -443,7 +443,7 @@ static char *rfc822_date_string(long gmt)
 
 /*---------------------------------------------------------------------------*/
 
-static long calculate_date(int yy, int mm, int dd,
+static time_t calculate_date(int yy, int mm, int dd,
 			   int h, int m, int s,
 			   int tzcorrection)
 {
@@ -455,7 +455,7 @@ static long calculate_date(int yy, int mm, int dd,
   };
 
   int i;
-  long jdate;
+  time_t jdate;
 
   if (yy <= 37) {
     yy += 2000;
@@ -735,7 +735,7 @@ static char *get_host_from_header(const char *line)
 
 /*---------------------------------------------------------------------------*/
 
-static long get_date_from_header(const char *line)
+static time_t get_date_from_header(const char *line)
 {
 
   int dd;
@@ -950,13 +950,13 @@ static void append_line(struct mail *mail, const char *line, enum e_where where)
 
 /*---------------------------------------------------------------------------*/
 
-static void prepend_Rline(struct mail *mail, long gmt)
+static void prepend_Rline(struct mail *mail, time_t gmt)
 {
 
   char line[1024];
   struct tm *tm;
 
-  tm = gmtime((time_t *) &gmt);
+  tm = gmtime(&gmt);
   sprintf(line, "R:%02d%02d%02d/%02d%02dz @:%s.%s",
 	  tm->tm_year % 100,
 	  tm->tm_mon + 1,
@@ -974,7 +974,7 @@ static void route_mail(struct mail *mail)
 {
 
   char *cp;
-  long gmt;
+  time_t gmt;
   struct strlist *p;
 
   /* Check for bogus mails */
@@ -3090,7 +3090,7 @@ static void print_prompt(void)
   char *t;
   int i;
   int num;
-  long gmt;
+  time_t gmt;
   struct tm *tm = 0;
 
   if (level == MBOX) {
@@ -3133,7 +3133,7 @@ static void print_prompt(void)
 	f++;
 	if (!tm) {
 	  gmt = time(0);
-	  tm = localtime((time_t *) &gmt);
+	  tm = localtime(&gmt);
 	}
 	sprintf(t, "%02d-%.3s-%02d",
 		tm->tm_mday,
@@ -3156,7 +3156,7 @@ static void print_prompt(void)
 	f++;
 	if (!tm) {
 	  gmt = time(0);
-	  tm = localtime((time_t *) &gmt);
+	  tm = localtime(&gmt);
 	}
 	sprintf(t, "%02d:%02d", tm->tm_hour, tm->tm_min);
 	while (*t)

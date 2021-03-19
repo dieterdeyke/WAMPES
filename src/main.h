@@ -11,7 +11,7 @@ extern char Nospace[];                  /* Generic malloc fail message */
 
 extern int main_exit;                   /* from main program (flag) */
 extern int stop_repeat;
-extern long StartTime;                  /* time that NOS was started */
+extern time_t StartTime;                /* time that NOS was started */
 
 void keyboard(int,void *,void *);
 

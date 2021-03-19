@@ -600,7 +600,7 @@ struct ax_route *rp)
 	struct iface *ifp = 0;
 	struct tm *tm;
 
-	tm = localtime((time_t *) &rp->time);
+	tm = localtime(&rp->time);
 	pax25(cp = buf, rp->target);
 	perm = rp->perm;
 	jumpstart = rp->jumpstart;

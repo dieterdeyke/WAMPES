@@ -58,7 +58,7 @@ int stop_repeat;
 
 char Prompt[] = "%s> ";
 static FILE *Logfp;
-long StartTime;                         /* time that NOS was started */
+time_t StartTime;                       /* time that NOS was started */
 static int Verbose;
 
 static void process_char(int c);
@@ -80,7 +80,7 @@ main(int argc,char *argv[])
 #else
 	setvbuf(stdout,NULL,_IOFBF,8192);
 #endif
-	time((time_t *) &StartTime);
+	time(&StartTime);
 	Hostname = strdup("net");
 
 	while((c = getopt(argc,argv,"gv")) != EOF){
@@ -385,7 +385,7 @@ void *p
 	if(strcmp(argv[1],"stop") != 0){
 		log_name = strdup(argv[1]);
 		Logfp = fopen(log_name,APPEND_TEXT);
-		strcpy(tbuf,ctime((time_t *) &StartTime));
+		strcpy(tbuf,ctime(&StartTime));
 		rip(tbuf);
 		logmsg(NULL,"NOS was started at %s", tbuf);
 	}
@@ -459,7 +459,7 @@ logmsg(void *tcb, const char *fmt, const char *arg)
 
 	if (Logfp == NULL)
 		return;
-	cp = ctime((time_t *) &Secclock);
+	cp = ctime(&Secclock);
 	rip(cp);
 	if (tcb)
 		fprintf(Logfp, "%s %s - ", cp, pinet_tcp(&((struct tcb *)tcb)->conn.remote));

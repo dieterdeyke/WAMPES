@@ -154,7 +154,7 @@ ftpscs(struct tcb *tcb,enum tcp_state old,enum tcp_state new)
 
 		/* Note current directory */
 		logmsg(tcb,"open FTP","");
-		cp = ctime((time_t *) &Secclock);
+		cp = ctime(&Secclock);
 		if((cp1 = strchr(cp,'\n')) != NULL)
 			*cp1 = '\0';
 		Xprintf(ftp->control,banner,Hostname,VERSION,cp);

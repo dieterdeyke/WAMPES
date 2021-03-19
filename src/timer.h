@@ -48,7 +48,7 @@ int32 next_timer_event(void);
 char *tformat(int32 t);
 
 extern int32 Msclock;
-extern int32 Secclock;
+extern time_t Secclock;
 #define msclock()       (Msclock)
 #define secclock()      (Secclock)
 
