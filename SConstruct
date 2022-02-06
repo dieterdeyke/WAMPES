@@ -1,12 +1,11 @@
 # Author: Dieter Deyke <dieter.deyke@gmail.com>
-# Time-stamp: <2018-06-09 07:35:41 deyke>
+# Time-stamp: <2022-02-06 14:03:40 deyke>
 
 import os
 import re
 import stat
 
-force_32_bit_build = False
-if force_32_bit_build:
+if ARGUMENTS.get("m32", 0):
     env = Environment(parse_flags = "-m32 -Ilib")
     env["LINKFLAGS"] = "-m32 "
 else:
