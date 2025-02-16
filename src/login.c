@@ -1,3 +1,5 @@
+#define _XOPEN_SOURCE 500
+
 #include <sys/types.h>
 
 #include <stdio.h>      /* must be before pwd.h */
